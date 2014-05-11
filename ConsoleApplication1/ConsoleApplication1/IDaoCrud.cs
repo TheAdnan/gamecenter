@@ -8,7 +8,10 @@ namespace ConsoleApplication1
 {
     public interface IDaoCrud<T>
     {
-        long create(T entity);  // INSERT INTO
+        long create(T entity); 
+        
+        
+        // INSERT INTO
         T read(T entity);        // SELECT FROM WHERE ..
         T update(T entity);     // UPDATE
         void delete(T entity);  // DELETE
