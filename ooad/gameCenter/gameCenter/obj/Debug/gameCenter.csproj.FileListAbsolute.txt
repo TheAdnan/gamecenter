@@ -1,0 +1,3 @@
+D:\ETF\4. semestar\OOAD\ooad\gameCenter\gameCenter\bin\Debug\gameCenter.exe.config
+D:\ETF\4. semestar\OOAD\ooad\gameCenter\gameCenter\obj\Debug\gameCenter.csprojResolveAssemblyReference.cache
+C:\Users\user\Source\Repos\gamecenter\ooad\gameCenter\gameCenter\bin\Debug\gameCenter.exe.config
