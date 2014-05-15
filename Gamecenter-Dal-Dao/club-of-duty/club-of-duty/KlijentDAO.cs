@@ -1,17 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using  MySql.Data.MySqlClient;
+using System.Data;
+using gameCenter;
 
-namespace ConsoleApplication1
+namespace DalDao
 {
-    public class StudentDAO : IDaoCrud<Student>
+    public class KlijentDAO : IDaoCrud<Klijent>
     {
         private MySqlConnection con;
 
-        public StudentDAO(string host, string db, string user, string pass)
+        public KlijentDAO(string host, string db, string user, string pass)
         {
             string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
             con = new MySqlConnection(connectionString);
@@ -21,21 +23,21 @@ namespace ConsoleApplication1
             }
             catch (Exception e) { throw e; }
         }
-        /*long create(Student entity)
+        long create(Klijent entity)
         {
             string user = "root";
             string pass = "";
             string db = "dao";
             string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
             MySqlConnection con = new MySqlConnection(connectionString);
-            // Unos novog studenata
+  
             con.Open();
             string ime = "Adnan", prezime = "Kicin";
-            MySqlCommand c = new MySqlCommand("insert into student values ('" + ime + "','" + prezime + "')", con);
+            MySqlCommand c = new MySqlCommand("insert into klijent values ('" + ime + "','" + prezime + "')", con);
             c.ExecuteNonQuery();
-            // insert into...
+          
         }
-         */
-        //    CRUD metode implementirane
+       
+        
     }
 }

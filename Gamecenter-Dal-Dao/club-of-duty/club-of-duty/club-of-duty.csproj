@@ -44,13 +44,13 @@
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
     <Compile Include="IDaoCrud.cs" />
+    <Compile Include="IgricaDAO.cs" />
     <Compile Include="Klase\Enumeration1.cs" />
     <Compile Include="Klase\Igrica.cs" />
     <Compile Include="Klase\Klijent.cs" />
     <Compile Include="Klase\Osoba.cs" />
     <Compile Include="Klase\Platform.cs" />
     <Compile Include="Klase\Poslodavac.cs" />
-    <Compile Include="Klase\Program.cs" />
     <Compile Include="Klase\Radnik.cs" />
     <Compile Include="Klase\Računar.cs" />
     <Compile Include="Klase\Računari.cs" />
@@ -60,10 +60,11 @@
     <Compile Include="Klase\TipKlijenta.cs" />
     <Compile Include="Klase\TipoviRegistracije.cs" />
     <Compile Include="Klase\Uposlenik.cs" />
+    <Compile Include="KlijentDAO.cs" />
+    <Compile Include="OsobaDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentDAO.cs" />
+    <Compile Include="UposlenikDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

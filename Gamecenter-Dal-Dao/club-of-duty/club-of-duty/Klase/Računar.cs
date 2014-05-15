@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using gameCenter;
 
-
-public class Raèunar {
-	private string Sifra ;
-	private boolean Dostupan ;
-	public Racunar(){
-	}
-	~Racunar(){
-	}
-	public boolean DaLiJeDostupan(){
-	}
-	public void DajSifru(){
+namespace gameCenter
+{
+	public class Raèunar {
+		private string Sifra ;
+		private bool Dostupan ;
+		public Racunar(){
+		}
+			public bool DaLiJeDostupan(){
+		}
+		public void DajSifru(){
+		}
 	}
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using gameCenter;
 
-namespace club_of_duty
+namespace gameCenter
 {
     class Program
     {
