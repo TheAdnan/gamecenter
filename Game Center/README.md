@@ -1,4 +1,0 @@
-gamecenter
-==========
-
-game center - ooad
