@@ -9,8 +9,8 @@ namespace DAL
 {
     public partial class DAL
     {
-        private string host, db, user, pass;
-        private static MySqlConnection con =null;
+        private string host = "localhost", db = "ooadgamecenter", user = "root", pass = "";
+        private static MySqlConnection con = null;
 
         private static DAL instanca = null;
         public static DAL Instanca
@@ -18,7 +18,7 @@ namespace DAL
             get { return (instanca == null) ? instanca = new DAL() : instanca; }
         }
         private DAL() { }
-         ~DAL() { terminirajKonekciju(); }
+        ~DAL() { terminirajKonekciju(); }
 
         public DAOFactory getDAO // mozemo napraviti i getDAO(tipBaze) koja vraca npr DAOMySqlFactory i sl. zavisi od potrebe
         {
@@ -29,7 +29,7 @@ namespace DAL
         {
             if (con != null) return;
 
-            string connectionString = "server=localhost;user="+user+";pwd="+pass+";database="+db;
+            string connectionString = "server=localhost;user=" + user + ";pwd=" + pass + ";database=" + db;
             con = new MySqlConnection(connectionString);
 
             try
@@ -46,7 +46,7 @@ namespace DAL
         {
             try
             {
-                if (con != null)  con.Close();
+                if (con != null) con.Close();
             }
             catch (Exception e) { throw e; }
         }

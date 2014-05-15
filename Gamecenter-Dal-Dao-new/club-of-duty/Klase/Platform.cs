@@ -7,14 +7,15 @@ using gameCenter;
 
 namespace gameCenter
 {
-	public class Platform {
-		private string Naziv ;
+
+    public class Platform {
+	private string Naziv ;
 		public List<Klijent> Subscriberi() ;
-		public void SaljiSubskripcije(Klijent k){
-		}
-		public void DodajSubscribera(Klijent k){
-		}
-		public void IgriceZaPlatformu(){
-		}
+	public void SaljiSubskripcije(Klijent k){
 	}
+	public void DodajSubscribera(Klijent k){
+	}
+	public void IgriceZaPlatformu(){
+	}
+}
 }

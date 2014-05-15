@@ -5,7 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using gameCenter;
 
-public enum TipKlijenta {
-	Obicni,
-	Registrovani
+namespace DAL.Entiteti
+{
+    public enum TipKlijenta
+    {
+        Obicni,
+        Registrovani
+    }
 }

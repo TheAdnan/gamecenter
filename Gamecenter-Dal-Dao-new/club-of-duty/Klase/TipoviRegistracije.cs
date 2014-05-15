@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using gameCenter;
 
-
-public enum TipoviRegistracije {
+namespace DAL
+{
+   public enum TipoviRegistracije {
 	Mjesecni,
 	Godisnji,
 	All-Time
