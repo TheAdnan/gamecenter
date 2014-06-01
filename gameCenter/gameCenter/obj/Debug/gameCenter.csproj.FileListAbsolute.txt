@@ -1,5 +1,0 @@
-D:\ETF\4. semestar\OOAD\ooad\gameCenter\gameCenter\bin\Debug\gameCenter.exe.config
-D:\ETF\4. semestar\OOAD\ooad\gameCenter\gameCenter\obj\Debug\gameCenter.csprojResolveAssemblyReference.cache
-D:\ETF\4. semestar\OOAD\ooad\gamecenter2\gameCenter\gameCenter\bin\Debug\gameCenter.exe.config
-C:\Users\Ilma\Documents\GitHub\gamecenter\gameCenter\gameCenter\bin\Debug\gameCenter.exe.config
-C:\Users\Ilma\Documents\GitHub\gamecenter\gameCenter\gameCenter\obj\Debug\gameCenter.csprojResolveAssemblyReference.cache
