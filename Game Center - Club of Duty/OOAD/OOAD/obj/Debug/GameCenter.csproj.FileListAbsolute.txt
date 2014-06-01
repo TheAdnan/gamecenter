@@ -1,2 +1,4 @@
 C:\Users\Nejla\Documents\Visual Studio 2012\Projects\OOAD\OOAD\bin\Debug\OOAD.exe.config
 C:\Users\Nejla\Desktop\repository\OOAD\OOAD\bin\Debug\OOAD.exe.config
+C:\Users\Ilma\Documents\GitHub\gamecenter\Game Center - Club of Duty\OOAD\OOAD\bin\Debug\OOAD.exe.config
+C:\Users\Ilma\Documents\GitHub\gamecenter\Game Center - Club of Duty\OOAD\OOAD\obj\Debug\GameCenter.csprojResolveAssemblyReference.cache
