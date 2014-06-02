@@ -6,10 +6,14 @@ using System.Text;
 
 namespace GameCenter.klase
 {
-    class Platform
+    public class Platform
     {
         public String Naziv { get; set; }
         public List<Klijent> Subscriberi { get; set; }
+        public Platform(String naziv)
+        {
+            Naziv = naziv;
+        }
 
     }
 }

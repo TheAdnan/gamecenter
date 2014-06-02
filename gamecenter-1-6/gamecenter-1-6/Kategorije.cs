@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GameCenter.klase
 {
-    class Kategorije
+    public class Kategorije
     {
         public List<String> Naziv { get; set; }
     }

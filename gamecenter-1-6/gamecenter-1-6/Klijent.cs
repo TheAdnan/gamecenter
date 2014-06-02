@@ -7,7 +7,7 @@ using GameCenter;
 
 namespace GameCenter.klase
 {
-    class Klijent: Osoba
+    public class Klijent: Osoba
     {
         public enum TipKlijenta
         {
@@ -20,12 +20,18 @@ namespace GameCenter.klase
         public TipoviRegistracije Tip_registracije { get; set; }
         public TipKlijenta Tip_klijenta { get; set; }
         public List<String> Subscriptions { get; set; }
-        public Klijent(int id, String ime, String prezime, int jmbg, String kontakt, String adresa, String email, String user, String pass, TipKlijenta tk, TipoviRegistracije tr)
+        public Klijent(int id, String ime, String prezime, int jmbg, String kontakt, String adresa, String email, String user, String pass)
             : base(id, ime, prezime, jmbg, kontakt, adresa, email, user, pass)
         {
-            Tip_klijenta = tk;
-            Tip_registracije = tr;
-            Subscriptions = new List<String>();
+            
+        }
+        public TipKlijenta DajTipKlijenta()
+        {
+            return this.Tip_klijenta;
+        }
+        public TipoviRegistracije DajTipReg()
+        {
+            return this.Tip_registracije;
         }
     }
 }

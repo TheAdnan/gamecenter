@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="DAL.cs" />
     <Compile Include="DAOFactory.cs" />
+    <Compile Include="DAO\IgricaDAO.cs" />
+    <Compile Include="DAO\KlijentDAO.cs" />
+    <Compile Include="DAO\PlatformDAO.cs" />
+    <Compile Include="DAO\RecenzentDAO.cs" />
     <Compile Include="DAO\UposlenikDAO.cs" />
     <Compile Include="Interfejsi\IDaoCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

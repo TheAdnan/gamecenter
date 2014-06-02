@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCenter.klase      
 {
-    class Racunari
+    public class Racunari
     {
         public int BrojDostupnih { get; set; }
         public List<Racunar> SviRacunari { get; set; }

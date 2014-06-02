@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCenter.klase
 {
-    class ShoppingCart
+    public class ShoppingCart
     {
         public int UkupnaCijena { get; set; }
         public List<Igrica> IzabraneIgrice { get; set; }

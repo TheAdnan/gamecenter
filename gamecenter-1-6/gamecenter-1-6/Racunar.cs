@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCenter.klase
 {
-    class Racunar
+   public class Racunar
     {
         public String Sifra { get; set; }
         public bool Dostupan { get; set; }

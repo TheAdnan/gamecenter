@@ -32,7 +32,22 @@ namespace DAL
             {
                 return new UposlenikDAO();
             }
-
+            public RecenzentDAO getRecenzentDAO()
+            {
+                return new RecenzentDAO();
+            }
+            public KlijentDAO getKlijentDAO()
+            {
+                return new KlijentDAO();
+            }
+            public IgricaDAO getIgricaDAO()
+            {
+                return new IgricaDAO();
+            }
+            public PlatformDAO getPlatformDAO()
+            {
+                return new PlatformDAO();
+            }
         }
     }
 }
