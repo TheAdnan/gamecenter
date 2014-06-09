@@ -34,9 +34,9 @@ namespace gamecenter_forma
             d.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
             DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
-            Uposlenik u = sd.getByUsername(textBox1.Text);
+            Uposlenik u = sd.getByUsername(username.Text);
             if (u != null)
-                if (u.Password == textBox2.Text)
+                if (u.Password == password.Text)
                 {
                     d.terminirajKonekciju();
                     Hide();
@@ -44,6 +44,11 @@ namespace gamecenter_forma
                     Show();
                 }
             //MessageBox.Show(u.Count.ToString());
+        }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
