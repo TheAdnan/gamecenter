@@ -28,25 +28,52 @@ namespace gamecenter_forma
             {
                 DAL.DAL d = DAL.DAL.Instanca;
                 d.kreirajKonekciju("localhost", "gamecenter", "root", "");
-
                 DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
+                DAL.DAL.RecenzentDAO rd = d.getDAO.getRecenzentDAO();
+                DAL.DAL.KlijentDAO kd = d.getDAO.getKlijentDAO();
                 Uposlenik u = sd.getByUsername(username.Text);
+                Klijent k = kd.getByUsername(username.Text);
+                Recenzent r = rd.getByUsername(username.Text);
                 if (u != null)
                 {
                     if (u.Password == password.Text)
                     {
 
                         Hide();
-                        (new afterlogin()).ShowDialog();
+                        (new UposlenikCP()).ShowDialog();
                         Show();
-                        
+
                     }
-                    else
+                    else MessageBox.Show("Neuspješno loginovaniranje!");
+                }
+                // else MessageBox.Show("Neuspješno loginovaniranje!");
+                else if (k != null)
+                {
+                    if (k.Password == password.Text)
                     {
-                        MessageBox.Show("Neuspješno loginovaniranje!");
+
+                        Hide();
+                        (new KlijentCP()).ShowDialog();
+                        Show();
+
                     }
+                    else MessageBox.Show("Neuspješno loginovaniranje!");
+                }
+                // else MessageBox.Show("Neuspješno loginovaniranje!");
+                else if (r != null)
+                {
+                    if (r.Password == password.Text)
+                    {
+
+                        Hide();
+                        (new RecenzentCP()).ShowDialog();
+                        Show();
+
+                    }
+                    else MessageBox.Show("Neuspješno loginovaniranje!");
                 }
                 else MessageBox.Show("Neuspješno loginovaniranje!");
+                e.KeyChar = (char)0;
             }
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -59,24 +86,53 @@ namespace gamecenter_forma
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju("localhost", "gamecenter", "root", "");
             DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
+            DAL.DAL.RecenzentDAO rd = d.getDAO.getRecenzentDAO();
+            DAL.DAL.KlijentDAO kd = d.getDAO.getKlijentDAO();
             Uposlenik u = sd.getByUsername(username.Text);
+            Klijent k = kd.getByUsername(username.Text);
+            Recenzent r = rd.getByUsername(username.Text);
             if (u != null)
             {
                 if (u.Password == password.Text)
                 {
 
                     Hide();
-                    (new afterlogin()).ShowDialog();
+                    (new UposlenikCP()).ShowDialog();
                     Show();
-                    
+
                 }
-                else
+                else MessageBox.Show("Neuspješno loginovaniranje!");
+                
+            }
+           // else MessageBox.Show("Neuspješno loginovaniranje!");
+            else if (k != null)
+            {
+                if (k.Password == password.Text)
                 {
-                    MessageBox.Show("Neuspješno loginovaniranje!");
+
+                    Hide();
+                    (new KlijentCP()).ShowDialog();
+                    Show();
+
                 }
+                else MessageBox.Show("Neuspješno loginovaniranje!");
+                
+            }
+           // else MessageBox.Show("Neuspješno loginovaniranje!");
+            else if (r != null)
+            {
+                if (r.Password == password.Text)
+                {
+
+                    Hide();
+                    (new RecenzentCP()).ShowDialog();
+                    Show();
+
+                }
+                else MessageBox.Show("Neuspješno loginovaniranje!");
+                
             }
             else MessageBox.Show("Neuspješno loginovaniranje!");
-           
         }
 
         private void username_TextChanged(object sender, EventArgs e)

@@ -77,8 +77,10 @@ namespace DAL
                     if (r.Read())
                     {
                         Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        r.Close();
                         return pom;
                     }
+                    r.Close();
                     return null;
                 }
                 catch (Exception e)

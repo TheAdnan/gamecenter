@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="afterlogin.cs">
+    <Compile Include="UposlenikCP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="afterlogin.Designer.cs">
-      <DependentUpon>afterlogin.cs</DependentUpon>
+    <Compile Include="UposlenikCP.Designer.cs">
+      <DependentUpon>UposlenikCP.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -56,10 +56,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KlijentCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlijentCP.Designer.cs">
+      <DependentUpon>KlijentCP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="afterlogin.resx">
-      <DependentUpon>afterlogin.cs</DependentUpon>
+    <Compile Include="RecenzentCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecenzentCP.Designer.cs">
+      <DependentUpon>RecenzentCP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UposlenikCP.resx">
+      <DependentUpon>UposlenikCP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
