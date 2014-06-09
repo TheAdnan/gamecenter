@@ -60,12 +60,38 @@ namespace DAL
 
             public void delete(Recenzent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("delete from recenzenti where id ='" + entity.ID + "'", con);
+
+                    c.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Recenzent getById(int id)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("select * from recenzenti where id = '" + id + "'", con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        r.Close();
+                        return pom;
+                    }
+                    r.Close();
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Recenzent getByUsername(string username)

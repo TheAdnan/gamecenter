@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gamecenter-1-6", "gamecenter-1-6\gamecenter-1-6.csproj", "{DD88D680-4F5E-4A74-9FE2-0966CDAB2F85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalDao", "DalDao\DalDao.csproj", "{A04DE301-CC88-48E1-B05A-AD7DC9F22EC6}"

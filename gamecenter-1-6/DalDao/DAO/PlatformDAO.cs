@@ -91,14 +91,9 @@ namespace DAL
 
             public Platform getById(int id)
             {
-                throw new NotImplementedException();
-            }
-
-            public Platform getByUsername(string username)
-            {
                 try
                 {
-                    c = new MySqlCommand("select * from platforme where username = '" + username + "'", con);
+                    c = new MySqlCommand("select * from platforme where id = '" + id + "'", con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -111,6 +106,12 @@ namespace DAL
                 {
                     throw e;
                 }
+            }
+
+            public Platform getByUsername(string username)
+            {
+                
+                throw new NotImplementedException();
             }
             public List<Platform> getByExample(string nijebitno1, string nijebitno2)
             {

@@ -60,12 +60,38 @@ namespace DAL
 
             public void delete(Klijent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("delete from klijenti where id ='" + entity.ID + "'", con);
+
+                    c.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Klijent getById(int id)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("select * from klijenti where id = '" + id + "'", con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        r.Close();
+                        return pom;
+                    }
+                    r.Close();
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Klijent getByUsername(string username)

@@ -61,12 +61,38 @@ namespace DAL
 
             public void delete(Uposlenik entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("delete from uposlenici where id ='" + entity.ID + "'", con);
+
+                    c.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Uposlenik getById(int id)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("select * from uposlenici where id = '" + id + "'", con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        r.Close();
+                        return pom;
+                    }
+                    r.Close();
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Uposlenik getByUsername(string username)

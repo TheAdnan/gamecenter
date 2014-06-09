@@ -93,14 +93,9 @@ namespace DAL
 
             public Igrica getById(int id)
             {
-                throw new NotImplementedException();
-            }
-
-            public Igrica getByUsername(string username)
-            {
                 try
                 {
-                    c = new MySqlCommand("select * from igrice where username = '" + username + "'", con);
+                    c = new MySqlCommand("select * from igrice where sifra = '" + id + "'", con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -113,6 +108,11 @@ namespace DAL
                 {
                     throw e;
                 }
+            }
+
+            public Igrica getByUsername(string username)
+            {
+                throw new NotImplementedException();
             }
             public List<Igrica> getByExample(string nijebitno1, string nijebitno2)
             {
