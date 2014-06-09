@@ -34,12 +34,13 @@
             this.password = new System.Windows.Forms.TextBox();
             this.ok_login = new System.Windows.Forms.Button();
             this.izadji_login = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // username
             // 
             this.username.Location = new System.Drawing.Point(173, 159);
-            this.username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Multiline = true;
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(229, 31);
@@ -72,7 +73,7 @@
             // password
             // 
             this.password.Location = new System.Drawing.Point(173, 243);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.PasswordChar = '*';
@@ -84,7 +85,7 @@
             // 
             this.ok_login.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ok_login.Location = new System.Drawing.Point(241, 318);
-            this.ok_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ok_login.Margin = new System.Windows.Forms.Padding(4);
             this.ok_login.Name = "ok_login";
             this.ok_login.Size = new System.Drawing.Size(153, 46);
             this.ok_login.TabIndex = 4;
@@ -102,19 +103,33 @@
             this.izadji_login.TabIndex = 5;
             this.izadji_login.Text = "Izađi";
             this.izadji_login.UseVisualStyleBackColor = true;
+            this.izadji_login.Click += new System.EventHandler(this.izadji_login_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Blog the impaler", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 22);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(206, 106);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "CLUB OF\r\nDUTY\r\n";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 392);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.izadji_login);
             this.Controls.Add(this.ok_login);
             this.Controls.Add(this.password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.username);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Club of Duty - Login";
             this.ResumeLayout(false);
@@ -130,6 +145,7 @@
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Button ok_login;
         private System.Windows.Forms.Button izadji_login;
+        private System.Windows.Forms.Label label3;
     }
 }
 

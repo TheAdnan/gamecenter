@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
-                        klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password")));
+                        klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password")));
                     return klijenti;
                 }
                 catch (Exception e)
@@ -76,7 +76,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
                         return pom;
                     }
                     return null;

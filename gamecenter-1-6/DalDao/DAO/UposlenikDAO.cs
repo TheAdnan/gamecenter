@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Uposlenik> uposlenici = new List<Uposlenik>();
                     while (r.Read())
-                        uposlenici.Add(new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
+                        uposlenici.Add(new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
                     return uposlenici;
                 }
                 catch (Exception e)
@@ -76,7 +76,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
                         return pom;
                     }
                     return null;

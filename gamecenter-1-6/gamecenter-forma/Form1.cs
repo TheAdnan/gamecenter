@@ -22,10 +22,28 @@ namespace gamecenter_forma
         {
 
         }
+        private void CheckKeys(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                DAL.DAL d = DAL.DAL.Instanca;
+                d.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
+                DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
+                Uposlenik u = sd.getByUsername(username.Text);
+                if (u != null)
+                    if (u.Password == password.Text)
+                    {
+                       
+                        Hide();
+                        (new afterlogin()).ShowDialog();
+                        Show();
+                    }
+            }
+        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,7 +56,7 @@ namespace gamecenter_forma
             if (u != null)
                 if (u.Password == password.Text)
                 {
-                    d.terminirajKonekciju();
+                   
                     Hide();
                     (new afterlogin()).ShowDialog();
                     Show();
@@ -48,7 +66,12 @@ namespace gamecenter_forma
 
         private void username_TextChanged(object sender, EventArgs e)
         {
+            this.password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
+        }
 
+        private void izadji_login_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

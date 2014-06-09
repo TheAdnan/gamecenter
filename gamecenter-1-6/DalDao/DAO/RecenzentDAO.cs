@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Recenzent> recenzenti = new List<Recenzent>();
                     while (r.Read())
-                        recenzenti.Add(new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
+                        recenzenti.Add(new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
                     return recenzenti;
                 }
                 catch (Exception e)
@@ -76,7 +76,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetInt32("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
                         return pom;
                     }
                     return null;
