@@ -39,6 +39,7 @@
             // 
             // username
             // 
+            this.username.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.Location = new System.Drawing.Point(173, 159);
             this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Multiline = true;
@@ -72,6 +73,7 @@
             // 
             // password
             // 
+            this.password.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.password.Location = new System.Drawing.Point(173, 243);
             this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Multiline = true;

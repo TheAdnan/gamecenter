@@ -32,13 +32,21 @@ namespace gamecenter_forma
                 DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
                 Uposlenik u = sd.getByUsername(username.Text);
                 if (u != null)
+                {
                     if (u.Password == password.Text)
                     {
-                       
+
                         Hide();
                         (new afterlogin()).ShowDialog();
                         Show();
+                        
                     }
+                    else
+                    {
+                        MessageBox.Show("Neuspješno loginovaniranje!");
+                    }
+                }
+                else MessageBox.Show("Neuspješno loginovaniranje!");
             }
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -50,18 +58,25 @@ namespace gamecenter_forma
         {
             DAL.DAL d = DAL.DAL.Instanca;
             d.kreirajKonekciju("localhost", "gamecenter", "root", "");
-
             DAL.DAL.UposlenikDAO sd = d.getDAO.getUposlenikDAO();
             Uposlenik u = sd.getByUsername(username.Text);
             if (u != null)
+            {
                 if (u.Password == password.Text)
                 {
-                   
+
                     Hide();
                     (new afterlogin()).ShowDialog();
                     Show();
+                    
                 }
-            //MessageBox.Show(u.Count.ToString());
+                else
+                {
+                    MessageBox.Show("Neuspješno loginovaniranje!");
+                }
+            }
+            else MessageBox.Show("Neuspješno loginovaniranje!");
+           
         }
 
         private void username_TextChanged(object sender, EventArgs e)

@@ -7,6 +7,7 @@ using GameCenter.klase;
 using DAL.Interfejsi;
 using MySql.Data.MySqlClient;
 
+
 namespace DAL
 {
     partial class DAL
@@ -77,8 +78,10 @@ namespace DAL
                     if (r.Read())
                     {
                         Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        r.Close();
                         return pom;
                     }
+                    r.Close();
                     return null;
                 }
                 catch (Exception e)

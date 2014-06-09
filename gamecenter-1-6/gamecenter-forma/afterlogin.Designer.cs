@@ -34,8 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 436);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(609, 465);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "afterlogin";
             this.Text = "afterlogin";
             this.ResumeLayout(false);
