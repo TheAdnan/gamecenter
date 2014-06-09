@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KlijentCP));
+            this.SuspendLayout();
+            // 
+            // KlijentCP
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "KlijentCP";
+            this.ClientSize = new System.Drawing.Size(819, 511);
+            this.Font = new System.Drawing.Font("Verdana", 7.8F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "KlijentCP";
+            this.Text = "Club of duty";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
