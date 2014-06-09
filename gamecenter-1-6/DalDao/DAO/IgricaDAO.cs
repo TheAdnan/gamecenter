@@ -55,12 +55,40 @@ namespace DAL
 
             public Igrica update(Igrica entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("update igrice set naziv = '" + entity.Naziv + "', set trailer = '" + entity.Trailer + "', set dostupnost = '" + entity.Dostupnost + "', set cijena= '" + entity.Cijena + "',set kategorija = '" + entity.Kategorija + "', set platforma = '" + entity.Platforma + "' where sifra ='" + entity.Sifra + "'", con);
+                   
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"));
+                        delete(entity);
+                        return pom;
+                    }
+                    delete(entity);
+                    return null;
+                    
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public void delete(Igrica entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("delete from igrice where sifra ='" + entity.Sifra + "'", con);
+
+                    c.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Igrica getById(int id)

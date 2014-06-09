@@ -55,12 +55,38 @@ namespace DAL
 
             public Platform update(Platform entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("select * from platforme where id = '" + entity.ID + "'", con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Platform pom = new Platform(r.GetInt32("id"), r.GetString("naziv"));
+                        delete(entity);
+                        return pom;
+                    }
+                    delete(entity);
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public void delete(Platform entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("delete from igrice where id ='" + entity.ID + "'", con);
+
+                    c.ExecuteNonQuery();
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Platform getById(int id)
