@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into igrice values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena +  "')", con);
+                    c = new MySqlCommand("insert into igrice values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Igrica> igrice = new List<Igrica>();
                     while (r.Read())
-                        igrice.Add(new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena")));
+                        igrice.Add(new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija")));
                     return igrice;
                 }
                 catch (Exception e)
@@ -76,7 +76,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"));
+                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"));
                         return pom;
                     }
                     return null;

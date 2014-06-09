@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into platforme values ('" + entity.Naziv + "')", con);
+                    c = new MySqlCommand("insert into platforme values ('" + entity.ID + "','" + entity.Naziv + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -34,11 +34,11 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from Platformi", con);
+                    c = new MySqlCommand("select * from platforme", con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Platform> Platformi = new List<Platform>();
                     while (r.Read())
-                        Platformi.Add(new Platform(r.GetString("naziv")));
+                        Platformi.Add(new Platform(r.GetInt32("id"), r.GetString("naziv")));
                     return Platformi;
                 }
                 catch (Exception e)
@@ -72,11 +72,11 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from Platformi where username = '" + username + "'", con);
+                    c = new MySqlCommand("select * from platforme where username = '" + username + "'", con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Platform pom = new Platform(r.GetString("naziv"));
+                        Platform pom = new Platform(r.GetInt32("id"), r.GetString("naziv"));
                         return pom;
                     }
                     return null;
