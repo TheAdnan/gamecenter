@@ -55,7 +55,25 @@ namespace DAL
 
             public Klijent update(Klijent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("update klijenti set ime = '" + entity.Ime + "', set prezime = '" + entity.Prezime + "', set kontakt = '" + entity.Kontakt + "', set adresa= '" + entity.Adresa + "', set email = '" + entity.E_Mail + "', set password = '"+ entity.Password + "' where id ='" + entity.ID + "'", con);
+
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        delete(entity);
+                        return pom;
+                    }
+                    delete(entity);
+                    return null;
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public void delete(Klijent entity)

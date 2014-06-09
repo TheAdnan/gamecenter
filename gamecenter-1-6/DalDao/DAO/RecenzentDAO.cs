@@ -55,7 +55,25 @@ namespace DAL
            
             public Recenzent update(Recenzent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    c = new MySqlCommand("update recenzenti set ime = '" + entity.Ime + "', set prezime = '" + entity.Prezime + "', set kontakt = '" + entity.Kontakt + "', set adresa= '" + entity.Adresa + "', set email = '" + entity.E_Mail + "', set password = '" + entity.Password + "', set plata = '" + entity.Plata + "', set radnovrijeme = '" + entity.RadnoVrijeme + "' where id ='" + entity.ID + "'", con);
+
+                    MySqlDataReader r = c.ExecuteReader();
+                    if (r.Read())
+                    {
+                        Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+                        delete(entity);
+                        return pom;
+                    }
+                    delete(entity);
+                    return null;
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public void delete(Recenzent entity)
