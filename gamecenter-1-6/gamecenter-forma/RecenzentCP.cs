@@ -13,8 +13,8 @@ namespace gamecenter_forma
 {
     public partial class RecenzentCP : Form
     {
-        private TextBox username;
-        private string user;
+       // private TextBox username;
+        //private string user;
         public static Podaci p = new Podaci();
         public Recenzent  Reco = new Recenzent();
         public RecenzentCP()
@@ -25,7 +25,7 @@ namespace gamecenter_forma
         public RecenzentCP(TextBox username)
         {
             // TODO: Complete member initialization
-            this.username = username;
+            
         }
         
         public RecenzentCP(string user)

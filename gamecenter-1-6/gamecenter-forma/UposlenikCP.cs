@@ -13,8 +13,8 @@ namespace gamecenter_forma
 {
     public partial class UposlenikCP : Form
     {
-        private TextBox userame;
-        private string username;
+        //private TextBox userame;
+        //private string username;
 
         public UposlenikCP()
         {
@@ -55,6 +55,120 @@ namespace gamecenter_forma
         private void UposlenikCP_Load(object sender, EventArgs e)
         {
 
+        }
+
+        Image slika1 = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-za-gamecenter\computer-i.png");
+        Image slika2 = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-za-gamecenter\computer-o.png");
+        private void racunar1_Click(object sender, EventArgs e)
+        {
+            if (racunar1.Image == slika2)
+            {
+                racunar1.Image = slika1;
+                racunar1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar1.Image = slika2;
+                racunar1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar2_Click(object sender, EventArgs e)
+        {
+            if (racunar2.Image == slika2)
+            {
+                racunar2.Image = slika1;
+                racunar2.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar2.Image = slika2;
+                racunar2.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar3_Click(object sender, EventArgs e)
+        {
+            if (racunar3.Image == slika2)
+            {
+                racunar3.Image = slika1;
+                racunar3.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar3.Image = slika2;
+                racunar3.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar4_Click(object sender, EventArgs e)
+        {
+            if (racunar4.Image == slika2)
+            {
+                racunar4.Image = slika1;
+                racunar4.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar4.Image = slika2;
+                racunar4.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar5_Click(object sender, EventArgs e)
+        {
+            if (racunar5.Image == slika2)
+            {
+                racunar5.Image = slika1;
+                racunar5.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar5.Image = slika2;
+                racunar5.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar6_Click(object sender, EventArgs e)
+        {
+            if (racunar6.Image == slika2)
+            {
+                racunar6.Image = slika1;
+                racunar6.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar6.Image = slika2;
+                racunar6.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar7_Click(object sender, EventArgs e)
+        {
+            if (racunar7.Image == slika2)
+            {
+                racunar7.Image = slika1;
+                racunar7.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar7.Image = slika2;
+                racunar7.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void racunar8_Click(object sender, EventArgs e)
+        {
+            if (racunar8.Image == slika2)
+            {
+                racunar8.Image = slika1;
+                racunar8.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                racunar8.Image = slika2;
+                racunar8.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
         }
     }
 }
