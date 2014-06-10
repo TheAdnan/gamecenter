@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Igrica> igrice = new List<Igrica>();
                     while (r.Read())
-                        igrice.Add(new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija")));
+                        igrice.Add(new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika")));
                     return igrice;
                 }
                 catch (Exception e)
@@ -65,12 +65,12 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update igrice set naziv = '" + entity.Naziv + "', set trailer = '" + entity.Trailer + "', set dostupnost = '" + entity.Dostupnost + "', set cijena= '" + entity.Cijena + "',set kategorija = '" + entity.Kategorija + "', set platforma = '" + entity.Platforma + "' where sifra ='" + entity.Sifra + "'", con);
+                    c = new MySqlCommand("update igrice set naziv = '" + entity.Naziv + "', trailer = '" + entity.Trailer + "', dostupnost = '" + entity.Dostupnost + "',  cijena= '" + entity.Cijena + "', kategorija = '" + entity.Kategorija + "', platforma = '" + entity.Platforma + "'slika = '" + entity.slika +"' where sifra ='" + entity.Sifra + "'", con);
                    
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"));
+                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika"));
                         delete(entity);
                         return pom;
                     }
@@ -107,7 +107,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"));
+                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika"));
                         return pom;
                     }
                     return null;

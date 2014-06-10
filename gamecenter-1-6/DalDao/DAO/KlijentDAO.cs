@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into klijenti values ('" + entity.Prezime + "','" + entity.Ime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.Adresa + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password +  "')", con);
+                    c = new MySqlCommand("insert into klijenti values ('" + entity.Prezime + "','" + entity.Ime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.Adresa + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password +  "','" + entity.TipRegistracije + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -38,7 +38,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
-                        klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password")));
+                        klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije")));
                     return klijenti;
                 }
                 catch (Exception e)
@@ -65,12 +65,12 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update klijenti set ime = '" + entity.Ime + "', set prezime = '" + entity.Prezime + "', set kontakt = '" + entity.Kontakt + "', set adresa= '" + entity.Adresa + "', set email = '" + entity.E_Mail + "', set password = '"+ entity.Password + "' where id ='" + entity.ID + "'", con);
+                    c = new MySqlCommand("update klijenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.Adresa + "', email = '" + entity.E_Mail + "', password = '"+ entity.Password + "' , tipregistracije = '" + entity.TipRegistracije + "' where id ='" + entity.ID + "'", con);
 
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
                         delete(entity);
                         return pom;
                     }
@@ -107,7 +107,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
                         r.Close();
                         return pom;
                     }
@@ -128,7 +128,7 @@ namespace DAL
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"));
+                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
                         r.Close();
                         return pom;
                     }

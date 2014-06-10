@@ -16,10 +16,13 @@ namespace GameCenter.klase
         public bool Trailer { get; set; }
         public int Dostupnost { get; set; }
         public double Cijena { get; set; }
-        public Igrica(int sifra, String name, bool trejler, int available, double cijena, int pltfrm, String ktgr)
+
+        public String slika { get; set; }
+        public Igrica(int sifra, String name, bool trejler, int available, double cijena, int pltfrm, String ktgr, String sliks)
         {
-            Naziv = name; Sifra = sifra; Trailer = trejler; Dostupnost = available; Cijena = cijena; Platforma = pltfrm; Kategorija = ktgr;
+            Naziv = name; Sifra = sifra; Trailer = trejler; Dostupnost = available; Cijena = cijena; Platforma = pltfrm; Kategorija = ktgr; slika = sliks;
         }
+        
         
     }
 }
