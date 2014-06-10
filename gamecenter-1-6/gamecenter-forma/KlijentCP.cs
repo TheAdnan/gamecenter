@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameCenter.klase;
 
 namespace gamecenter_forma
 {
@@ -19,7 +20,9 @@ namespace gamecenter_forma
 
         private void KlijentCP_Load(object sender, EventArgs e)
         {
-
-        }
+            DAL.DAL d = DAL.DAL.Instanca;
+            d.kreirajKonekciju("localhost", "gamecenter", "root", "");
+                       
+           }
     }
 }

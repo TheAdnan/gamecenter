@@ -16,5 +16,10 @@ namespace gamecenter_forma
         {
             InitializeComponent();
         }
+
+        private void RecenzentCP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

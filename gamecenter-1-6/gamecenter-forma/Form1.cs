@@ -17,6 +17,8 @@ namespace gamecenter_forma
         {
             InitializeComponent();
         }
+        Podaci p = new Podaci();
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -78,6 +80,7 @@ namespace gamecenter_forma
 
                     }
                     else MessageBox.Show("Neuspješno loginovaniranje!");
+                    
                 }
                 catch
                 {

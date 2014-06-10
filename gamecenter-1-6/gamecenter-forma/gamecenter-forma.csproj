@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Podaci.cs" />
     <Compile Include="UposlenikCP.cs">
       <SubType>Form</SubType>
     </Compile>
