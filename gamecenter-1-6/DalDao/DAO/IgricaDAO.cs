@@ -50,7 +50,15 @@ namespace DAL
 
             public Igrica read(Igrica entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    return getById(entity.Sifra);
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Igrica update(Igrica entity)

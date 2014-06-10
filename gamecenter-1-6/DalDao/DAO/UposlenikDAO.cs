@@ -51,7 +51,15 @@ namespace DAL
 
           public Uposlenik read(Uposlenik entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    return getById(entity.ID);
+                    
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
            
             public Uposlenik update(Uposlenik entity)

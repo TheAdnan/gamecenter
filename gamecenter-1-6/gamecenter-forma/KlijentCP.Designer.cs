@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KlijentCP));
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabovi_klijent = new System.Windows.Forms.TabControl();
+            this.Home_tab = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabovi_klijent.SuspendLayout();
+            this.Home_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -47,36 +47,36 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "welcome to club of duty!";
             // 
-            // tabControl1
+            // tabovi_klijent
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabovi_klijent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(2, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(815, 506);
-            this.tabControl1.TabIndex = 1;
+            this.tabovi_klijent.Controls.Add(this.Home_tab);
+            this.tabovi_klijent.Controls.Add(this.tabPage2);
+            this.tabovi_klijent.Location = new System.Drawing.Point(2, 3);
+            this.tabovi_klijent.Name = "tabovi_klijent";
+            this.tabovi_klijent.SelectedIndex = 0;
+            this.tabovi_klijent.Size = new System.Drawing.Size(815, 506);
+            this.tabovi_klijent.TabIndex = 1;
             // 
-            // tabPage1
+            // Home_tab
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(807, 477);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Home_tab.Controls.Add(this.label1);
+            this.Home_tab.Location = new System.Drawing.Point(4, 25);
+            this.Home_tab.Name = "Home_tab";
+            this.Home_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.Home_tab.Size = new System.Drawing.Size(807, 477);
+            this.Home_tab.TabIndex = 0;
+            this.Home_tab.Text = "Home";
+            this.Home_tab.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 71);
+            this.tabPage2.Size = new System.Drawing.Size(807, 477);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -86,14 +86,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 511);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabovi_klijent);
             this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KlijentCP";
             this.Text = "Club of duty";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabovi_klijent.ResumeLayout(false);
+            this.Home_tab.ResumeLayout(false);
+            this.Home_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -101,8 +101,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabovi_klijent;
+        private System.Windows.Forms.TabPage Home_tab;
         private System.Windows.Forms.TabPage tabPage2;
     }
 }

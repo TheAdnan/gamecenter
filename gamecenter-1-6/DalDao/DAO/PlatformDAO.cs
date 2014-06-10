@@ -50,7 +50,15 @@ namespace DAL
 
             public Platform read(Platform entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    return getById(entity.ID);
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Platform update(Platform entity)

@@ -139,6 +139,7 @@
             this.MinimumSize = new System.Drawing.Size(437, 442);
             this.Name = "Form1";
             this.Text = "Club of Duty - Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

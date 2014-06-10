@@ -50,7 +50,15 @@ namespace DAL
 
             public Klijent read(Klijent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    return getById(entity.ID);
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
 
             public Klijent update(Klijent entity)

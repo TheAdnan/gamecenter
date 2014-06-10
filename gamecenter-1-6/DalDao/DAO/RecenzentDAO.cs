@@ -50,7 +50,15 @@ namespace DAL
 
           public Recenzent read(Recenzent entity)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    return getById(entity.ID);
+
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
            
             public Recenzent update(Recenzent entity)
