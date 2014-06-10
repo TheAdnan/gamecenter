@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Blog the impaler", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(127, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(495, 49);
+            this.label1.Size = new System.Drawing.Size(481, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "welcome to club of duty!";
             // 
@@ -91,6 +91,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KlijentCP";
             this.Text = "Club of duty";
+            this.Load += new System.EventHandler(this.KlijentCP_Load);
             this.tabovi_klijent.ResumeLayout(false);
             this.Home_tab.ResumeLayout(false);
             this.Home_tab.PerformLayout();
