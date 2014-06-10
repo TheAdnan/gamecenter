@@ -33,6 +33,7 @@
             this.tabovi_klijent = new System.Windows.Forms.TabControl();
             this.Home_tab = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabovi_klijent.SuspendLayout();
             this.Home_tab.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // Home_tab
             // 
+            this.Home_tab.Controls.Add(this.button1);
             this.Home_tab.Controls.Add(this.label1);
             this.Home_tab.Location = new System.Drawing.Point(4, 25);
             this.Home_tab.Name = "Home_tab";
@@ -80,6 +82,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(491, 375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KlijentCP
             // 
@@ -105,5 +117,6 @@
         private System.Windows.Forms.TabControl tabovi_klijent;
         private System.Windows.Forms.TabPage Home_tab;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button1;
     }
 }

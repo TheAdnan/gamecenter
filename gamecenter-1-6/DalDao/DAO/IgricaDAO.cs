@@ -39,6 +39,7 @@ namespace DAL
                     List<Igrica> igrice = new List<Igrica>();
                     while (r.Read())
                         igrice.Add(new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika")));
+                    r.Close();
                     return igrice;
                 }
                 catch (Exception e)
@@ -72,9 +73,11 @@ namespace DAL
                     {
                         Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika"));
                         delete(entity);
+                        r.Close();
                         return pom;
                     }
                     delete(entity);
+                    r.Close();
                     return null;
                     
                 }
@@ -108,8 +111,10 @@ namespace DAL
                     if (r.Read())
                     {
                         Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika"));
+                        r.Close();
                         return pom;
                     }
+                    r.Close();
                     return null;
                 }
                 catch (Exception e)

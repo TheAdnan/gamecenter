@@ -41,6 +41,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UposlenikCP";
             this.Text = "Club of duty - control panel";
+            this.Load += new System.EventHandler(this.UposlenikCP_Load);
             this.ResumeLayout(false);
 
         }

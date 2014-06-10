@@ -18,5 +18,10 @@ namespace GameCenter.klase
         {
            Plata = plata; RadnoVrijeme = radno_vrijeme;
         }
+
+        public Uposlenik()
+        {
+            // TODO: Complete member initialization
+        }
     }
 }

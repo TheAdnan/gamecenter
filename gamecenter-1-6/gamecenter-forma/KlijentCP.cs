@@ -25,22 +25,24 @@ namespace gamecenter_forma
         public KlijentCP(String username)
         {
             // TODO: Complete member initialization
-            InitializeComponent();
-            DAL.DAL d = DAL.DAL.Instanca;
+            
+            DAL.DAL f = DAL.DAL.Instanca;
             try
             { 
-                //d.kreirajKonekciju("localhost", "gamecenter", "root", "");
+               // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
-                DAL.DAL.IgricaDAO igrica = d.getDAO.getIgricaDAO();
+                DAL.DAL.IgricaDAO igrica = f.getDAO.getIgricaDAO();
                 p.sveIgrice = igrica.getAll();
-                DAL.DAL.KlijentDAO klajent = d.getDAO.getKlijentDAO();
+                DAL.DAL.KlijentDAO klajent = f.getDAO.getKlijentDAO();
                 Klajent = klajent.getByUsername(username);
+                
             }
             catch
             {
-            //     MessageBox.Show("Nece da se spoji na bazu");
+            MessageBox.Show("Nece da se spoji na bazu");
                 
             }
+            InitializeComponent();
            
         }
 
@@ -49,5 +51,10 @@ namespace gamecenter_forma
             
             
        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Klajent.Ime);
+        }
     }
 }

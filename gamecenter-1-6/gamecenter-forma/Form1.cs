@@ -119,8 +119,6 @@ namespace gamecenter_forma
                         UposlenikCP uposlenikforma = new UposlenikCP(username.Text);
                         uposlenikforma.ShowDialog();
                         Show();
-                       
-
                     }
                     else MessageBox.Show("Neuspješno loginovaniranje!");
 
