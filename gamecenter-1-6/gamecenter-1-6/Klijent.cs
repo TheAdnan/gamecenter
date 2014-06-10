@@ -21,6 +21,11 @@ namespace GameCenter.klase
         {
             TipRegistracije = tipReg;
         }
+
+        public Klijent()
+        {
+            
+        }
         
         
         void DodajUShoppingCart(Igrica i)

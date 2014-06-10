@@ -15,9 +15,10 @@ namespace gamecenter_forma
     {
         public Form1()
         {
+            
             InitializeComponent();
         }
-        Podaci p = new Podaci();
+       
         
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,7 +45,8 @@ namespace gamecenter_forma
                         {
 
                             Hide();
-                            (new UposlenikCP()).ShowDialog();
+                            UposlenikCP uposlenikforma = new UposlenikCP(username.Text);
+                            uposlenikforma.ShowDialog();
                             Show();
 
                         }
@@ -58,7 +60,8 @@ namespace gamecenter_forma
                         {
 
                             Hide();
-                            (new KlijentCP()).ShowDialog();
+                            KlijentCP klijentforma = new KlijentCP(username.Text);
+                            klijentforma.ShowDialog();
                             Show();
 
                         }
@@ -72,7 +75,8 @@ namespace gamecenter_forma
                         {
 
                             Hide();
-                            (new RecenzentCP()).ShowDialog();
+                            RecenzentCP recenzentforma = new RecenzentCP(username.Text);
+                            recenzentforma.ShowDialog();
                             Show();
 
                         }
@@ -82,9 +86,9 @@ namespace gamecenter_forma
                     else MessageBox.Show("Neuspješno loginovaniranje!");
                     
                 }
-                catch
+                catch(Exception a)
                 {
-                    MessageBox.Show("Niste spojeni na bazu!");
+                    MessageBox.Show("Error" + a);
                 }
                 e.KeyChar = (char)0;
             }
@@ -112,8 +116,10 @@ namespace gamecenter_forma
                     {
 
                         Hide();
-                        (new UposlenikCP()).ShowDialog();
+                        UposlenikCP uposlenikforma = new UposlenikCP(username.Text);
+                        uposlenikforma.ShowDialog();
                         Show();
+                       
 
                     }
                     else MessageBox.Show("Neuspješno loginovaniranje!");
@@ -126,7 +132,8 @@ namespace gamecenter_forma
                     {
 
                         Hide();
-                        (new KlijentCP()).ShowDialog();
+                        KlijentCP klijentforma = new KlijentCP(username.Text);
+                        klijentforma.ShowDialog();
                         Show();
 
                     }
@@ -140,7 +147,8 @@ namespace gamecenter_forma
                     {
 
                         Hide();
-                        (new RecenzentCP()).ShowDialog();
+                        RecenzentCP recenzentforma = new RecenzentCP(username.Text);
+                        recenzentforma.ShowDialog();
                         Show();
 
                     }

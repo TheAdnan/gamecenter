@@ -11,9 +11,9 @@ namespace gamecenter_forma
 {
     public class Podaci
     {
-        public static List<Igrica> sveIgrice;
-        public static List<Uposlenik> sviUposlenici;
-        public static List<Recenzent> sviRecenzenti;
-        public static List<Klijent> sviKlijenti;
+        public List<Igrica> sveIgrice{get; set;}
+        public List<Uposlenik> sviUposlenici{set;get;}
+        public List<Recenzent> sviRecenzenti{get; set;}
+        public List<Klijent> sviKlijenti{set; get;}
     }
 }

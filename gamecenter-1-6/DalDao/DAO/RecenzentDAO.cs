@@ -39,6 +39,7 @@ namespace DAL
                     List<Recenzent> recenzenti = new List<Recenzent>();
                     while (r.Read())
                         recenzenti.Add(new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
+                    r.Close();
                     return recenzenti;
                 }
                 catch (Exception e)
@@ -72,9 +73,11 @@ namespace DAL
                     {
                         Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
                         delete(entity);
+                        r.Close();
                         return pom;
                     }
                     delete(entity);
+                    r.Close();
                     return null;
 
                 }

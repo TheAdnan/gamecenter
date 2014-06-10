@@ -39,6 +39,7 @@ namespace DAL
                     List<Klijent> klijenti = new List<Klijent>();
                     while (r.Read())
                         klijenti.Add(new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije")));
+                    r.Close();
                     return klijenti;
                 }
                 catch (Exception e)
@@ -72,9 +73,11 @@ namespace DAL
                     {
                         Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
                         delete(entity);
+                        r.Close();
                         return pom;
                     }
                     delete(entity);
+                    r.Close();
                     return null;
 
                 }
@@ -126,7 +129,7 @@ namespace DAL
                 {
                     c = new MySqlCommand("select * from klijenti where username = '" + username + "'", con);
                     MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
+                    while(r.Read())
                     {
                         Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
                         r.Close();

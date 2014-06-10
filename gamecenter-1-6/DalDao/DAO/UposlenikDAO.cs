@@ -35,11 +35,12 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from uposlenici", con);
+                    MySqlCommand c = new MySqlCommand("select * from uposlenici", con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<Uposlenik> uposlenici = new List<Uposlenik>();
                     while (r.Read())
                         uposlenici.Add(new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"),  r.GetDouble("plata"), r.GetInt32("radnoVrijeme")));
+                    r.Close();
                     return uposlenici;
                 }
                 catch (Exception e)
@@ -72,10 +73,13 @@ namespace DAL
                     if (r.Read())
                     {
                         Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
+
                         delete(entity);
+                        r.Close();
                         return pom;
                     }
                     delete(entity);
+                    r.Close();
                     return null;
 
                 }
@@ -125,19 +129,21 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from uposlenici where username = '" + username + "'", con);
+                    MySqlCommand c = new MySqlCommand("select * from uposlenici where username = '" + username + "'", con);
                     MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
+                    while(r.Read())
                     {
                         Uposlenik pom = new Uposlenik(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("adresa"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
                         r.Close();
                         return pom;
                     }
                     r.Close();
+                   
                     return null;
                 }
                 catch (Exception e)
                 {
+                    
                     throw e;
                 }
             }

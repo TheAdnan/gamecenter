@@ -39,6 +39,7 @@ namespace DAL
                     List<Platform> Platformi = new List<Platform>();
                     while (r.Read())
                         Platformi.Add(new Platform(r.GetInt32("id"), r.GetString("naziv")));
+                    r.Close();
                     return Platformi;
                 }
                 catch (Exception e)
@@ -71,9 +72,11 @@ namespace DAL
                     {
                         Platform pom = new Platform(r.GetInt32("id"), r.GetString("naziv"));
                         delete(entity);
+                        r.Close();
                         return pom;
                     }
                     delete(entity);
+                    r.Close();
                     return null;
                 }
                 catch (Exception e)
@@ -106,8 +109,10 @@ namespace DAL
                     if (r.Read())
                     {
                         Platform pom = new Platform(r.GetInt32("id"), r.GetString("naziv"));
+                        r.Close();
                         return pom;
                     }
+                    r.Close();
                     return null;
                 }
                 catch (Exception e)
