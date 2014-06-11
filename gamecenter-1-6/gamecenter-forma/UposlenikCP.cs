@@ -550,7 +550,7 @@ namespace gamecenter_forma
                 DAL.DAL.IgricaDAO aj = f.getDAO.getIgricaDAO();
                 sveIgrice = aj.getAll();
                 games.DataSource = null;
-                games.DataSource = sviKlijenti;
+                games.DataSource = sveIgrice;
             }
             catch
             {
