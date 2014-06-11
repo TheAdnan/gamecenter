@@ -282,6 +282,36 @@ namespace gamecenter_forma
 
         }
 
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Uhome_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = home_tab;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = home_tab;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = home_tab;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = home_tab;
+        }
+
         
 
         
