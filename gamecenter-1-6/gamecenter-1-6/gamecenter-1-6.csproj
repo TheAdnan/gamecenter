@@ -43,16 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Igrica.cs" />
-    <Compile Include="Kategorije.cs" />
     <Compile Include="Klijent.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Poslodavac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Racunar.cs" />
-    <Compile Include="Racunari.cs" />
     <Compile Include="Recenzent.cs" />
-    <Compile Include="ShoppingCart.cs" />
     <Compile Include="Uposlenik.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

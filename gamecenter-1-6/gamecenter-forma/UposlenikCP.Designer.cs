@@ -38,6 +38,7 @@
             this.racunari_button = new System.Windows.Forms.Button();
             this.korisnici_button = new System.Windows.Forms.Button();
             this.korisnici_tab = new System.Windows.Forms.TabPage();
+            this.users = new System.Windows.Forms.ListBox();
             this.racunari_tab = new System.Windows.Forms.TabPage();
             this.racunar2 = new System.Windows.Forms.PictureBox();
             this.racunar8 = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
             this.igrice_tab = new System.Windows.Forms.TabPage();
             this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
-            this.users = new System.Windows.Forms.ListBox();
             this.slika_profil = new System.Windows.Forms.PictureBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
@@ -189,6 +189,17 @@
             this.korisnici_tab.TabIndex = 2;
             this.korisnici_tab.Text = "Korisnici";
             this.korisnici_tab.UseVisualStyleBackColor = true;
+            // 
+            // users
+            // 
+            this.users.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.users.FormattingEnabled = true;
+            this.users.ItemHeight = 16;
+            this.users.Location = new System.Drawing.Point(4, 5);
+            this.users.Name = "users";
+            this.users.Size = new System.Drawing.Size(330, 468);
+            this.users.TabIndex = 1;
             // 
             // racunari_tab
             // 
@@ -336,17 +347,6 @@
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
             // 
-            // users
-            // 
-            this.users.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.users.FormattingEnabled = true;
-            this.users.ItemHeight = 16;
-            this.users.Location = new System.Drawing.Point(4, 5);
-            this.users.Name = "users";
-            this.users.Size = new System.Drawing.Size(330, 468);
-            this.users.TabIndex = 1;
-            // 
             // slika_profil
             // 
             this.slika_profil.Location = new System.Drawing.Point(45, 75);
@@ -366,6 +366,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UposlenikCP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Club of duty - control panel";
             this.Load += new System.EventHandler(this.UposlenikCP_Load);
             this.tabovi_uposlenik.ResumeLayout(false);

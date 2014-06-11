@@ -39,6 +39,7 @@
             this.Font = new System.Drawing.Font("Verdana", 7.8F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RecenzentCP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Club of duty - control panel";
             this.Load += new System.EventHandler(this.RecenzentCP_Load);
             this.ResumeLayout(false);
