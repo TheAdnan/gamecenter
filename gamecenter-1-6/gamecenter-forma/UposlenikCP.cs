@@ -43,15 +43,28 @@ namespace gamecenter_forma
                 sveIgrice = igrica.getAll();
                 DAL.DAL.KlijentDAO klijent = f.getDAO.getKlijentDAO();
                 sviKlijenti = klijent.getAll();
+                DAL.DAL.PlatformDAO v = f.getDAO.getPlatformDAO();
+                svePlatforme = v.getAll();
                 DAL.DAL.UposlenikDAO uposlenik = f.getDAO.getUposlenikDAO();
                 Cojek = uposlenik.getByUsername(username);
+                games.DataSource = null;
+                users.DataSource = null;
                 games.DataSource = sveIgrice;
                 users.DataSource = sviKlijenti;
                 Cojek.PostaviSliku(Cojek.slika);
                 slika_profil.Image = Cojek.Slika;
+                xIme.Text = Cojek.Ime;
+                xPrezime.Text = Cojek.Prezime;
+                xKontakt.Text = Cojek.Kontakt;
+                xMail.Text = Cojek.E_Mail;
+                xUsername.Text = Cojek.Username;
+                xJmbg.Text = Cojek.JMBG;
+                platf_combo.DataSource = null;
+                platf_combo.DataSource = svePlatforme;
                 
+                }
                 
-            }
+            
             catch
             {
                 MessageBox.Show("Nece da se spoji na bazu");
@@ -72,8 +85,10 @@ namespace gamecenter_forma
         {
             if (racunar1.Image == slika2)
             {
+                
                 racunar1.Image = slika1;
                 racunar1.SizeMode = PictureBoxSizeMode.StretchImage;
+               
             }
             else
             {
@@ -219,6 +234,55 @@ namespace gamecenter_forma
         {
 
         }
+
+        private void games_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(games.SelectedIndex != -1)
+            for (int i = 0; i < sveIgrice.Count; i++)
+            {
+                if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                {
+                    ime_igrice.Text = sveIgrice[i].Naziv;
+                    
+                    cijena_din.Text = sveIgrice[i].Cijena.ToString();
+                    
+                    for (int k = 0; k < svePlatforme.Count; k++)
+                    {
+                        if (svePlatforme[k].ID == sveIgrice[i].Platforma)
+                        {
+                            platf_din.Text = svePlatforme[i].Naziv;
+                        }
+                    }
+                    dost_din.Text = sveIgrice[i].Dostupnost.ToString();
+                    kat_din.Text = sveIgrice[i].Kategorija;
+                    sveIgrice[i].PostaviSliku(sveIgrice[i].slika);
+                    slika_igrice.Image = sveIgrice[i].Slika;
+
+                }
+            }
+        }
+
+        private void platf_combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<String> igrice_filtrirano = new List<String>();
+            for(int i=0; i<sveIgrice.Count; i++){
+                for (int j = 0; j < svePlatforme.Count; j++)
+                {
+                    if ((svePlatforme[j].ID == sveIgrice[i].Platforma) && (platf_combo.SelectedItem.ToString() == svePlatforme[j].ToString()))
+                    {
+                        igrice_filtrirano.Add(sveIgrice[i].ToString());
+                    }
+                }
+            }
+            games.DataSource = igrice_filtrirano;
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         
 

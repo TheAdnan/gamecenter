@@ -24,7 +24,15 @@ namespace GameCenter.klase
 
         public void PostaviSliku(String swika)
         {
-            Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-igrica\" + swika + ".jpg");
+            try
+            {
+                Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-igrica\" + swika + ".png");
+
+            }
+            catch
+            {
+                Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-igrica\" + swika + ".jpg");
+            }
         }
         public Igrica(int sifra, String name, bool trejler, int available, double cijena, int pltfrm, String ktgr, String sliks)
         {

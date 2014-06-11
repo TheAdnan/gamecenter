@@ -40,6 +40,15 @@
             this.korisnici_tab = new System.Windows.Forms.TabPage();
             this.users = new System.Windows.Forms.ListBox();
             this.racunari_tab = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.racunar2 = new System.Windows.Forms.PictureBox();
             this.racunar8 = new System.Windows.Forms.PictureBox();
             this.racunar1 = new System.Windows.Forms.PictureBox();
@@ -49,13 +58,42 @@
             this.racunar4 = new System.Windows.Forms.PictureBox();
             this.racunar5 = new System.Windows.Forms.PictureBox();
             this.igrice_tab = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.platf_combo = new System.Windows.Forms.ComboBox();
+            this.trailer_igrice = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cijena_din = new System.Windows.Forms.Label();
+            this.cijena_igrice = new System.Windows.Forms.Label();
+            this.dost_din = new System.Windows.Forms.Label();
+            this.kat_din = new System.Windows.Forms.Label();
+            this.platf_din = new System.Windows.Forms.Label();
+            this.dostupne_igrice = new System.Windows.Forms.Label();
+            this.kategorija_igrice = new System.Windows.Forms.Label();
+            this.platforma_igrice = new System.Windows.Forms.Label();
+            this.ime_igrice = new System.Windows.Forms.Label();
+            this.slika_igrice = new System.Windows.Forms.PictureBox();
             this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
+            this.xKontakt = new System.Windows.Forms.Label();
+            this.xMail = new System.Windows.Forms.Label();
+            this.xJmbg = new System.Windows.Forms.Label();
+            this.xUsername = new System.Windows.Forms.Label();
+            this.xPrezime = new System.Windows.Forms.Label();
+            this.xIme = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.korisnici_tab.SuspendLayout();
             this.racunari_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar1)).BeginInit();
@@ -65,6 +103,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).BeginInit();
             this.igrice_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
             this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +123,7 @@
             this.tabovi_uposlenik.Location = new System.Drawing.Point(4, 1);
             this.tabovi_uposlenik.Name = "tabovi_uposlenik";
             this.tabovi_uposlenik.SelectedIndex = 0;
-            this.tabovi_uposlenik.Size = new System.Drawing.Size(815, 511);
+            this.tabovi_uposlenik.Size = new System.Drawing.Size(863, 511);
             this.tabovi_uposlenik.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabovi_uposlenik.TabIndex = 8;
             // 
@@ -97,7 +138,7 @@
             this.home_tab.Location = new System.Drawing.Point(4, 25);
             this.home_tab.Name = "home_tab";
             this.home_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.home_tab.Size = new System.Drawing.Size(807, 482);
+            this.home_tab.Size = new System.Drawing.Size(855, 482);
             this.home_tab.TabIndex = 0;
             this.home_tab.Text = "Home";
             this.home_tab.UseVisualStyleBackColor = true;
@@ -185,7 +226,7 @@
             this.korisnici_tab.Controls.Add(this.users);
             this.korisnici_tab.Location = new System.Drawing.Point(4, 25);
             this.korisnici_tab.Name = "korisnici_tab";
-            this.korisnici_tab.Size = new System.Drawing.Size(807, 482);
+            this.korisnici_tab.Size = new System.Drawing.Size(855, 482);
             this.korisnici_tab.TabIndex = 2;
             this.korisnici_tab.Text = "Korisnici";
             this.korisnici_tab.UseVisualStyleBackColor = true;
@@ -203,6 +244,15 @@
             // 
             // racunari_tab
             // 
+            this.racunari_tab.Controls.Add(this.label9);
+            this.racunari_tab.Controls.Add(this.label8);
+            this.racunari_tab.Controls.Add(this.label7);
+            this.racunari_tab.Controls.Add(this.label6);
+            this.racunari_tab.Controls.Add(this.label5);
+            this.racunari_tab.Controls.Add(this.label4);
+            this.racunari_tab.Controls.Add(this.label3);
+            this.racunari_tab.Controls.Add(this.label2);
+            this.racunari_tab.Controls.Add(this.pictureBox1);
             this.racunari_tab.Controls.Add(this.racunar2);
             this.racunari_tab.Controls.Add(this.racunar8);
             this.racunari_tab.Controls.Add(this.racunar1);
@@ -214,16 +264,98 @@
             this.racunari_tab.Location = new System.Drawing.Point(4, 25);
             this.racunari_tab.Name = "racunari_tab";
             this.racunari_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.racunari_tab.Size = new System.Drawing.Size(807, 482);
+            this.racunari_tab.Size = new System.Drawing.Size(855, 482);
             this.racunari_tab.TabIndex = 1;
             this.racunari_tab.Text = "Računari";
             this.racunari_tab.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(496, 390);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 17);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Računar 8";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(496, 288);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 17);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Računar 7";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(496, 177);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 17);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Računar 6";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(496, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 17);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Računar 5";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(247, 390);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 17);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Računar 4";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(247, 288);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Računar 3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(247, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Računar 2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(247, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 17);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Računar 1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(356, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 383);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // racunar2
             // 
             this.racunar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar2.Image = ((System.Drawing.Image)(resources.GetObject("racunar2.Image")));
-            this.racunar2.Location = new System.Drawing.Point(506, 151);
+            this.racunar2.Location = new System.Drawing.Point(130, 151);
             this.racunar2.Name = "racunar2";
             this.racunar2.Size = new System.Drawing.Size(83, 70);
             this.racunar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,7 +367,7 @@
             // 
             this.racunar8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar8.Image = ((System.Drawing.Image)(resources.GetObject("racunar8.Image")));
-            this.racunar8.Location = new System.Drawing.Point(671, 355);
+            this.racunar8.Location = new System.Drawing.Point(626, 355);
             this.racunar8.Name = "racunar8";
             this.racunar8.Size = new System.Drawing.Size(83, 70);
             this.racunar8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,7 +379,7 @@
             // 
             this.racunar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar1.Image = ((System.Drawing.Image)(resources.GetObject("racunar1.Image")));
-            this.racunar1.Location = new System.Drawing.Point(506, 42);
+            this.racunar1.Location = new System.Drawing.Point(130, 42);
             this.racunar1.Name = "racunar1";
             this.racunar1.Size = new System.Drawing.Size(83, 70);
             this.racunar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -259,7 +391,7 @@
             // 
             this.racunar7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar7.Image = ((System.Drawing.Image)(resources.GetObject("racunar7.Image")));
-            this.racunar7.Location = new System.Drawing.Point(671, 258);
+            this.racunar7.Location = new System.Drawing.Point(626, 258);
             this.racunar7.Name = "racunar7";
             this.racunar7.Size = new System.Drawing.Size(83, 70);
             this.racunar7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +403,7 @@
             // 
             this.racunar3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar3.Image = ((System.Drawing.Image)(resources.GetObject("racunar3.Image")));
-            this.racunar3.Location = new System.Drawing.Point(506, 258);
+            this.racunar3.Location = new System.Drawing.Point(130, 258);
             this.racunar3.Name = "racunar3";
             this.racunar3.Size = new System.Drawing.Size(83, 70);
             this.racunar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,7 +415,7 @@
             // 
             this.racunar6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar6.Image = ((System.Drawing.Image)(resources.GetObject("racunar6.Image")));
-            this.racunar6.Location = new System.Drawing.Point(671, 151);
+            this.racunar6.Location = new System.Drawing.Point(626, 151);
             this.racunar6.Name = "racunar6";
             this.racunar6.Size = new System.Drawing.Size(83, 70);
             this.racunar6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,7 +427,7 @@
             // 
             this.racunar4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar4.Image = ((System.Drawing.Image)(resources.GetObject("racunar4.Image")));
-            this.racunar4.Location = new System.Drawing.Point(506, 355);
+            this.racunar4.Location = new System.Drawing.Point(130, 355);
             this.racunar4.Name = "racunar4";
             this.racunar4.Size = new System.Drawing.Size(83, 70);
             this.racunar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +439,7 @@
             // 
             this.racunar5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar5.Image = ((System.Drawing.Image)(resources.GetObject("racunar5.Image")));
-            this.racunar5.Location = new System.Drawing.Point(671, 42);
+            this.racunar5.Location = new System.Drawing.Point(626, 42);
             this.racunar5.Name = "racunar5";
             this.racunar5.Size = new System.Drawing.Size(83, 70);
             this.racunar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -317,14 +449,174 @@
             // 
             // igrice_tab
             // 
+            this.igrice_tab.Controls.Add(this.label18);
+            this.igrice_tab.Controls.Add(this.pictureBox2);
+            this.igrice_tab.Controls.Add(this.label16);
+            this.igrice_tab.Controls.Add(this.platf_combo);
+            this.igrice_tab.Controls.Add(this.trailer_igrice);
+            this.igrice_tab.Controls.Add(this.panel1);
+            this.igrice_tab.Controls.Add(this.ime_igrice);
+            this.igrice_tab.Controls.Add(this.slika_igrice);
             this.igrice_tab.Controls.Add(this.games);
             this.igrice_tab.Location = new System.Drawing.Point(4, 25);
             this.igrice_tab.Name = "igrice_tab";
-            this.igrice_tab.Size = new System.Drawing.Size(807, 482);
+            this.igrice_tab.Size = new System.Drawing.Size(855, 482);
             this.igrice_tab.TabIndex = 3;
             this.igrice_tab.Text = "Igrice";
             this.igrice_tab.UseVisualStyleBackColor = true;
             this.igrice_tab.Click += new System.EventHandler(this.igrice_tab_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(4, 144);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 18);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "Igrice:";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(310, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 470);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(4, 55);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(135, 17);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "Odaberi platformu";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // platf_combo
+            // 
+            this.platf_combo.FormattingEnabled = true;
+            this.platf_combo.Location = new System.Drawing.Point(158, 52);
+            this.platf_combo.Name = "platf_combo";
+            this.platf_combo.Size = new System.Drawing.Size(146, 24);
+            this.platf_combo.TabIndex = 9;
+            this.platf_combo.SelectedIndexChanged += new System.EventHandler(this.platf_combo_SelectedIndexChanged);
+            // 
+            // trailer_igrice
+            // 
+            this.trailer_igrice.Location = new System.Drawing.Point(576, 176);
+            this.trailer_igrice.Name = "trailer_igrice";
+            this.trailer_igrice.Size = new System.Drawing.Size(271, 296);
+            this.trailer_igrice.TabIndex = 8;
+            this.trailer_igrice.TabStop = false;
+            this.trailer_igrice.Text = "Trailer";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cijena_din);
+            this.panel1.Controls.Add(this.cijena_igrice);
+            this.panel1.Controls.Add(this.dost_din);
+            this.panel1.Controls.Add(this.kat_din);
+            this.panel1.Controls.Add(this.platf_din);
+            this.panel1.Controls.Add(this.dostupne_igrice);
+            this.panel1.Controls.Add(this.kategorija_igrice);
+            this.panel1.Controls.Add(this.platforma_igrice);
+            this.panel1.Location = new System.Drawing.Point(333, 176);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(237, 296);
+            this.panel1.TabIndex = 7;
+            // 
+            // cijena_din
+            // 
+            this.cijena_din.AutoSize = true;
+            this.cijena_din.Location = new System.Drawing.Point(184, 219);
+            this.cijena_din.Name = "cijena_din";
+            this.cijena_din.Size = new System.Drawing.Size(0, 17);
+            this.cijena_din.TabIndex = 16;
+            // 
+            // cijena_igrice
+            // 
+            this.cijena_igrice.AutoSize = true;
+            this.cijena_igrice.Location = new System.Drawing.Point(3, 219);
+            this.cijena_igrice.Name = "cijena_igrice";
+            this.cijena_igrice.Size = new System.Drawing.Size(57, 17);
+            this.cijena_igrice.TabIndex = 15;
+            this.cijena_igrice.Text = "Cijena:";
+            // 
+            // dost_din
+            // 
+            this.dost_din.AutoSize = true;
+            this.dost_din.Location = new System.Drawing.Point(184, 157);
+            this.dost_din.Name = "dost_din";
+            this.dost_din.Size = new System.Drawing.Size(0, 17);
+            this.dost_din.TabIndex = 14;
+            // 
+            // kat_din
+            // 
+            this.kat_din.AutoSize = true;
+            this.kat_din.Location = new System.Drawing.Point(107, 85);
+            this.kat_din.Name = "kat_din";
+            this.kat_din.Size = new System.Drawing.Size(0, 17);
+            this.kat_din.TabIndex = 13;
+            // 
+            // platf_din
+            // 
+            this.platf_din.AutoSize = true;
+            this.platf_din.Location = new System.Drawing.Point(107, 18);
+            this.platf_din.Name = "platf_din";
+            this.platf_din.Size = new System.Drawing.Size(0, 17);
+            this.platf_din.TabIndex = 12;
+            // 
+            // dostupne_igrice
+            // 
+            this.dostupne_igrice.AutoSize = true;
+            this.dostupne_igrice.Location = new System.Drawing.Point(3, 157);
+            this.dostupne_igrice.Name = "dostupne_igrice";
+            this.dostupne_igrice.Size = new System.Drawing.Size(161, 17);
+            this.dostupne_igrice.TabIndex = 10;
+            this.dostupne_igrice.Text = "Broj dostupnih igrica:";
+            // 
+            // kategorija_igrice
+            // 
+            this.kategorija_igrice.AutoSize = true;
+            this.kategorija_igrice.Location = new System.Drawing.Point(3, 85);
+            this.kategorija_igrice.Name = "kategorija_igrice";
+            this.kategorija_igrice.Size = new System.Drawing.Size(86, 17);
+            this.kategorija_igrice.TabIndex = 9;
+            this.kategorija_igrice.Text = "Kategorija:";
+            // 
+            // platforma_igrice
+            // 
+            this.platforma_igrice.AutoSize = true;
+            this.platforma_igrice.Location = new System.Drawing.Point(3, 18);
+            this.platforma_igrice.Name = "platforma_igrice";
+            this.platforma_igrice.Size = new System.Drawing.Size(80, 17);
+            this.platforma_igrice.TabIndex = 8;
+            this.platforma_igrice.Text = "Platforma:";
+            // 
+            // ime_igrice
+            // 
+            this.ime_igrice.AutoSize = true;
+            this.ime_igrice.Font = new System.Drawing.Font("Mortal Kombat Armageddon", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ime_igrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ime_igrice.Location = new System.Drawing.Point(336, 55);
+            this.ime_igrice.Name = "ime_igrice";
+            this.ime_igrice.Size = new System.Drawing.Size(0, 21);
+            this.ime_igrice.TabIndex = 2;
+            this.ime_igrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // slika_igrice
+            // 
+            this.slika_igrice.Location = new System.Drawing.Point(584, 3);
+            this.slika_igrice.Name = "slika_igrice";
+            this.slika_igrice.Size = new System.Drawing.Size(263, 158);
+            this.slika_igrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.slika_igrice.TabIndex = 1;
+            this.slika_igrice.TabStop = false;
             // 
             // games
             // 
@@ -332,27 +624,154 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.games.FormattingEnabled = true;
             this.games.ItemHeight = 16;
-            this.games.Location = new System.Drawing.Point(0, 4);
+            this.games.Location = new System.Drawing.Point(0, 180);
             this.games.Name = "games";
-            this.games.Size = new System.Drawing.Size(330, 468);
+            this.games.Size = new System.Drawing.Size(304, 292);
             this.games.TabIndex = 0;
+            this.games.SelectedIndexChanged += new System.EventHandler(this.games_SelectedIndexChanged);
             // 
             // profil_tab
             // 
+            this.profil_tab.Controls.Add(this.xKontakt);
+            this.profil_tab.Controls.Add(this.xMail);
+            this.profil_tab.Controls.Add(this.xJmbg);
+            this.profil_tab.Controls.Add(this.xUsername);
+            this.profil_tab.Controls.Add(this.xPrezime);
+            this.profil_tab.Controls.Add(this.xIme);
+            this.profil_tab.Controls.Add(this.label15);
+            this.profil_tab.Controls.Add(this.label14);
+            this.profil_tab.Controls.Add(this.label13);
+            this.profil_tab.Controls.Add(this.label12);
+            this.profil_tab.Controls.Add(this.label11);
+            this.profil_tab.Controls.Add(this.label10);
             this.profil_tab.Controls.Add(this.slika_profil);
             this.profil_tab.Location = new System.Drawing.Point(4, 25);
             this.profil_tab.Name = "profil_tab";
-            this.profil_tab.Size = new System.Drawing.Size(807, 482);
+            this.profil_tab.Size = new System.Drawing.Size(855, 482);
             this.profil_tab.TabIndex = 4;
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
             // 
+            // xKontakt
+            // 
+            this.xKontakt.AutoSize = true;
+            this.xKontakt.Location = new System.Drawing.Point(543, 367);
+            this.xKontakt.Name = "xKontakt";
+            this.xKontakt.Size = new System.Drawing.Size(40, 17);
+            this.xKontakt.TabIndex = 12;
+            this.xKontakt.Text = "Ime:";
+            // 
+            // xMail
+            // 
+            this.xMail.AutoSize = true;
+            this.xMail.Location = new System.Drawing.Point(543, 307);
+            this.xMail.Name = "xMail";
+            this.xMail.Size = new System.Drawing.Size(40, 17);
+            this.xMail.TabIndex = 11;
+            this.xMail.Text = "Ime:";
+            // 
+            // xJmbg
+            // 
+            this.xJmbg.AutoSize = true;
+            this.xJmbg.Location = new System.Drawing.Point(543, 248);
+            this.xJmbg.Name = "xJmbg";
+            this.xJmbg.Size = new System.Drawing.Size(40, 17);
+            this.xJmbg.TabIndex = 10;
+            this.xJmbg.Text = "Ime:";
+            // 
+            // xUsername
+            // 
+            this.xUsername.AutoSize = true;
+            this.xUsername.Location = new System.Drawing.Point(543, 187);
+            this.xUsername.Name = "xUsername";
+            this.xUsername.Size = new System.Drawing.Size(40, 17);
+            this.xUsername.TabIndex = 9;
+            this.xUsername.Text = "Ime:";
+            // 
+            // xPrezime
+            // 
+            this.xPrezime.AutoSize = true;
+            this.xPrezime.Location = new System.Drawing.Point(543, 131);
+            this.xPrezime.Name = "xPrezime";
+            this.xPrezime.Size = new System.Drawing.Size(40, 17);
+            this.xPrezime.TabIndex = 8;
+            this.xPrezime.Text = "Ime:";
+            // 
+            // xIme
+            // 
+            this.xIme.AutoSize = true;
+            this.xIme.Location = new System.Drawing.Point(543, 74);
+            this.xIme.Name = "xIme";
+            this.xIme.Size = new System.Drawing.Size(40, 17);
+            this.xIme.TabIndex = 7;
+            this.xIme.Text = "Ime:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label15.Location = new System.Drawing.Point(383, 187);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 17);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Username:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label14.Location = new System.Drawing.Point(383, 307);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 17);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "E-Mail:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label13.Location = new System.Drawing.Point(383, 367);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(75, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Kontakt:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label12.Location = new System.Drawing.Point(383, 248);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "JMBG:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label11.Location = new System.Drawing.Point(383, 131);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 17);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Prezime:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label10.Location = new System.Drawing.Point(383, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 17);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Ime:";
+            // 
             // slika_profil
             // 
-            this.slika_profil.Location = new System.Drawing.Point(45, 75);
+            this.slika_profil.Location = new System.Drawing.Point(37, 74);
             this.slika_profil.Name = "slika_profil";
             this.slika_profil.Size = new System.Drawing.Size(285, 310);
-            this.slika_profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.slika_profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.slika_profil.TabIndex = 0;
             this.slika_profil.TabStop = false;
             this.slika_profil.Click += new System.EventHandler(this.slika_profil_Click);
@@ -361,7 +780,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 511);
+            this.ClientSize = new System.Drawing.Size(867, 511);
             this.Controls.Add(this.tabovi_uposlenik);
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -375,6 +794,8 @@
             this.home_tab.PerformLayout();
             this.korisnici_tab.ResumeLayout(false);
             this.racunari_tab.ResumeLayout(false);
+            this.racunari_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar1)).EndInit();
@@ -384,6 +805,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).EndInit();
             this.igrice_tab.ResumeLayout(false);
+            this.igrice_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).EndInit();
             this.profil_tab.ResumeLayout(false);
             this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
@@ -416,6 +842,43 @@
         private System.Windows.Forms.ListBox games;
         private System.Windows.Forms.ListBox users;
         private System.Windows.Forms.PictureBox slika_profil;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label ime_igrice;
+        private System.Windows.Forms.PictureBox slika_igrice;
+        private System.Windows.Forms.GroupBox trailer_igrice;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label dost_din;
+        private System.Windows.Forms.Label kat_din;
+        private System.Windows.Forms.Label platf_din;
+        private System.Windows.Forms.Label dostupne_igrice;
+        private System.Windows.Forms.Label kategorija_igrice;
+        private System.Windows.Forms.Label platforma_igrice;
+        private System.Windows.Forms.Label cijena_din;
+        private System.Windows.Forms.Label cijena_igrice;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label xKontakt;
+        private System.Windows.Forms.Label xMail;
+        private System.Windows.Forms.Label xJmbg;
+        private System.Windows.Forms.Label xUsername;
+        private System.Windows.Forms.Label xPrezime;
+        private System.Windows.Forms.Label xIme;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox platf_combo;
 
     }
 }

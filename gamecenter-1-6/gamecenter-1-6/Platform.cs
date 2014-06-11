@@ -16,6 +16,9 @@ namespace GameCenter.klase
             Naziv = naziv;
             ID = id;
         }
-
+        public override string ToString()
+        {
+            return Naziv;
+        }
     }
 }
