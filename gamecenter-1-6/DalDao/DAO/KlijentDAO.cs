@@ -77,20 +77,16 @@ namespace DAL
                 }
             }
 
-            public Klijent update(Klijent entity)
+            public void update(Klijent entity)
             {
                 try
                 {
 
-                    string query = "update klijenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "', email = '" + entity.E_Mail + "', password = '" + entity.Password + "' , tipregistracije = '" + entity.TipRegistracije + "' where id ='" + entity.ID + "';";
+                     c = new MySqlCommand("update klijenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', jmbg = '" + entity.JMBG + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "', email = '" + entity.E_Mail + "', password = '" + entity.Password + "', username = '" + entity.Username + "' , tipregistracije = '" + entity.TipRegistracije + "' where id ='" + entity.ID + "'", con);
 
-                    command = new MySqlCommand(query, con);
+                    c.ExecuteNonQuery();
 
-                    command.ExecuteNonQuery();
-
-                    return entity;
-                    
-                    
+                  
 
                 }
                 catch (Exception e)

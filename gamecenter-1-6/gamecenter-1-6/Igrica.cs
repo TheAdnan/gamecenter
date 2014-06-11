@@ -37,6 +37,12 @@ namespace GameCenter.klase
         public Igrica(int sifra, String name, bool trejler, int available, double cijena, int pltfrm, String ktgr, String sliks)
         {
             Naziv = name; Sifra = sifra; Trailer = trejler; Dostupnost = available; Cijena = cijena; Platforma = pltfrm; Kategorija = ktgr; slika = sliks;
+            PostaviSliku(sliks);
+        }
+
+        public Igrica()
+        {
+            // TODO: Complete member initialization
         }
 
         public override String ToString()

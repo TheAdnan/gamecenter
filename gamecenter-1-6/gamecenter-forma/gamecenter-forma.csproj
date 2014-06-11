@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DodajIgricu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajIgricu.Designer.cs">
+      <DependentUpon>DodajIgricu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajKorisnika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     <Compile Include="RecenzentCP.Designer.cs">
       <DependentUpon>RecenzentCP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DodajIgricu.resx">
+      <DependentUpon>DodajIgricu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DodajKorisnika.resx">
       <DependentUpon>DodajKorisnika.cs</DependentUpon>
     </EmbeddedResource>

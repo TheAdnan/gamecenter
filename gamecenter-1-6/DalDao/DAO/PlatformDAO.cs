@@ -62,7 +62,7 @@ namespace DAL
                 }
             }
 
-            public Platform update(Platform entity)
+            public void update(Platform entity)
             {
                 try
                 {
@@ -72,7 +72,7 @@ namespace DAL
 
                     c.ExecuteNonQuery();
 
-                    return entity;
+                   
                 }
                 catch (Exception e)
                 {

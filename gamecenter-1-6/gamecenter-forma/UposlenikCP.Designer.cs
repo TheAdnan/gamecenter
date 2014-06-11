@@ -94,7 +94,7 @@
             this.platf_combo = new System.Windows.Forms.ComboBox();
             this.trailer_igrice = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.editujIgru = new System.Windows.Forms.Button();
             this.cijena_din = new System.Windows.Forms.Label();
             this.cijena_igrice = new System.Windows.Forms.Label();
             this.dost_din = new System.Windows.Forms.Label();
@@ -121,6 +121,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
+            this.p_u = new System.Windows.Forms.TextBox();
+            this.k_u = new System.Windows.Forms.TextBox();
+            this.d_u = new System.Windows.Forms.TextBox();
+            this.c_u = new System.Windows.Forms.TextBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.korisnici_tab.SuspendLayout();
@@ -798,6 +802,7 @@
             this.button9.TabIndex = 35;
             this.button9.Text = "Dodaj igricu";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -807,6 +812,7 @@
             this.button8.TabIndex = 34;
             this.button8.Text = "Obriši igricu";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -875,7 +881,11 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.c_u);
+            this.panel1.Controls.Add(this.d_u);
+            this.panel1.Controls.Add(this.k_u);
+            this.panel1.Controls.Add(this.p_u);
+            this.panel1.Controls.Add(this.editujIgru);
             this.panel1.Controls.Add(this.cijena_din);
             this.panel1.Controls.Add(this.cijena_igrice);
             this.panel1.Controls.Add(this.dost_din);
@@ -889,19 +899,20 @@
             this.panel1.Size = new System.Drawing.Size(316, 378);
             this.panel1.TabIndex = 7;
             // 
-            // button7
+            // editujIgru
             // 
-            this.button7.Location = new System.Drawing.Point(7, 331);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(292, 41);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Edituj igricu";
-            this.button7.UseVisualStyleBackColor = true;
+            this.editujIgru.Location = new System.Drawing.Point(7, 331);
+            this.editujIgru.Name = "editujIgru";
+            this.editujIgru.Size = new System.Drawing.Size(292, 41);
+            this.editujIgru.TabIndex = 33;
+            this.editujIgru.Text = "Edituj igricu";
+            this.editujIgru.UseVisualStyleBackColor = true;
+            this.editujIgru.Click += new System.EventHandler(this.button7_Click);
             // 
             // cijena_din
             // 
             this.cijena_din.AutoSize = true;
-            this.cijena_din.Location = new System.Drawing.Point(184, 219);
+            this.cijena_din.Location = new System.Drawing.Point(167, 222);
             this.cijena_din.Name = "cijena_din";
             this.cijena_din.Size = new System.Drawing.Size(0, 17);
             this.cijena_din.TabIndex = 16;
@@ -918,7 +929,7 @@
             // dost_din
             // 
             this.dost_din.AutoSize = true;
-            this.dost_din.Location = new System.Drawing.Point(184, 157);
+            this.dost_din.Location = new System.Drawing.Point(167, 157);
             this.dost_din.Name = "dost_din";
             this.dost_din.Size = new System.Drawing.Size(0, 17);
             this.dost_din.TabIndex = 14;
@@ -926,7 +937,7 @@
             // kat_din
             // 
             this.kat_din.AutoSize = true;
-            this.kat_din.Location = new System.Drawing.Point(107, 85);
+            this.kat_din.Location = new System.Drawing.Point(167, 85);
             this.kat_din.Name = "kat_din";
             this.kat_din.Size = new System.Drawing.Size(0, 17);
             this.kat_din.TabIndex = 13;
@@ -934,7 +945,7 @@
             // platf_din
             // 
             this.platf_din.AutoSize = true;
-            this.platf_din.Location = new System.Drawing.Point(107, 18);
+            this.platf_din.Location = new System.Drawing.Point(167, 18);
             this.platf_din.Name = "platf_din";
             this.platf_din.Size = new System.Drawing.Size(0, 17);
             this.platf_din.TabIndex = 12;
@@ -1158,6 +1169,38 @@
             this.slika_profil.TabStop = false;
             this.slika_profil.Click += new System.EventHandler(this.slika_profil_Click);
             // 
+            // p_u
+            // 
+            this.p_u.Location = new System.Drawing.Point(170, 15);
+            this.p_u.Name = "p_u";
+            this.p_u.Size = new System.Drawing.Size(100, 23);
+            this.p_u.TabIndex = 34;
+            this.p_u.Visible = false;
+            // 
+            // k_u
+            // 
+            this.k_u.Location = new System.Drawing.Point(170, 85);
+            this.k_u.Name = "k_u";
+            this.k_u.Size = new System.Drawing.Size(100, 23);
+            this.k_u.TabIndex = 35;
+            this.k_u.Visible = false;
+            // 
+            // d_u
+            // 
+            this.d_u.Location = new System.Drawing.Point(170, 154);
+            this.d_u.Name = "d_u";
+            this.d_u.Size = new System.Drawing.Size(100, 23);
+            this.d_u.TabIndex = 36;
+            this.d_u.Visible = false;
+            // 
+            // c_u
+            // 
+            this.c_u.Location = new System.Drawing.Point(170, 219);
+            this.c_u.Name = "c_u";
+            this.c_u.Size = new System.Drawing.Size(100, 23);
+            this.c_u.TabIndex = 37;
+            this.c_u.Visible = false;
+            // 
             // UposlenikCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1283,7 +1326,7 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button editujIgru;
         private System.Windows.Forms.Button addUser;
         private System.Windows.Forms.Button deleteUser;
         private System.Windows.Forms.Button button2;
@@ -1295,6 +1338,10 @@
         private System.Windows.Forms.TextBox username_unos;
         private System.Windows.Forms.TextBox prezime_unos;
         private System.Windows.Forms.Button Uhome;
+        private System.Windows.Forms.TextBox c_u;
+        private System.Windows.Forms.TextBox d_u;
+        private System.Windows.Forms.TextBox k_u;
+        private System.Windows.Forms.TextBox p_u;
 
     }
 }

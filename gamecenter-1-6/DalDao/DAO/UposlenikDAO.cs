@@ -70,7 +70,7 @@ namespace DAL
                 }
             }
            
-            public Uposlenik update(Uposlenik entity)
+            public void update(Uposlenik entity)
             {
                 try
                 {
@@ -80,7 +80,7 @@ namespace DAL
 
                     c.ExecuteNonQuery();
 
-                    return entity;
+                   
                    
 
                 }

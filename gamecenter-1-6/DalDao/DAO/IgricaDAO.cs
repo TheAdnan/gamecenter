@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    string query = "insert into igrice(naziv, trailer, dostupnost, cijena, kategorija, platforma) values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "');";
+                    string query = "insert into igrice(naziv, trailer, dostupnost, cijena, kategorija, platforma, slika) values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "','" + entity.slika + "');";
 
 
                     c = new MySqlCommand(query, con);
@@ -76,7 +76,7 @@ namespace DAL
                 }
             }
 
-            public Igrica update(Igrica entity)
+            public void update(Igrica entity)
             {
                 try
                 {
@@ -86,7 +86,7 @@ namespace DAL
 
                     c.ExecuteNonQuery();
 
-                    return entity;
+                    
 
                     
                     

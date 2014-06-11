@@ -9,7 +9,7 @@ namespace DAL.Interfejsi
     {
         void create(T entity);
         T read(T entity);
-        T update(T entity);
+        void update(T entity);
         void delete(T entity);
         T getById(int id);
         List<T> getAll();

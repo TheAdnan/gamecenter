@@ -62,7 +62,7 @@ namespace DAL
                 }
             }
            
-            public Recenzent update(Recenzent entity)
+            public void update(Recenzent entity)
             {
                 try
                 {
@@ -72,7 +72,7 @@ namespace DAL
 
                     c.ExecuteNonQuery();
 
-                    return entity;
+                    
 
                 }
                 catch (Exception e)

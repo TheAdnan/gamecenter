@@ -340,7 +340,19 @@ namespace gamecenter_forma
             for (int i = 0; i < sviKlijenti.Count; i++)
             {
                 if (users.SelectedItem.ToString() == sviKlijenti[i].ToString())
-                    x = sviKlijenti[i];
+                {
+                    x.Username = sviKlijenti[i].Username;
+                    x.ID = sviKlijenti[i].ID;
+                    x.Prezime = sviKlijenti[i].Prezime;
+                    x.Password = sviKlijenti[i].Password;
+                    x.JMBG = sviKlijenti[i].JMBG;
+                    x.Kontakt = sviKlijenti[i].Kontakt;
+                    x.slika = sviKlijenti[i].slika;
+                    x.PostaviSliku(x.slika);
+                    x.TipRegistracije = sviKlijenti[i].TipRegistracije;
+                    x.E_Mail = sviKlijenti[i].E_Mail;
+                }
+
             }
                 if (editUser.Text == "Edituj korisnika")
                 {
@@ -360,64 +372,59 @@ namespace gamecenter_forma
                     mail_unos.Text = Umail.Text;
                     tip_unos.Text = Utip_reg.Text;
                     username_unos.Text = Uuser.Text;
-
+                    
                 }
                 else
                 {
                     
-                    Klijent y = new Klijent(x.ID, Uime.Text, Uprezime.Text, Ujmbg.Text, Ukontakt.Text, x.slika, Umail.Text, Uuser.Text, x.Password, Convert.ToInt16(Utip_reg.Text));
-                    DAL.DAL f = DAL.DAL.Instanca;
+                    
+                    editUser.Text = "Edituj korisnika";
 
+                    Ime_unos.Visible = false;
+                    prezime_unos.Visible = false;
+                    mail_unos.Visible = false;
+                    jmb_user.Visible = false;
+                    username_unos.Visible = false;
+                    kontakt_unos.Visible = false;
+                    tip_unos.Visible = false;
+                    Uime.Text = Ime_unos.Text;
+                    Uprezime.Text = prezime_unos.Text;
+                    Ukontakt.Text = kontakt_unos.Text;
+                    Ujmbg.Text = jmb_user.Text;
+                    Umail.Text = mail_unos.Text;
+                    Utip_reg.Text = tip_unos.Text;
+                    Uuser.Text = username_unos.Text;
+
+                    DAL.DAL f = DAL.DAL.Instanca;
                     try
                     {
-                    DAL.DAL.KlijentDAO juza = f.getDAO.getKlijentDAO();
-                    for (int i = 0; i < sviKlijenti.Count; i++)
-                    {
-                        if (users.SelectedItem.ToString() == sviKlijenti[i].ToString()){
-                            sviKlijenti[i] = y;
-                            sviKlijenti[i] = juza.update(y);
-                            users.DataSource = null;
-                            users.DataSource = sviKlijenti;
-                        }
-                    }
-                    
-                    
-                    
-                        // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
-
-                        
-                        
-                        
-                    }
-                    catch
-                    {
-                        MessageBox.Show("greška");
-                        
-                    }
-                    finally
-                    {
-                        
-                        editUser.Text = "Edituj korisnika";
+                        DAL.DAL.KlijentDAO juza = f.getDAO.getKlijentDAO();
+                        x.Ime = Uime.Text;
+                        x.Prezime = Uprezime.Text;
+                        x.Kontakt = Ukontakt.Text;
+                        x.JMBG = Ujmbg.Text;
+                        x.E_Mail = Umail.Text;
+                        x.Username = Uuser.Text;
+                        juza.update(x);
+                        sviKlijenti = juza.getAll();
                         users.DataSource = null;
                         users.DataSource = sviKlijenti;
-                        Ime_unos.Visible = false;
-                        prezime_unos.Visible = false;
-                        mail_unos.Visible = false;
-                        jmb_user.Visible = false;
-                        username_unos.Visible = false;
-                        kontakt_unos.Visible = false;
-                        tip_unos.Visible = false;
-                        Uime.Text = Ime_unos.Text;
-                        Uprezime.Text = prezime_unos.Text;
-                        Ukontakt.Text = kontakt_unos.Text;
-                        Ujmbg.Text = jmb_user.Text;
-                        Umail.Text = mail_unos.Text;
-                        Utip_reg.Text = tip_unos.Text;
-                        Uuser.Text = username_unos.Text;
+                          
+                      }
+
+                catch
+                    {
+                        MessageBox.Show("greška");
+
                     }
 
-                }
-     }
+                    }
+                    
+                    
+                    
+
+}
+     
 
         private void addUser_Click(object sender, EventArgs e)
         {
@@ -452,6 +459,120 @@ namespace gamecenter_forma
                         sviKlijenti.RemoveAt(i);
                         users.DataSource = null;
                         users.DataSource = sviKlijenti;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Greška");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Igrica x = new Igrica();
+            for (int i = 0; i < sveIgrice.Count; i++)
+            {
+                if (users.SelectedItem.ToString() == sveIgrice[i].ToString())
+                {
+                    x.Naziv = sveIgrice[i].Naziv;
+                    x.Kategorija = sveIgrice[i].Kategorija;
+                    x.Platforma = sveIgrice[i].Platforma;
+                    x.Sifra = sveIgrice[i].Sifra;
+                    x.Trailer = sveIgrice[i].Trailer;
+                    x.Dostupnost = sveIgrice[i].Dostupnost;
+                    x.Cijena = sveIgrice[i].Cijena;
+                    x.slika = sveIgrice[i].slika;
+                    x.PostaviSliku(x.slika);
+                }
+            }
+            if(editujIgru.Text == "Potvrdi")
+            {
+                editujIgru.Text = "Edituj igricu";
+                p_u.Visible = false;
+                k_u.Visible = false;
+                d_u.Visible = false;
+                c_u.Visible = false;
+                platf_din.Text = p_u.Text;
+                kat_din.Text = k_u.Text;
+                dost_din.Text = d_u.Text;
+                cijena_din.Text = c_u.Text;
+                
+
+                DAL.DAL f = DAL.DAL.Instanca;
+                try
+                {
+                    x.Kategorija = k_u.Text;
+                    x.Platforma = Convert.ToInt32(p_u.Text);
+                    x.Dostupnost = Convert.ToInt32(d_u.Text);
+                    x.Cijena = Convert.ToDouble(c_u.Text);
+                    DAL.DAL.IgricaDAO juza = f.getDAO.getIgricaDAO();
+
+                    juza.update(x);
+
+
+
+                    sveIgrice = juza.getAll();
+                    games.DataSource = null;
+                    games.DataSource = sveIgrice;
+
+                }
+                catch
+                {
+                    MessageBox.Show("greška");
+
+                }
+
+            }
+            else
+            {
+                editujIgru.Text = "Potvrdi";
+                p_u.Visible = true;
+                k_u.Visible = true;
+                d_u.Visible = true;
+                c_u.Visible = true;
+                p_u.Text = platf_din.Text;
+                k_u.Text = kat_din.Text;
+                d_u.Text = dost_din.Text;
+                c_u.Text = cijena_din.Text;
+                
+            }
+            
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            (new DodajIgricu()).ShowDialog();
+            DAL.DAL f = DAL.DAL.Instanca;
+            try
+            {
+                DAL.DAL.IgricaDAO aj = f.getDAO.getIgricaDAO();
+                sveIgrice = aj.getAll();
+                games.DataSource = null;
+                games.DataSource = sviKlijenti;
+            }
+            catch
+            {
+                MessageBox.Show("DAYUM");
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            DAL.DAL f = DAL.DAL.Instanca;
+
+            try
+            {
+                DAL.DAL.IgricaDAO juza = f.getDAO.getIgricaDAO();
+                for (int i = 0; i < sveIgrice.Count; i++)
+                {
+                    if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                    {
+                        juza.delete(sveIgrice[i]);
+                        sviKlijenti.RemoveAt(i);
+                        games.DataSource = null;
+                        games.DataSource = sveIgrice;
                     }
                 }
             }
