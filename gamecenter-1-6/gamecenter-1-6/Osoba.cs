@@ -29,6 +29,10 @@ namespace GameCenter.klase
         {
             Ime = ime; Prezime = prezime; ID = id; JMBG = jmbg; Kontakt = kontakt; Adresa = adresa; E_Mail = email; Username = user; Password = pass;
         }
+        public override string ToString()
+        {
+            return Ime + " " + Prezime;
+        }
         public Osoba() { }
     }
 }

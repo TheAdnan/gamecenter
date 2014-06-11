@@ -9,11 +9,11 @@ using System.Drawing;
 
 namespace gamecenter_forma
 {
-    public class Podaci
+    public static class Podaci
     {
-        public List<Igrica> sveIgrice{get; set;}
-        public List<Uposlenik> sviUposlenici{set;get;}
-        public List<Recenzent> sviRecenzenti{get; set;}
-        public List<Klijent> sviKlijenti{set; get;}
+        public static List<Igrica> sveIgrice{get; set;}
+        public static List<Uposlenik> sviUposlenici{set;get;}
+        public static List<Recenzent> sviRecenzenti{get; set;}
+        public static List<Klijent> sviKlijenti{set; get;}
     }
 }

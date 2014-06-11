@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UposlenikCP));
             this.tabovi_uposlenik = new System.Windows.Forms.TabControl();
             this.home_tab = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.igrice_button = new System.Windows.Forms.Button();
             this.racunari_button = new System.Windows.Forms.Button();
@@ -46,9 +48,8 @@
             this.racunar4 = new System.Windows.Forms.PictureBox();
             this.racunar5 = new System.Windows.Forms.PictureBox();
             this.igrice_tab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.racunari_tab.SuspendLayout();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).BeginInit();
+            this.igrice_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabovi_uposlenik
@@ -94,12 +96,35 @@
             this.home_tab.TabIndex = 0;
             this.home_tab.Text = "Home";
             this.home_tab.UseVisualStyleBackColor = true;
+            this.home_tab.Click += new System.EventHandler(this.home_tab_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Dead Kansas", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(34, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(341, 144);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Welcome to\r\nClub of duty\r\nControl Panel\r\n";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 8F);
+            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(323, 331);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 129);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Profil";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // exit_button
             // 
-            this.exit_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.exit_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.exit_button.Image = ((System.Drawing.Image)(resources.GetObject("exit_button.Image")));
             this.exit_button.Location = new System.Drawing.Point(43, 331);
             this.exit_button.Name = "exit_button";
@@ -110,9 +135,7 @@
             // 
             // igrice_button
             // 
-            this.igrice_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.igrice_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.igrice_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.igrice_button.ForeColor = System.Drawing.Color.Red;
             this.igrice_button.Image = ((System.Drawing.Image)(resources.GetObject("igrice_button.Image")));
@@ -126,9 +149,7 @@
             // 
             // racunari_button
             // 
-            this.racunari_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.racunari_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunari_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.racunari_button.ForeColor = System.Drawing.Color.Red;
             this.racunari_button.Image = ((System.Drawing.Image)(resources.GetObject("racunari_button.Image")));
@@ -142,9 +163,7 @@
             // 
             // korisnici_button
             // 
-            this.korisnici_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.korisnici_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.korisnici_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.korisnici_button.ForeColor = System.Drawing.Color.Red;
             this.korisnici_button.Image = ((System.Drawing.Image)(resources.GetObject("korisnici_button.Image")));
@@ -185,6 +204,7 @@
             // 
             // racunar2
             // 
+            this.racunar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar2.Image = ((System.Drawing.Image)(resources.GetObject("racunar2.Image")));
             this.racunar2.Location = new System.Drawing.Point(506, 151);
             this.racunar2.Name = "racunar2";
@@ -196,6 +216,7 @@
             // 
             // racunar8
             // 
+            this.racunar8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar8.Image = ((System.Drawing.Image)(resources.GetObject("racunar8.Image")));
             this.racunar8.Location = new System.Drawing.Point(671, 355);
             this.racunar8.Name = "racunar8";
@@ -207,6 +228,7 @@
             // 
             // racunar1
             // 
+            this.racunar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar1.Image = ((System.Drawing.Image)(resources.GetObject("racunar1.Image")));
             this.racunar1.Location = new System.Drawing.Point(506, 42);
             this.racunar1.Name = "racunar1";
@@ -218,6 +240,7 @@
             // 
             // racunar7
             // 
+            this.racunar7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar7.Image = ((System.Drawing.Image)(resources.GetObject("racunar7.Image")));
             this.racunar7.Location = new System.Drawing.Point(671, 258);
             this.racunar7.Name = "racunar7";
@@ -229,6 +252,7 @@
             // 
             // racunar3
             // 
+            this.racunar3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar3.Image = ((System.Drawing.Image)(resources.GetObject("racunar3.Image")));
             this.racunar3.Location = new System.Drawing.Point(506, 258);
             this.racunar3.Name = "racunar3";
@@ -240,6 +264,7 @@
             // 
             // racunar6
             // 
+            this.racunar6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar6.Image = ((System.Drawing.Image)(resources.GetObject("racunar6.Image")));
             this.racunar6.Location = new System.Drawing.Point(671, 151);
             this.racunar6.Name = "racunar6";
@@ -251,6 +276,7 @@
             // 
             // racunar4
             // 
+            this.racunar4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar4.Image = ((System.Drawing.Image)(resources.GetObject("racunar4.Image")));
             this.racunar4.Location = new System.Drawing.Point(506, 355);
             this.racunar4.Name = "racunar4";
@@ -262,6 +288,7 @@
             // 
             // racunar5
             // 
+            this.racunar5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.racunar5.Image = ((System.Drawing.Image)(resources.GetObject("racunar5.Image")));
             this.racunar5.Location = new System.Drawing.Point(671, 42);
             this.racunar5.Name = "racunar5";
@@ -273,6 +300,7 @@
             // 
             // igrice_tab
             // 
+            this.igrice_tab.Controls.Add(this.games);
             this.igrice_tab.Location = new System.Drawing.Point(4, 25);
             this.igrice_tab.Name = "igrice_tab";
             this.igrice_tab.Size = new System.Drawing.Size(807, 482);
@@ -280,21 +308,16 @@
             this.igrice_tab.Text = "Igrice";
             this.igrice_tab.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // games
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(323, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 129);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Profil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.games.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.games.FormattingEnabled = true;
+            this.games.ItemHeight = 16;
+            this.games.Location = new System.Drawing.Point(0, 4);
+            this.games.Name = "games";
+            this.games.Size = new System.Drawing.Size(330, 468);
+            this.games.TabIndex = 0;
             // 
             // profil_tab
             // 
@@ -304,16 +327,6 @@
             this.profil_tab.TabIndex = 4;
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Dead Kansas", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(34, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 147);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Welcome to\r\nClub of duty\r\nControl Panel\r\n";
             // 
             // UposlenikCP
             // 
@@ -339,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).EndInit();
+            this.igrice_tab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -365,6 +379,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage profil_tab;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox games;
 
     }
 }

@@ -13,9 +13,9 @@ namespace gamecenter_forma
 {
     public partial class KlijentCP : Form
     {
-        public static Podaci p = new Podaci();
-        public Klijent Klajent= new Klijent();
         
+        public Klijent Klajent= new Klijent();
+        public static List<Igrica> sveIgrice;
         
         public KlijentCP()
         {
@@ -32,7 +32,7 @@ namespace gamecenter_forma
                // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
                 DAL.DAL.IgricaDAO igrica = f.getDAO.getIgricaDAO();
-                p.sveIgrice = igrica.getAll();
+                sveIgrice = igrica.getAll();
                 DAL.DAL.KlijentDAO klajent = f.getDAO.getKlijentDAO();
                 Klajent = klajent.getByUsername(username);
                 

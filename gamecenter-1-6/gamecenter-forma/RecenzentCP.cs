@@ -15,8 +15,9 @@ namespace gamecenter_forma
     {
        // private TextBox username;
         //private string user;
-        public static Podaci p = new Podaci();
+     
         public Recenzent  Reco = new Recenzent();
+        public static List<Igrica> sveIgrice;
         public RecenzentCP()
         {
             InitializeComponent();
@@ -36,7 +37,7 @@ namespace gamecenter_forma
                 // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
                 DAL.DAL.IgricaDAO igrica = f.getDAO.getIgricaDAO();
-                p.sveIgrice = igrica.getAll();
+                sveIgrice = igrica.getAll();
 
                 DAL.DAL.RecenzentDAO recenzent = f.getDAO.getRecenzentDAO();
                 Reco = recenzent.getByUsername(user);

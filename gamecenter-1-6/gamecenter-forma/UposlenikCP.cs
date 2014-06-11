@@ -26,8 +26,11 @@ namespace gamecenter_forma
             // TODO: Complete member initialization
             
         }
-        public static Podaci p = new Podaci();
-        public Uposlenik Cojek = new Uposlenik();
+        
+        public static Uposlenik Cojek = new Uposlenik();
+        public static List<Klijent> sviKlijenti;
+        public static List<Igrica> sveIgrice;
+        public static List<Platform> svePlatforme;
         public UposlenikCP(string username)
         {
             DAL.DAL f = DAL.DAL.Instanca;
@@ -36,12 +39,15 @@ namespace gamecenter_forma
                 // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
 
                 DAL.DAL.IgricaDAO igrica = f.getDAO.getIgricaDAO();
-                p.sveIgrice = igrica.getAll();
+                sveIgrice = igrica.getAll();
                 DAL.DAL.KlijentDAO klijent = f.getDAO.getKlijentDAO();
-                p.sviKlijenti = klijent.getAll();
+                sviKlijenti = klijent.getAll();
                 DAL.DAL.UposlenikDAO uposlenik = f.getDAO.getUposlenikDAO();
                 Cojek = uposlenik.getByUsername(username);
 
+                MessageBox.Show(sviKlijenti[0].ToString());
+                MessageBox.Show(sviKlijenti[1].ToString());
+                
             }
             catch
             {
@@ -195,6 +201,13 @@ namespace gamecenter_forma
         {
             tabovi_uposlenik.SelectedTab = profil_tab;
         }
+
+        private void home_tab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         
 
