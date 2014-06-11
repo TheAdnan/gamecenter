@@ -94,11 +94,11 @@
             this.exit_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.exit_button.Location = new System.Drawing.Point(26, 414);
+            this.exit_button.Image = ((System.Drawing.Image)(resources.GetObject("exit_button.Image")));
+            this.exit_button.Location = new System.Drawing.Point(28, 331);
             this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(131, 41);
+            this.exit_button.Size = new System.Drawing.Size(143, 129);
             this.exit_button.TabIndex = 3;
-            this.exit_button.Text = "Izađi";
             this.exit_button.UseVisualStyleBackColor = true;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
@@ -107,9 +107,12 @@
             this.igrice_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.igrice_button.Location = new System.Drawing.Point(621, 241);
+            this.igrice_button.Font = new System.Drawing.Font("Verdana", 8F);
+            this.igrice_button.ForeColor = System.Drawing.Color.Red;
+            this.igrice_button.Image = ((System.Drawing.Image)(resources.GetObject("igrice_button.Image")));
+            this.igrice_button.Location = new System.Drawing.Point(621, 19);
             this.igrice_button.Name = "igrice_button";
-            this.igrice_button.Size = new System.Drawing.Size(131, 41);
+            this.igrice_button.Size = new System.Drawing.Size(143, 129);
             this.igrice_button.TabIndex = 2;
             this.igrice_button.Text = "Igrice";
             this.igrice_button.UseVisualStyleBackColor = true;
@@ -120,24 +123,32 @@
             this.racunari_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.racunari_button.Location = new System.Drawing.Point(621, 329);
+            this.racunari_button.Font = new System.Drawing.Font("Verdana", 8F);
+            this.racunari_button.ForeColor = System.Drawing.Color.Red;
+            this.racunari_button.Image = ((System.Drawing.Image)(resources.GetObject("racunari_button.Image")));
+            this.racunari_button.Location = new System.Drawing.Point(621, 173);
             this.racunari_button.Name = "racunari_button";
-            this.racunari_button.Size = new System.Drawing.Size(131, 41);
+            this.racunari_button.Size = new System.Drawing.Size(143, 129);
             this.racunari_button.TabIndex = 1;
             this.racunari_button.Text = "Računari";
             this.racunari_button.UseVisualStyleBackColor = true;
+            this.racunari_button.Click += new System.EventHandler(this.racunari_button_Click);
             // 
             // korisnici_button
             // 
             this.korisnici_button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.korisnici_button.Location = new System.Drawing.Point(621, 414);
+            this.korisnici_button.Font = new System.Drawing.Font("Verdana", 8F);
+            this.korisnici_button.ForeColor = System.Drawing.Color.Red;
+            this.korisnici_button.Image = ((System.Drawing.Image)(resources.GetObject("korisnici_button.Image")));
+            this.korisnici_button.Location = new System.Drawing.Point(621, 331);
             this.korisnici_button.Name = "korisnici_button";
-            this.korisnici_button.Size = new System.Drawing.Size(131, 41);
+            this.korisnici_button.Size = new System.Drawing.Size(143, 129);
             this.korisnici_button.TabIndex = 0;
             this.korisnici_button.Text = "Korisnici";
             this.korisnici_button.UseVisualStyleBackColor = true;
+            this.korisnici_button.Click += new System.EventHandler(this.korisnici_button_Click);
             // 
             // korisnici_tab
             // 

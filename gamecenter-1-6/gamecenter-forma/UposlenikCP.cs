@@ -181,6 +181,16 @@ namespace gamecenter_forma
             tabovi_uposlenik.SelectedTab = igrice_tab;
         }
 
+        private void korisnici_button_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = korisnici_tab;
+        }
+
+        private void racunari_button_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = racunari_tab;
+        }
+
         
 
        
