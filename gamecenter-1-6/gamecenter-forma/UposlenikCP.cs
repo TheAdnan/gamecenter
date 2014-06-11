@@ -262,6 +262,7 @@ namespace gamecenter_forma
             }
         }
 
+
         private void platf_combo_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<String> igrice_filtrirano = new List<String>();
@@ -310,6 +311,27 @@ namespace gamecenter_forma
         private void button2_Click(object sender, EventArgs e)
         {
             tabovi_uposlenik.SelectedTab = home_tab;
+        }
+
+        private void users_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (users.SelectedIndex != -1)
+                for (int i = 0; i < sviKlijenti.Count; i++)
+                {
+                    if (users.SelectedItem.ToString() == sviKlijenti[i].ToString())
+                    {
+                        Uime.Text = sviKlijenti[i].Ime;
+                        Uprezime.Text = sviKlijenti[i].Prezime;
+                        Ukontakt.Text = sviKlijenti[i].Kontakt;
+                        Ujmbg.Text = sviKlijenti[i].JMBG;
+                        Umail.Text = sviKlijenti[i].E_Mail;
+                        Utip_reg.Text = sviKlijenti[i].TipRegistracije.ToString();
+                        Uuser.Text = sviKlijenti[i].Username;
+                        sviKlijenti[i].PostaviSliku(sviKlijenti[i].slika);
+                        slikajuzera.Image = sviKlijenti[i].Slika;
+
+                    }
+                }
         }
 
         

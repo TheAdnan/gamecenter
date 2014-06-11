@@ -103,7 +103,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.Utip_reg = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.slikajuzera = new System.Windows.Forms.PictureBox();
             this.editUser = new System.Windows.Forms.Button();
             this.Uhome = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -133,7 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
             this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).BeginInit();
             this.SuspendLayout();
             // 
             // tabovi_uposlenik
@@ -253,7 +253,7 @@
             this.korisnici_tab.Controls.Add(this.deleteUser);
             this.korisnici_tab.Controls.Add(this.Uhome);
             this.korisnici_tab.Controls.Add(this.editUser);
-            this.korisnici_tab.Controls.Add(this.pictureBox3);
+            this.korisnici_tab.Controls.Add(this.slikajuzera);
             this.korisnici_tab.Controls.Add(this.Utip_reg);
             this.korisnici_tab.Controls.Add(this.label31);
             this.korisnici_tab.Controls.Add(this.Ukontakt);
@@ -286,6 +286,7 @@
             this.users.Name = "users";
             this.users.Size = new System.Drawing.Size(330, 420);
             this.users.TabIndex = 1;
+            this.users.SelectedIndexChanged += new System.EventHandler(this.users_SelectedIndexChanged);
             // 
             // racunari_tab
             // 
@@ -854,7 +855,7 @@
             // Umail
             // 
             this.Umail.AutoSize = true;
-            this.Umail.Location = new System.Drawing.Point(472, 353);
+            this.Umail.Location = new System.Drawing.Point(472, 363);
             this.Umail.Name = "Umail";
             this.Umail.Size = new System.Drawing.Size(40, 17);
             this.Umail.TabIndex = 23;
@@ -863,7 +864,7 @@
             // Ujmbg
             // 
             this.Ujmbg.AutoSize = true;
-            this.Ujmbg.Location = new System.Drawing.Point(472, 270);
+            this.Ujmbg.Location = new System.Drawing.Point(472, 281);
             this.Ujmbg.Name = "Ujmbg";
             this.Ujmbg.Size = new System.Drawing.Size(40, 17);
             this.Ujmbg.TabIndex = 22;
@@ -872,7 +873,7 @@
             // Uuser
             // 
             this.Uuser.AutoSize = true;
-            this.Uuser.Location = new System.Drawing.Point(472, 198);
+            this.Uuser.Location = new System.Drawing.Point(472, 204);
             this.Uuser.Name = "Uuser";
             this.Uuser.Size = new System.Drawing.Size(40, 17);
             this.Uuser.TabIndex = 21;
@@ -900,7 +901,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label24.Location = new System.Drawing.Point(353, 198);
+            this.label24.Location = new System.Drawing.Point(353, 204);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(91, 17);
             this.label24.TabIndex = 18;
@@ -910,7 +911,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label25.Location = new System.Drawing.Point(353, 353);
+            this.label25.Location = new System.Drawing.Point(353, 363);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 17);
             this.label25.TabIndex = 17;
@@ -930,7 +931,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label27.Location = new System.Drawing.Point(353, 270);
+            this.label27.Location = new System.Drawing.Point(353, 281);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(57, 17);
             this.label27.TabIndex = 15;
@@ -977,13 +978,14 @@
             this.label31.Text = "Tip registracije:";
             this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
-            // pictureBox3
+            // slikajuzera
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(600, 53);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(247, 305);
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
+            this.slikajuzera.Location = new System.Drawing.Point(600, 53);
+            this.slikajuzera.Name = "slikajuzera";
+            this.slikajuzera.Size = new System.Drawing.Size(247, 305);
+            this.slikajuzera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.slikajuzera.TabIndex = 27;
+            this.slikajuzera.TabStop = false;
             // 
             // editUser
             // 
@@ -1121,7 +1123,7 @@
             this.profil_tab.ResumeLayout(false);
             this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1204,7 +1206,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button Uhome;
         private System.Windows.Forms.Button editUser;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox slikajuzera;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
