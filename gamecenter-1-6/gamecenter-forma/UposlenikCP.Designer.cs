@@ -38,8 +38,35 @@
             this.racunari_button = new System.Windows.Forms.Button();
             this.korisnici_button = new System.Windows.Forms.Button();
             this.korisnici_tab = new System.Windows.Forms.TabPage();
+            this.tip_unos = new System.Windows.Forms.TextBox();
+            this.kontakt_unos = new System.Windows.Forms.TextBox();
+            this.mail_unos = new System.Windows.Forms.TextBox();
+            this.jmb_user = new System.Windows.Forms.TextBox();
+            this.username_unos = new System.Windows.Forms.TextBox();
+            this.prezime_unos = new System.Windows.Forms.TextBox();
+            this.Ime_unos = new System.Windows.Forms.TextBox();
+            this.addUser = new System.Windows.Forms.Button();
+            this.deleteUser = new System.Windows.Forms.Button();
+            this.Uhome = new System.Windows.Forms.Button();
+            this.editUser = new System.Windows.Forms.Button();
+            this.slikajuzera = new System.Windows.Forms.PictureBox();
+            this.Utip_reg = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Ukontakt = new System.Windows.Forms.Label();
+            this.Umail = new System.Windows.Forms.Label();
+            this.Ujmbg = new System.Windows.Forms.Label();
+            this.Uuser = new System.Windows.Forms.Label();
+            this.Uprezime = new System.Windows.Forms.Label();
+            this.Uime = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.users = new System.Windows.Forms.ListBox();
             this.racunari_tab = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,12 +85,16 @@
             this.racunar4 = new System.Windows.Forms.PictureBox();
             this.racunar5 = new System.Windows.Forms.PictureBox();
             this.igrice_tab = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.platf_combo = new System.Windows.Forms.ComboBox();
             this.trailer_igrice = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.cijena_din = new System.Windows.Forms.Label();
             this.cijena_igrice = new System.Windows.Forms.Label();
             this.dost_din = new System.Windows.Forms.Label();
@@ -76,6 +107,7 @@
             this.slika_igrice = new System.Windows.Forms.PictureBox();
             this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.xKontakt = new System.Windows.Forms.Label();
             this.xMail = new System.Windows.Forms.Label();
             this.xJmbg = new System.Windows.Forms.Label();
@@ -89,41 +121,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
-            this.Ukontakt = new System.Windows.Forms.Label();
-            this.Umail = new System.Windows.Forms.Label();
-            this.Ujmbg = new System.Windows.Forms.Label();
-            this.Uuser = new System.Windows.Forms.Label();
-            this.Uprezime = new System.Windows.Forms.Label();
-            this.Uime = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.Utip_reg = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.slikajuzera = new System.Windows.Forms.PictureBox();
-            this.editUser = new System.Windows.Forms.Button();
-            this.Uhome = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.deleteUser = new System.Windows.Forms.Button();
-            this.addUser = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.Ime_unos = new System.Windows.Forms.TextBox();
-            this.prezime_unos = new System.Windows.Forms.TextBox();
-            this.username_unos = new System.Windows.Forms.TextBox();
-            this.jmb_user = new System.Windows.Forms.TextBox();
-            this.mail_unos = new System.Windows.Forms.TextBox();
-            this.kontakt_unos = new System.Windows.Forms.TextBox();
-            this.tip_unos = new System.Windows.Forms.TextBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.korisnici_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).BeginInit();
             this.racunari_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar2)).BeginInit();
@@ -140,7 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
             this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).BeginInit();
             this.SuspendLayout();
             // 
             // tabovi_uposlenik
@@ -171,7 +171,7 @@
             this.home_tab.Location = new System.Drawing.Point(4, 25);
             this.home_tab.Name = "home_tab";
             this.home_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.home_tab.Size = new System.Drawing.Size(855, 557);
+            this.home_tab.Size = new System.Drawing.Size(934, 557);
             this.home_tab.TabIndex = 0;
             this.home_tab.Text = "Home";
             this.home_tab.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.button1.Font = new System.Drawing.Font("Verdana", 8F);
             this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(332, 409);
+            this.button1.Location = new System.Drawing.Point(390, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 129);
             this.button1.TabIndex = 4;
@@ -218,7 +218,7 @@
             this.igrice_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.igrice_button.ForeColor = System.Drawing.Color.Red;
             this.igrice_button.Image = ((System.Drawing.Image)(resources.GetObject("igrice_button.Image")));
-            this.igrice_button.Location = new System.Drawing.Point(641, 32);
+            this.igrice_button.Location = new System.Drawing.Point(729, 32);
             this.igrice_button.Name = "igrice_button";
             this.igrice_button.Size = new System.Drawing.Size(143, 129);
             this.igrice_button.TabIndex = 2;
@@ -232,7 +232,7 @@
             this.racunari_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.racunari_button.ForeColor = System.Drawing.Color.Red;
             this.racunari_button.Image = ((System.Drawing.Image)(resources.GetObject("racunari_button.Image")));
-            this.racunari_button.Location = new System.Drawing.Point(641, 220);
+            this.racunari_button.Location = new System.Drawing.Point(729, 220);
             this.racunari_button.Name = "racunari_button";
             this.racunari_button.Size = new System.Drawing.Size(143, 129);
             this.racunari_button.TabIndex = 1;
@@ -246,7 +246,7 @@
             this.korisnici_button.Font = new System.Drawing.Font("Verdana", 8F);
             this.korisnici_button.ForeColor = System.Drawing.Color.Red;
             this.korisnici_button.Image = ((System.Drawing.Image)(resources.GetObject("korisnici_button.Image")));
-            this.korisnici_button.Location = new System.Drawing.Point(641, 409);
+            this.korisnici_button.Location = new System.Drawing.Point(729, 409);
             this.korisnici_button.Name = "korisnici_button";
             this.korisnici_button.Size = new System.Drawing.Size(143, 129);
             this.korisnici_button.TabIndex = 0;
@@ -290,6 +290,246 @@
             this.korisnici_tab.Text = "Korisnici";
             this.korisnici_tab.UseVisualStyleBackColor = true;
             // 
+            // tip_unos
+            // 
+            this.tip_unos.Location = new System.Drawing.Point(492, 508);
+            this.tip_unos.Name = "tip_unos";
+            this.tip_unos.Size = new System.Drawing.Size(110, 23);
+            this.tip_unos.TabIndex = 39;
+            this.tip_unos.Visible = false;
+            // 
+            // kontakt_unos
+            // 
+            this.kontakt_unos.Location = new System.Drawing.Point(475, 435);
+            this.kontakt_unos.Name = "kontakt_unos";
+            this.kontakt_unos.Size = new System.Drawing.Size(127, 23);
+            this.kontakt_unos.TabIndex = 38;
+            this.kontakt_unos.Visible = false;
+            // 
+            // mail_unos
+            // 
+            this.mail_unos.Location = new System.Drawing.Point(475, 360);
+            this.mail_unos.Name = "mail_unos";
+            this.mail_unos.Size = new System.Drawing.Size(127, 23);
+            this.mail_unos.TabIndex = 37;
+            this.mail_unos.Visible = false;
+            // 
+            // jmb_user
+            // 
+            this.jmb_user.Location = new System.Drawing.Point(475, 278);
+            this.jmb_user.Name = "jmb_user";
+            this.jmb_user.Size = new System.Drawing.Size(127, 23);
+            this.jmb_user.TabIndex = 36;
+            this.jmb_user.Visible = false;
+            // 
+            // username_unos
+            // 
+            this.username_unos.Location = new System.Drawing.Point(475, 204);
+            this.username_unos.Name = "username_unos";
+            this.username_unos.Size = new System.Drawing.Size(127, 23);
+            this.username_unos.TabIndex = 35;
+            this.username_unos.Visible = false;
+            // 
+            // prezime_unos
+            // 
+            this.prezime_unos.Location = new System.Drawing.Point(475, 122);
+            this.prezime_unos.Name = "prezime_unos";
+            this.prezime_unos.Size = new System.Drawing.Size(127, 23);
+            this.prezime_unos.TabIndex = 34;
+            this.prezime_unos.Visible = false;
+            // 
+            // Ime_unos
+            // 
+            this.Ime_unos.Location = new System.Drawing.Point(475, 50);
+            this.Ime_unos.Name = "Ime_unos";
+            this.Ime_unos.Size = new System.Drawing.Size(127, 23);
+            this.Ime_unos.TabIndex = 33;
+            this.Ime_unos.Visible = false;
+            // 
+            // addUser
+            // 
+            this.addUser.Location = new System.Drawing.Point(172, 495);
+            this.addUser.Name = "addUser";
+            this.addUser.Size = new System.Drawing.Size(154, 49);
+            this.addUser.TabIndex = 32;
+            this.addUser.Text = "Dodaj korisnika";
+            this.addUser.UseVisualStyleBackColor = true;
+            this.addUser.Click += new System.EventHandler(this.addUser_Click);
+            // 
+            // deleteUser
+            // 
+            this.deleteUser.Location = new System.Drawing.Point(0, 495);
+            this.deleteUser.Name = "deleteUser";
+            this.deleteUser.Size = new System.Drawing.Size(154, 49);
+            this.deleteUser.TabIndex = 31;
+            this.deleteUser.Text = "Obriši korisnika";
+            this.deleteUser.UseVisualStyleBackColor = true;
+            this.deleteUser.Click += new System.EventHandler(this.deleteUser_Click);
+            // 
+            // Uhome
+            // 
+            this.Uhome.Image = ((System.Drawing.Image)(resources.GetObject("Uhome.Image")));
+            this.Uhome.Location = new System.Drawing.Point(669, 495);
+            this.Uhome.Name = "Uhome";
+            this.Uhome.Size = new System.Drawing.Size(252, 49);
+            this.Uhome.TabIndex = 29;
+            this.Uhome.UseVisualStyleBackColor = true;
+            this.Uhome.Click += new System.EventHandler(this.Uhome_Click);
+            // 
+            // editUser
+            // 
+            this.editUser.Location = new System.Drawing.Point(669, 422);
+            this.editUser.Name = "editUser";
+            this.editUser.Size = new System.Drawing.Size(252, 49);
+            this.editUser.TabIndex = 28;
+            this.editUser.Text = "Edituj korisnika";
+            this.editUser.UseVisualStyleBackColor = true;
+            this.editUser.Click += new System.EventHandler(this.editUser_Click);
+            // 
+            // slikajuzera
+            // 
+            this.slikajuzera.Location = new System.Drawing.Point(669, 53);
+            this.slikajuzera.Name = "slikajuzera";
+            this.slikajuzera.Size = new System.Drawing.Size(247, 305);
+            this.slikajuzera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.slikajuzera.TabIndex = 27;
+            this.slikajuzera.TabStop = false;
+            // 
+            // Utip_reg
+            // 
+            this.Utip_reg.AutoSize = true;
+            this.Utip_reg.Location = new System.Drawing.Point(489, 511);
+            this.Utip_reg.Name = "Utip_reg";
+            this.Utip_reg.Size = new System.Drawing.Size(40, 17);
+            this.Utip_reg.TabIndex = 26;
+            this.Utip_reg.Text = "Ime:";
+            this.Utip_reg.Click += new System.EventHandler(this.label30_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label31.Location = new System.Drawing.Point(353, 511);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(130, 17);
+            this.label31.TabIndex = 25;
+            this.label31.Text = "Tip registracije:";
+            this.label31.Click += new System.EventHandler(this.label31_Click);
+            // 
+            // Ukontakt
+            // 
+            this.Ukontakt.AutoSize = true;
+            this.Ukontakt.Location = new System.Drawing.Point(472, 438);
+            this.Ukontakt.Name = "Ukontakt";
+            this.Ukontakt.Size = new System.Drawing.Size(40, 17);
+            this.Ukontakt.TabIndex = 24;
+            this.Ukontakt.Text = "Ime:";
+            // 
+            // Umail
+            // 
+            this.Umail.AutoSize = true;
+            this.Umail.Location = new System.Drawing.Point(472, 363);
+            this.Umail.Name = "Umail";
+            this.Umail.Size = new System.Drawing.Size(40, 17);
+            this.Umail.TabIndex = 23;
+            this.Umail.Text = "Ime:";
+            // 
+            // Ujmbg
+            // 
+            this.Ujmbg.AutoSize = true;
+            this.Ujmbg.Location = new System.Drawing.Point(472, 281);
+            this.Ujmbg.Name = "Ujmbg";
+            this.Ujmbg.Size = new System.Drawing.Size(40, 17);
+            this.Ujmbg.TabIndex = 22;
+            this.Ujmbg.Text = "Ime:";
+            // 
+            // Uuser
+            // 
+            this.Uuser.AutoSize = true;
+            this.Uuser.Location = new System.Drawing.Point(472, 204);
+            this.Uuser.Name = "Uuser";
+            this.Uuser.Size = new System.Drawing.Size(40, 17);
+            this.Uuser.TabIndex = 21;
+            this.Uuser.Text = "Ime:";
+            // 
+            // Uprezime
+            // 
+            this.Uprezime.AutoSize = true;
+            this.Uprezime.Location = new System.Drawing.Point(472, 125);
+            this.Uprezime.Name = "Uprezime";
+            this.Uprezime.Size = new System.Drawing.Size(40, 17);
+            this.Uprezime.TabIndex = 20;
+            this.Uprezime.Text = "Ime:";
+            // 
+            // Uime
+            // 
+            this.Uime.AutoSize = true;
+            this.Uime.Location = new System.Drawing.Point(472, 56);
+            this.Uime.Name = "Uime";
+            this.Uime.Size = new System.Drawing.Size(40, 17);
+            this.Uime.TabIndex = 19;
+            this.Uime.Text = "Ime:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label24.Location = new System.Drawing.Point(353, 204);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(91, 17);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "Username:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label25.Location = new System.Drawing.Point(353, 363);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 17);
+            this.label25.TabIndex = 17;
+            this.label25.Text = "E-Mail:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label26.Location = new System.Drawing.Point(353, 438);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(75, 17);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "Kontakt:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label27.Location = new System.Drawing.Point(353, 281);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 17);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "JMBG:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label28.Location = new System.Drawing.Point(353, 125);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(75, 17);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Prezime:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label29.Location = new System.Drawing.Point(353, 53);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(45, 17);
+            this.label29.TabIndex = 13;
+            this.label29.Text = "Ime:";
+            // 
             // users
             // 
             this.users.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -325,10 +565,21 @@
             this.racunari_tab.Location = new System.Drawing.Point(4, 25);
             this.racunari_tab.Name = "racunari_tab";
             this.racunari_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.racunari_tab.Size = new System.Drawing.Size(855, 557);
+            this.racunari_tab.Size = new System.Drawing.Size(934, 557);
             this.racunari_tab.TabIndex = 1;
             this.racunari_tab.Text = "Računari";
             this.racunari_tab.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(798, 499);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 49);
+            this.button4.TabIndex = 31;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label9
             // 
@@ -533,11 +784,41 @@
             this.igrice_tab.Controls.Add(this.games);
             this.igrice_tab.Location = new System.Drawing.Point(4, 25);
             this.igrice_tab.Name = "igrice_tab";
-            this.igrice_tab.Size = new System.Drawing.Size(855, 557);
+            this.igrice_tab.Size = new System.Drawing.Size(934, 557);
             this.igrice_tab.TabIndex = 3;
             this.igrice_tab.Text = "Igrice";
             this.igrice_tab.UseVisualStyleBackColor = true;
             this.igrice_tab.Click += new System.EventHandler(this.igrice_tab_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(158, 507);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(146, 41);
+            this.button9.TabIndex = 35;
+            this.button9.Text = "Dodaj igricu";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(4, 507);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(135, 41);
+            this.button8.TabIndex = 34;
+            this.button8.Text = "Obriši igricu";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(663, 507);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(263, 41);
+            this.button6.TabIndex = 31;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label18
             // 
@@ -583,7 +864,7 @@
             // 
             this.trailer_igrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trailer_igrice.Location = new System.Drawing.Point(576, 176);
+            this.trailer_igrice.Location = new System.Drawing.Point(655, 176);
             this.trailer_igrice.Name = "trailer_igrice";
             this.trailer_igrice.Size = new System.Drawing.Size(271, 315);
             this.trailer_igrice.TabIndex = 8;
@@ -605,8 +886,17 @@
             this.panel1.Controls.Add(this.platforma_igrice);
             this.panel1.Location = new System.Drawing.Point(333, 176);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(237, 378);
+            this.panel1.Size = new System.Drawing.Size(316, 378);
             this.panel1.TabIndex = 7;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(7, 331);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(292, 41);
+            this.button7.TabIndex = 33;
+            this.button7.Text = "Edituj igricu";
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // cijena_din
             // 
@@ -691,7 +981,7 @@
             // 
             this.slika_igrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.slika_igrice.Location = new System.Drawing.Point(584, 3);
+            this.slika_igrice.Location = new System.Drawing.Point(663, 3);
             this.slika_igrice.Name = "slika_igrice";
             this.slika_igrice.Size = new System.Drawing.Size(263, 158);
             this.slika_igrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -728,10 +1018,21 @@
             this.profil_tab.Controls.Add(this.slika_profil);
             this.profil_tab.Location = new System.Drawing.Point(4, 25);
             this.profil_tab.Name = "profil_tab";
-            this.profil_tab.Size = new System.Drawing.Size(855, 557);
+            this.profil_tab.Size = new System.Drawing.Size(934, 557);
             this.profil_tab.TabIndex = 4;
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(798, 499);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 49);
+            this.button2.TabIndex = 32;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // xKontakt
             // 
@@ -857,304 +1158,6 @@
             this.slika_profil.TabStop = false;
             this.slika_profil.Click += new System.EventHandler(this.slika_profil_Click);
             // 
-            // Ukontakt
-            // 
-            this.Ukontakt.AutoSize = true;
-            this.Ukontakt.Location = new System.Drawing.Point(472, 438);
-            this.Ukontakt.Name = "Ukontakt";
-            this.Ukontakt.Size = new System.Drawing.Size(40, 17);
-            this.Ukontakt.TabIndex = 24;
-            this.Ukontakt.Text = "Ime:";
-            // 
-            // Umail
-            // 
-            this.Umail.AutoSize = true;
-            this.Umail.Location = new System.Drawing.Point(472, 363);
-            this.Umail.Name = "Umail";
-            this.Umail.Size = new System.Drawing.Size(40, 17);
-            this.Umail.TabIndex = 23;
-            this.Umail.Text = "Ime:";
-            // 
-            // Ujmbg
-            // 
-            this.Ujmbg.AutoSize = true;
-            this.Ujmbg.Location = new System.Drawing.Point(472, 281);
-            this.Ujmbg.Name = "Ujmbg";
-            this.Ujmbg.Size = new System.Drawing.Size(40, 17);
-            this.Ujmbg.TabIndex = 22;
-            this.Ujmbg.Text = "Ime:";
-            // 
-            // Uuser
-            // 
-            this.Uuser.AutoSize = true;
-            this.Uuser.Location = new System.Drawing.Point(472, 204);
-            this.Uuser.Name = "Uuser";
-            this.Uuser.Size = new System.Drawing.Size(40, 17);
-            this.Uuser.TabIndex = 21;
-            this.Uuser.Text = "Ime:";
-            // 
-            // Uprezime
-            // 
-            this.Uprezime.AutoSize = true;
-            this.Uprezime.Location = new System.Drawing.Point(472, 125);
-            this.Uprezime.Name = "Uprezime";
-            this.Uprezime.Size = new System.Drawing.Size(40, 17);
-            this.Uprezime.TabIndex = 20;
-            this.Uprezime.Text = "Ime:";
-            // 
-            // Uime
-            // 
-            this.Uime.AutoSize = true;
-            this.Uime.Location = new System.Drawing.Point(472, 56);
-            this.Uime.Name = "Uime";
-            this.Uime.Size = new System.Drawing.Size(40, 17);
-            this.Uime.TabIndex = 19;
-            this.Uime.Text = "Ime:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label24.Location = new System.Drawing.Point(353, 204);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(91, 17);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "Username:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label25.Location = new System.Drawing.Point(353, 363);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(61, 17);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "E-Mail:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label26.Location = new System.Drawing.Point(353, 438);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(75, 17);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "Kontakt:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label27.Location = new System.Drawing.Point(353, 281);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(57, 17);
-            this.label27.TabIndex = 15;
-            this.label27.Text = "JMBG:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label28.Location = new System.Drawing.Point(353, 125);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(75, 17);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "Prezime:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label29.Location = new System.Drawing.Point(353, 53);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(45, 17);
-            this.label29.TabIndex = 13;
-            this.label29.Text = "Ime:";
-            // 
-            // Utip_reg
-            // 
-            this.Utip_reg.AutoSize = true;
-            this.Utip_reg.Location = new System.Drawing.Point(489, 511);
-            this.Utip_reg.Name = "Utip_reg";
-            this.Utip_reg.Size = new System.Drawing.Size(40, 17);
-            this.Utip_reg.TabIndex = 26;
-            this.Utip_reg.Text = "Ime:";
-            this.Utip_reg.Click += new System.EventHandler(this.label30_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label31.Location = new System.Drawing.Point(353, 511);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(130, 17);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "Tip registracije:";
-            this.label31.Click += new System.EventHandler(this.label31_Click);
-            // 
-            // slikajuzera
-            // 
-            this.slikajuzera.Location = new System.Drawing.Point(669, 53);
-            this.slikajuzera.Name = "slikajuzera";
-            this.slikajuzera.Size = new System.Drawing.Size(247, 305);
-            this.slikajuzera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.slikajuzera.TabIndex = 27;
-            this.slikajuzera.TabStop = false;
-            // 
-            // editUser
-            // 
-            this.editUser.Location = new System.Drawing.Point(669, 422);
-            this.editUser.Name = "editUser";
-            this.editUser.Size = new System.Drawing.Size(252, 49);
-            this.editUser.TabIndex = 28;
-            this.editUser.Text = "Edituj korisnika";
-            this.editUser.UseVisualStyleBackColor = true;
-            // 
-            // Uhome
-            // 
-            this.Uhome.Image = ((System.Drawing.Image)(resources.GetObject("Uhome.Image")));
-            this.Uhome.Location = new System.Drawing.Point(669, 495);
-            this.Uhome.Name = "Uhome";
-            this.Uhome.Size = new System.Drawing.Size(252, 49);
-            this.Uhome.TabIndex = 29;
-            this.Uhome.UseVisualStyleBackColor = true;
-            this.Uhome.Click += new System.EventHandler(this.Uhome_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(710, 499);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 49);
-            this.button4.TabIndex = 31;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(584, 507);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(263, 41);
-            this.button6.TabIndex = 31;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 331);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(216, 41);
-            this.button7.TabIndex = 33;
-            this.button7.Text = "Edituj igricu";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(4, 507);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(135, 41);
-            this.button8.TabIndex = 34;
-            this.button8.Text = "Obriši igricu";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(158, 507);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 41);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "Dodaj igricu";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // deleteUser
-            // 
-            this.deleteUser.Location = new System.Drawing.Point(0, 495);
-            this.deleteUser.Name = "deleteUser";
-            this.deleteUser.Size = new System.Drawing.Size(154, 49);
-            this.deleteUser.TabIndex = 31;
-            this.deleteUser.Text = "Obriši korisnika";
-            this.deleteUser.UseVisualStyleBackColor = true;
-            // 
-            // addUser
-            // 
-            this.addUser.Location = new System.Drawing.Point(172, 495);
-            this.addUser.Name = "addUser";
-            this.addUser.Size = new System.Drawing.Size(154, 49);
-            this.addUser.TabIndex = 32;
-            this.addUser.Text = "Dodaj korisnika";
-            this.addUser.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(719, 499);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 49);
-            this.button2.TabIndex = 32;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // Ime_unos
-            // 
-            this.Ime_unos.Location = new System.Drawing.Point(475, 50);
-            this.Ime_unos.Name = "Ime_unos";
-            this.Ime_unos.Size = new System.Drawing.Size(127, 23);
-            this.Ime_unos.TabIndex = 33;
-            this.Ime_unos.Visible = false;
-            // 
-            // prezime_unos
-            // 
-            this.prezime_unos.Location = new System.Drawing.Point(475, 122);
-            this.prezime_unos.Name = "prezime_unos";
-            this.prezime_unos.Size = new System.Drawing.Size(127, 23);
-            this.prezime_unos.TabIndex = 34;
-            this.prezime_unos.Visible = false;
-            // 
-            // username_unos
-            // 
-            this.username_unos.Location = new System.Drawing.Point(475, 204);
-            this.username_unos.Name = "username_unos";
-            this.username_unos.Size = new System.Drawing.Size(127, 23);
-            this.username_unos.TabIndex = 35;
-            this.username_unos.Visible = false;
-            // 
-            // jmb_user
-            // 
-            this.jmb_user.Location = new System.Drawing.Point(475, 278);
-            this.jmb_user.Name = "jmb_user";
-            this.jmb_user.Size = new System.Drawing.Size(127, 23);
-            this.jmb_user.TabIndex = 36;
-            this.jmb_user.Visible = false;
-            // 
-            // mail_unos
-            // 
-            this.mail_unos.Location = new System.Drawing.Point(475, 360);
-            this.mail_unos.Name = "mail_unos";
-            this.mail_unos.Size = new System.Drawing.Size(127, 23);
-            this.mail_unos.TabIndex = 37;
-            this.mail_unos.Visible = false;
-            // 
-            // kontakt_unos
-            // 
-            this.kontakt_unos.Location = new System.Drawing.Point(475, 435);
-            this.kontakt_unos.Name = "kontakt_unos";
-            this.kontakt_unos.Size = new System.Drawing.Size(127, 23);
-            this.kontakt_unos.TabIndex = 38;
-            this.kontakt_unos.Visible = false;
-            // 
-            // tip_unos
-            // 
-            this.tip_unos.Location = new System.Drawing.Point(492, 508);
-            this.tip_unos.Name = "tip_unos";
-            this.tip_unos.Size = new System.Drawing.Size(110, 23);
-            this.tip_unos.TabIndex = 39;
-            this.tip_unos.Visible = false;
-            // 
             // UposlenikCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1173,6 +1176,7 @@
             this.home_tab.PerformLayout();
             this.korisnici_tab.ResumeLayout(false);
             this.korisnici_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).EndInit();
             this.racunari_tab.ResumeLayout(false);
             this.racunari_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1193,7 +1197,6 @@
             this.profil_tab.ResumeLayout(false);
             this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slikajuzera)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1274,7 +1277,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label Utip_reg;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button Uhome;
         private System.Windows.Forms.Button editUser;
         private System.Windows.Forms.PictureBox slikajuzera;
         private System.Windows.Forms.Button button4;
@@ -1292,6 +1294,7 @@
         private System.Windows.Forms.TextBox jmb_user;
         private System.Windows.Forms.TextBox username_unos;
         private System.Windows.Forms.TextBox prezime_unos;
+        private System.Windows.Forms.Button Uhome;
 
     }
 }

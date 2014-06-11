@@ -15,19 +15,34 @@ namespace DAL
         {
             #region IDaoCrud<Klijent> Members
             protected MySqlCommand c;
+            protected MySqlCommand command;
 
             public long create(Klijent entity)
             {
                 try
                 {
-                    c = new MySqlCommand("insert into klijenti values ('" + entity.Prezime + "','" + entity.Ime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password +  "','" + entity.TipRegistracije + "')", con);
-                    c.ExecuteNonQuery();
-                    return c.LastInsertedId;
+                    string query = "insert into klijenti(ime,prezime,jmbg,kontakt,slika,email,username,password, tipregistracije) values ('" + entity.Ime + "','" + entity.Prezime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password + "','" + entity.TipRegistracije + "');";
+
+
+                    command = new MySqlCommand(query, con);
+                    command.ExecuteNonQuery();
+
+                    return command.LastInsertedId;
                 }
                 catch (Exception e)
                 {
                     throw e;
                 }
+                //try
+                //{
+                //    c = new MySqlCommand("insert into klijenti values ('" + entity.Ime + "','" + entity.Prezime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password +  "','" + entity.TipRegistracije + "')", con);
+                //    c.ExecuteNonQuery();
+                //    return c.LastInsertedId;
+                //}
+                //catch (Exception e)
+                //{
+                //    throw e;
+                //}
             }
 
             public List<Klijent> getAll()
@@ -66,19 +81,16 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update klijenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "', email = '" + entity.E_Mail + "', password = '"+ entity.Password + "' , tipregistracije = '" + entity.TipRegistracije + "' where id ='" + entity.ID + "'", con);
 
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        Klijent pom = new Klijent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("slika"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetInt16("tipregistracije"));
-                        delete(entity);
-                        r.Close();
-                        return pom;
-                    }
-                    delete(entity);
-                    r.Close();
-                    return null;
+                    string query = "update klijenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "', email = '" + entity.E_Mail + "', password = '" + entity.Password + "' , tipregistracije = '" + entity.TipRegistracije + "' where id ='" + entity.ID + "';";
+
+                    command = new MySqlCommand(query, con);
+
+                    command.ExecuteNonQuery();
+
+                    return entity;
+                    
+                    
 
                 }
                 catch (Exception e)

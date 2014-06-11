@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into platforme values ('" + entity.ID + "','" + entity.Naziv + "')", con);
+                    c = new MySqlCommand("insert into platforme(naziv) values ('" + entity.Naziv + "');", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -66,18 +66,13 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("select * from platforme where id = '" + entity.ID + "'", con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        Platform pom = new Platform(r.GetInt32("id"), r.GetString("naziv"));
-                        delete(entity);
-                        r.Close();
-                        return pom;
-                    }
-                    delete(entity);
-                    r.Close();
-                    return null;
+                    string query = "update platforme set naziv = '" + entity.Naziv + "';";
+
+                    c = new MySqlCommand(query, con);
+
+                    c.ExecuteNonQuery();
+
+                    return entity;
                 }
                 catch (Exception e)
                 {

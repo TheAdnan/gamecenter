@@ -20,14 +20,28 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into igrice values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "')", con);
+                    string query = "insert into igrice(naziv, trailer, dostupnost, cijena, kategorija, platforma) values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "');";
+
+
+                    c = new MySqlCommand(query, con);
                     c.ExecuteNonQuery();
+
                     return c.LastInsertedId;
                 }
                 catch (Exception e)
                 {
                     throw e;
                 }
+                //try
+                //{
+                //    c = new MySqlCommand("insert into igrice values ('" + entity.Naziv + "','" + entity.Trailer + "','" + entity.Dostupnost + "','" + entity.Cijena + "','" + entity.Kategorija + "','" + entity.Platforma + "')", con);
+                //    c.ExecuteNonQuery();
+                //    return c.LastInsertedId;
+                //}
+                //catch (Exception e)
+                //{
+                //    throw e;
+                //}
             }
 
             public List<Igrica> getAll()
@@ -66,19 +80,15 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update igrice set naziv = '" + entity.Naziv + "', trailer = '" + entity.Trailer + "', dostupnost = '" + entity.Dostupnost + "',  cijena= '" + entity.Cijena + "', kategorija = '" + entity.Kategorija + "', platforma = '" + entity.Platforma + "'slika = '" + entity.slika +"' where sifra ='" + entity.Sifra + "'", con);
-                   
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        Igrica pom = new Igrica(r.GetInt32("sifra"), r.GetString("naziv"), r.GetBoolean("trailer"), r.GetInt32("dostupnost"), r.GetDouble("cijena"), r.GetInt32("platforma"), r.GetString("kategorija"), r.GetString("slika"));
-                        delete(entity);
-                        r.Close();
-                        return pom;
-                    }
-                    delete(entity);
-                    r.Close();
-                    return null;
+                    string query = "update igrice set naziv = '" + entity.Naziv + "', trailer = '" + entity.Trailer + "', dostupnost = '" + entity.Dostupnost + "',  cijena= '" + entity.Cijena + "', kategorija = '" + entity.Kategorija + "', platforma = '" + entity.Platforma + "'slika = '" + entity.slika + "' where sifra ='" + entity.Sifra + "';";
+
+                    c = new MySqlCommand(query, con);
+
+                    c.ExecuteNonQuery();
+
+                    return entity;
+
+                    
                     
                 }
                 catch (Exception e)

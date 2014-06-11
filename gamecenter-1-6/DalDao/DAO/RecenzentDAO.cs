@@ -20,7 +20,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("insert into recenzenti values ('" + entity.Prezime + "','" + entity.Ime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password + "','" +  entity.Plata + "','" + entity.RadnoVrijeme + "')", con);
+                    c = new MySqlCommand("insert into recenzenti(ime,prezime,jmbg,kontakt,slika,email,username,password, plata, radnoVrijeme) values ('" + entity.Ime + "','" + entity.Prezime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password + "','" + entity.Plata + "','" + entity.RadnoVrijeme + "')", con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -66,19 +66,13 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update recenzenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "',email = '" + entity.E_Mail + "', set password = '" + entity.Password + "', plata = '" + entity.Plata + "', radnovrijeme = '" + entity.RadnoVrijeme + "' where id ='" + entity.ID + "'", con);
+                    string query = "update recenzenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.slika + "', email = '" + entity.E_Mail + "', password = '" + entity.Password + "', plata = '" + entity.Plata + "', radnovrijeme = '" + entity.RadnoVrijeme + "' where id ='" + entity.ID + "';";
 
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        Recenzent pom = new Recenzent(r.GetInt32("id"), r.GetString("ime"), r.GetString("prezime"), r.GetString("jmbg"), r.GetString("kontakt"), r.GetString("slika"), r.GetString("email"), r.GetString("username"), r.GetString("password"), r.GetDouble("plata"), r.GetInt32("radnovrijeme"));
-                        delete(entity);
-                        r.Close();
-                        return pom;
-                    }
-                    delete(entity);
-                    r.Close();
-                    return null;
+                    c = new MySqlCommand(query, con);
+
+                    c.ExecuteNonQuery();
+
+                    return entity;
 
                 }
                 catch (Exception e)

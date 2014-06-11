@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DodajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKorisnika.Designer.cs">
+      <DependentUpon>DodajKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="UposlenikCP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="RecenzentCP.Designer.cs">
       <DependentUpon>RecenzentCP.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DodajKorisnika.resx">
+      <DependentUpon>DodajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KlijentCP.resx">
       <DependentUpon>KlijentCP.cs</DependentUpon>
     </EmbeddedResource>

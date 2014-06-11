@@ -334,7 +334,120 @@ namespace gamecenter_forma
                 }
         }
 
-        
+        private void editUser_Click(object sender, EventArgs e)
+        {
+            Klijent x = new Klijent();
+            for (int i = 0; i < sviKlijenti.Count; i++)
+            {
+                if (users.SelectedItem.ToString() == sviKlijenti[i].ToString())
+                    x = sviKlijenti[i];
+            }
+                if (editUser.Text == "Edituj korisnika")
+                {
+                    editUser.Text = "Potvrdi";
+                    
+                    Ime_unos.Visible = true;
+                    prezime_unos.Visible = true;
+                    mail_unos.Visible = true;
+                    jmb_user.Visible = true;
+                    username_unos.Visible = true;
+                    kontakt_unos.Visible = true;
+                    tip_unos.Visible = true;
+                    Ime_unos.Text = Uime.Text;
+                    prezime_unos.Text = Uprezime.Text;
+                    kontakt_unos.Text= Ukontakt.Text;
+                    jmb_user.Text = Ujmbg.Text;
+                    mail_unos.Text = Umail.Text;
+                    tip_unos.Text = Utip_reg.Text;
+                    username_unos.Text = Uuser.Text;
+
+                }
+                else
+                {
+                    
+                    Klijent y = new Klijent(x.ID, Uime.Text, Uprezime.Text, Ujmbg.Text, Ukontakt.Text, x.slika, Umail.Text, Uuser.Text, x.Password, Convert.ToInt16(Utip_reg.Text));
+                    DAL.DAL f = DAL.DAL.Instanca;
+
+                    try
+                    {
+                    DAL.DAL.KlijentDAO juza = f.getDAO.getKlijentDAO();
+                    for (int i = 0; i < sviKlijenti.Count; i++)
+                    {
+                        if (users.SelectedItem.ToString() == sviKlijenti[i].ToString()){
+                            sviKlijenti[i] = y;
+                            sviKlijenti[i] = juza.update(y);
+                            users.DataSource = null;
+                            users.DataSource = sviKlijenti;
+                        }
+                    }
+                    
+                    
+                    
+                        // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
+
+                        
+                        
+                        
+                    }
+                    catch
+                    {
+                        MessageBox.Show("greška");
+                        
+                    }
+                    finally
+                    {
+                        
+                        editUser.Text = "Edituj korisnika";
+                        users.DataSource = null;
+                        users.DataSource = sviKlijenti;
+                        Ime_unos.Visible = false;
+                        prezime_unos.Visible = false;
+                        mail_unos.Visible = false;
+                        jmb_user.Visible = false;
+                        username_unos.Visible = false;
+                        kontakt_unos.Visible = false;
+                        tip_unos.Visible = false;
+                        Uime.Text = Ime_unos.Text;
+                        Uprezime.Text = prezime_unos.Text;
+                        Ukontakt.Text = kontakt_unos.Text;
+                        Ujmbg.Text = jmb_user.Text;
+                        Umail.Text = mail_unos.Text;
+                        Utip_reg.Text = tip_unos.Text;
+                        Uuser.Text = username_unos.Text;
+                    }
+
+                }
+     }
+
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            (new DodajKorisnika()).ShowDialog();
+            
+        }
+
+        private void deleteUser_Click(object sender, EventArgs e)
+        {
+            DAL.DAL f = DAL.DAL.Instanca;
+
+            try
+            {
+                DAL.DAL.KlijentDAO juza = f.getDAO.getKlijentDAO();
+                for (int i = 0; i < sviKlijenti.Count; i++)
+                {
+                    if (users.SelectedItem.ToString() == sviKlijenti[i].ToString())
+                    {
+                        juza.delete(sviKlijenti[i]);
+                        sviKlijenti.RemoveAt(i);
+                        users.DataSource = null;
+                        users.DataSource = sviKlijenti;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Greška");
+            }
+        }
 
         
 
