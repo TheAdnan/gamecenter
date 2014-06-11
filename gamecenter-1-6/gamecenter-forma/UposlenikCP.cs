@@ -59,7 +59,7 @@ namespace gamecenter_forma
 
         Image slika1 = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-za-gamecenter\computer-i.png");
         Image slika2 = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-za-gamecenter\computer-o.png");
-        private void racunar1_Click(object sender, EventArgs e)
+        private void racunar1_Click_1(object sender, EventArgs e)
         {
             if (racunar1.Image == slika2)
             {
@@ -170,5 +170,23 @@ namespace gamecenter_forma
                 racunar8.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void igrice_button_Click(object sender, EventArgs e)
+        {
+            tabovi_uposlenik.SelectedTab = igrice_tab;
+        }
+
+        
+
+       
+
+        
+
+        
     }
 }
