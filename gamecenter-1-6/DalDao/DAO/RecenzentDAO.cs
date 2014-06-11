@@ -66,7 +66,7 @@ namespace DAL
             {
                 try
                 {
-                    c = new MySqlCommand("update recenzenti set ime = '" + entity.Ime + "', set prezime = '" + entity.Prezime + "', set kontakt = '" + entity.Kontakt + "', set adresa= '" + entity.Adresa + "', set email = '" + entity.E_Mail + "', set password = '" + entity.Password + "', set plata = '" + entity.Plata + "', set radnovrijeme = '" + entity.RadnoVrijeme + "' where id ='" + entity.ID + "'", con);
+                    c = new MySqlCommand("update recenzenti set ime = '" + entity.Ime + "', prezime = '" + entity.Prezime + "', kontakt = '" + entity.Kontakt + "', adresa= '" + entity.Adresa + "',email = '" + entity.E_Mail + "', set password = '" + entity.Password + "', plata = '" + entity.Plata + "', radnovrijeme = '" + entity.RadnoVrijeme + "' where id ='" + entity.ID + "'", con);
 
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
