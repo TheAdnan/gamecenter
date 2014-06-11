@@ -23,7 +23,7 @@ namespace GameCenter.klase
 
         public void PostaviSliku(String swika)
         {
-            Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-korisnika\" + swika + ".jpg");
+            Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-korisnika\" + swika + ".png");
         }
         public Osoba(int id, String ime, String prezime, String jmbg, String kontakt, String adresa, String email, String user, String pass)
         {

@@ -50,8 +50,11 @@
             this.igrice_tab = new System.Windows.Forms.TabPage();
             this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
+            this.users = new System.Windows.Forms.ListBox();
+            this.slika_profil = new System.Windows.Forms.PictureBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
+            this.korisnici_tab.SuspendLayout();
             this.racunari_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.racunar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar8)).BeginInit();
@@ -62,6 +65,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).BeginInit();
             this.igrice_tab.SuspendLayout();
+            this.profil_tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
             this.SuspendLayout();
             // 
             // tabovi_uposlenik
@@ -177,6 +182,7 @@
             // 
             // korisnici_tab
             // 
+            this.korisnici_tab.Controls.Add(this.users);
             this.korisnici_tab.Location = new System.Drawing.Point(4, 25);
             this.korisnici_tab.Name = "korisnici_tab";
             this.korisnici_tab.Size = new System.Drawing.Size(807, 482);
@@ -307,6 +313,7 @@
             this.igrice_tab.TabIndex = 3;
             this.igrice_tab.Text = "Igrice";
             this.igrice_tab.UseVisualStyleBackColor = true;
+            this.igrice_tab.Click += new System.EventHandler(this.igrice_tab_Click);
             // 
             // games
             // 
@@ -321,12 +328,33 @@
             // 
             // profil_tab
             // 
+            this.profil_tab.Controls.Add(this.slika_profil);
             this.profil_tab.Location = new System.Drawing.Point(4, 25);
             this.profil_tab.Name = "profil_tab";
             this.profil_tab.Size = new System.Drawing.Size(807, 482);
             this.profil_tab.TabIndex = 4;
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
+            // 
+            // users
+            // 
+            this.users.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.users.FormattingEnabled = true;
+            this.users.ItemHeight = 16;
+            this.users.Location = new System.Drawing.Point(4, 5);
+            this.users.Name = "users";
+            this.users.Size = new System.Drawing.Size(330, 468);
+            this.users.TabIndex = 1;
+            // 
+            // slika_profil
+            // 
+            this.slika_profil.Location = new System.Drawing.Point(45, 75);
+            this.slika_profil.Name = "slika_profil";
+            this.slika_profil.Size = new System.Drawing.Size(285, 310);
+            this.slika_profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.slika_profil.TabIndex = 0;
+            this.slika_profil.TabStop = false;
             // 
             // UposlenikCP
             // 
@@ -343,6 +371,7 @@
             this.tabovi_uposlenik.ResumeLayout(false);
             this.home_tab.ResumeLayout(false);
             this.home_tab.PerformLayout();
+            this.korisnici_tab.ResumeLayout(false);
             this.racunari_tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.racunar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar8)).EndInit();
@@ -353,6 +382,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.racunar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.racunar5)).EndInit();
             this.igrice_tab.ResumeLayout(false);
+            this.profil_tab.ResumeLayout(false);
+            this.profil_tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,6 +412,8 @@
         private System.Windows.Forms.TabPage profil_tab;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox games;
+        private System.Windows.Forms.ListBox users;
+        private System.Windows.Forms.PictureBox slika_profil;
 
     }
 }

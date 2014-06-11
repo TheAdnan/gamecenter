@@ -27,26 +27,30 @@ namespace gamecenter_forma
             
         }
         
-        public static Uposlenik Cojek = new Uposlenik();
-        public static List<Klijent> sviKlijenti;
-        public static List<Igrica> sveIgrice;
-        public static List<Platform> svePlatforme;
+        public Uposlenik Cojek = new Uposlenik();
+        public List<Klijent> sviKlijenti;
+        public List<Igrica> sveIgrice;
+        public List<Platform> svePlatforme;
+        
         public UposlenikCP(string username)
         {
             DAL.DAL f = DAL.DAL.Instanca;
             try
             {
                 // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
-
+                InitializeComponent();
                 DAL.DAL.IgricaDAO igrica = f.getDAO.getIgricaDAO();
                 sveIgrice = igrica.getAll();
                 DAL.DAL.KlijentDAO klijent = f.getDAO.getKlijentDAO();
                 sviKlijenti = klijent.getAll();
                 DAL.DAL.UposlenikDAO uposlenik = f.getDAO.getUposlenikDAO();
                 Cojek = uposlenik.getByUsername(username);
-
-                MessageBox.Show(sviKlijenti[0].ToString());
-                MessageBox.Show(sviKlijenti[1].ToString());
+                games.DataSource = sveIgrice;
+                users.DataSource = sviKlijenti;
+                Cojek.slika = "default";
+                Cojek.PostaviSliku(Cojek.slika);
+                slika_profil.Image = Cojek.Slika;
+                
                 
             }
             catch
@@ -54,10 +58,10 @@ namespace gamecenter_forma
                 MessageBox.Show("Nece da se spoji na bazu");
 
             }
-            InitializeComponent();
+            
             
         }
-
+        
         private void UposlenikCP_Load(object sender, EventArgs e)
         {
 
@@ -205,6 +209,11 @@ namespace gamecenter_forma
         private void home_tab_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void igrice_tab_Click(object sender, EventArgs e)
+        {
+            
         }
 
         

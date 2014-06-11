@@ -31,7 +31,7 @@ namespace GameCenter.klase
             Naziv = name; Sifra = sifra; Trailer = trejler; Dostupnost = available; Cijena = cijena; Platforma = pltfrm; Kategorija = ktgr; slika = sliks;
         }
 
-        public override string ToString()
+        public override String ToString()
         {
             return Naziv;
         }
