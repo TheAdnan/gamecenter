@@ -355,6 +355,7 @@
             this.slika_profil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.slika_profil.TabIndex = 0;
             this.slika_profil.TabStop = false;
+            this.slika_profil.Click += new System.EventHandler(this.slika_profil_Click);
             // 
             // UposlenikCP
             // 

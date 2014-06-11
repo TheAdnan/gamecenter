@@ -47,7 +47,6 @@ namespace gamecenter_forma
                 Cojek = uposlenik.getByUsername(username);
                 games.DataSource = sveIgrice;
                 users.DataSource = sviKlijenti;
-                Cojek.slika = "default";
                 Cojek.PostaviSliku(Cojek.slika);
                 slika_profil.Image = Cojek.Slika;
                 
@@ -214,6 +213,11 @@ namespace gamecenter_forma
         private void igrice_tab_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void slika_profil_Click(object sender, EventArgs e)
+        {
+
         }
 
         

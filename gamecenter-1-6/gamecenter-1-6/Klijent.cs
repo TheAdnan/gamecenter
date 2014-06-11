@@ -16,8 +16,8 @@ namespace GameCenter.klase
         public int TipRegistracije { get; set; }
         public List<String> Subscriptions { get; set; }
         
-        public Klijent(int id, String ime, String prezime, String jmbg, String kontakt, String adresa, String email, String user, String pass, int tipReg)
-            : base(id, ime, prezime, jmbg, kontakt, adresa, email, user, pass)
+        public Klijent(int id, String ime, String prezime, String jmbg, String kontakt, String swika, String email, String user, String pass, int tipReg)
+            : base(id, ime, prezime, jmbg, kontakt, swika, email, user, pass)
         {
             TipRegistracije = tipReg;
         }

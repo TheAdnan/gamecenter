@@ -12,8 +12,8 @@ namespace GameCenter.klase
     {
         public double Plata { get; set; }
         public int RadnoVrijeme { get; set; }
-       public Recenzent(int id, String ime, String prezime, String jmbg, String kontakt, String adresa, String email, String user, String pass, double plata, int radno_vrijeme)
-            : base(id, ime, prezime, jmbg, kontakt, adresa, email, user, pass)
+       public Recenzent(int id, String ime, String prezime, String jmbg, String kontakt, String swika, String email, String user, String pass, double plata, int radno_vrijeme)
+            : base(id, ime, prezime, jmbg, kontakt, swika, email, user, pass)
         {
         Plata = plata; RadnoVrijeme = radno_vrijeme;
         }

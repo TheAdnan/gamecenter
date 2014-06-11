@@ -14,7 +14,7 @@ namespace GameCenter.klase
         public String Prezime { get; set; }
         public String JMBG { get; set; }
         public String Kontakt { get; set; }
-        public String Adresa { get; set; }
+        //public String Adresa { get; set; }
         public String E_Mail { get; set; }
         public String Username { get; set; }
         public String Password { get; set; }
@@ -23,11 +23,19 @@ namespace GameCenter.klase
 
         public void PostaviSliku(String swika)
         {
-            Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-korisnika\" + swika + ".png");
+            try
+            {
+                Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-korisnika\" + swika + ".png");
+
+            }
+            catch
+            {
+                Slika = Image.FromFile(@"D:\ETF\4. semestar\OOAD\gamecenter-1-6\slike-korisnika\" + swika + ".jpg");
+            }
         }
-        public Osoba(int id, String ime, String prezime, String jmbg, String kontakt, String adresa, String email, String user, String pass)
+        public Osoba(int id, String ime, String prezime, String jmbg, String kontakt, String swika, String email, String user, String pass)
         {
-            Ime = ime; Prezime = prezime; ID = id; JMBG = jmbg; Kontakt = kontakt; Adresa = adresa; E_Mail = email; Username = user; Password = pass;
+            Ime = ime; Prezime = prezime; ID = id; JMBG = jmbg; Kontakt = kontakt; slika = swika; E_Mail = email; Username = user; Password = pass;
         }
         public override string ToString()
         {
