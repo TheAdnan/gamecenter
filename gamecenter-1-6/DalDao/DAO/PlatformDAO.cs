@@ -16,13 +16,13 @@ namespace DAL
             #region IDaoCrud<Platform> Members
             protected MySqlCommand c;
 
-            public long create(Platform entity)
+            public void create(Platform entity)
             {
                 try
                 {
                     c = new MySqlCommand("insert into platforme(naziv) values ('" + entity.Naziv + "');", con);
                     c.ExecuteNonQuery();
-                    return c.LastInsertedId;
+                    
                 }
                 catch (Exception e)
                 {

@@ -17,7 +17,7 @@ namespace DAL
             protected MySqlCommand c;
             protected MySqlCommand command;
 
-            public long create(Klijent entity)
+            public void create(Klijent entity)
             {
                 try
                 {
@@ -27,7 +27,7 @@ namespace DAL
                     command = new MySqlCommand(query, con);
                     command.ExecuteNonQuery();
 
-                    return command.LastInsertedId;
+                    
                 }
                 catch (Exception e)
                 {

@@ -24,10 +24,12 @@ namespace gamecenter_forma
             try
             {
                 // f.kreirajKonekciju("localhost", "gamecenter", "root", "");
-                InitializeComponent();
+                //InitializeComponent();
                 Klijent x = new Klijent(0, Ime_unos.Text,prezime_unos.Text, jmb_user.Text, kontakt_unos.Text, "default", mail_unos.Text, username_unos.Text, tip_unos.Text, 1);
                 DAL.DAL.KlijentDAO klijent = f.getDAO.getKlijentDAO();
-                long i = klijent.create(x);
+                klijent.create(x);
+                MessageBox.Show("Uspjesno je dodan!");
+                this.Close();
 
             }
             catch
@@ -48,6 +50,11 @@ namespace gamecenter_forma
         }
 
         private void Ime_unos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void username_unos_TextChanged(object sender, EventArgs e)
         {
 
         }

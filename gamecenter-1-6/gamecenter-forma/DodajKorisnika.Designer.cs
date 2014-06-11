@@ -80,6 +80,7 @@
             this.username_unos.Name = "username_unos";
             this.username_unos.Size = new System.Drawing.Size(127, 22);
             this.username_unos.TabIndex = 56;
+            this.username_unos.TextChanged += new System.EventHandler(this.username_unos_TextChanged);
             // 
             // prezime_unos
             // 

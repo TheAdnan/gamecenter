@@ -17,7 +17,7 @@ namespace DAL
             #region IDaoCrud<Uposlenik> Members
             protected MySqlCommand c;
 
-            public long create(Uposlenik entity)
+            public void create(Uposlenik entity)
             {
                 try
                 {
@@ -27,7 +27,7 @@ namespace DAL
                     c = new MySqlCommand(query, con);
                     c.ExecuteNonQuery();
 
-                    return c.LastInsertedId;
+                    
 
                     
                     

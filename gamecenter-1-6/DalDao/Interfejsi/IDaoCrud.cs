@@ -7,7 +7,7 @@ namespace DAL.Interfejsi
 {
     public interface IDaoCrud<T>
     {
-        long create(T entity);
+        void create(T entity);
         T read(T entity);
         T update(T entity);
         void delete(T entity);

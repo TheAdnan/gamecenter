@@ -16,7 +16,7 @@ namespace DAL
             #region IDaoCrud<Igrica> Members
             protected MySqlCommand c;
 
-            public long create(Igrica entity)
+            public void create(Igrica entity)
             {
                 try
                 {
@@ -26,7 +26,7 @@ namespace DAL
                     c = new MySqlCommand(query, con);
                     c.ExecuteNonQuery();
 
-                    return c.LastInsertedId;
+                    
                 }
                 catch (Exception e)
                 {

@@ -422,6 +422,18 @@ namespace gamecenter_forma
         private void addUser_Click(object sender, EventArgs e)
         {
             (new DodajKorisnika()).ShowDialog();
+            DAL.DAL f = DAL.DAL.Instanca;
+            try
+            {
+                DAL.DAL.KlijentDAO klijent = f.getDAO.getKlijentDAO();
+                sviKlijenti = klijent.getAll();
+                users.DataSource = null;
+                users.DataSource = sviKlijenti;
+            }
+            catch
+            {
+                MessageBox.Show("DAYUM");
+            }
             
         }
 

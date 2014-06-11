@@ -16,13 +16,13 @@ namespace DAL
             #region IDaoCrud<Recenzent> Members
             protected MySqlCommand c;
 
-            public long create(Recenzent entity)
+            public void create(Recenzent entity)
             {
                 try
                 {
                     c = new MySqlCommand("insert into recenzenti(ime,prezime,jmbg,kontakt,slika,email,username,password, plata, radnoVrijeme) values ('" + entity.Ime + "','" + entity.Prezime + "','" + entity.JMBG + "','" + entity.Kontakt + "','" + entity.slika + "','" + entity.E_Mail + "','" + entity.Username + "','" + entity.Password + "','" + entity.Plata + "','" + entity.RadnoVrijeme + "')", con);
                     c.ExecuteNonQuery();
-                    return c.LastInsertedId;
+                    
                 }
                 catch (Exception e)
                 {
