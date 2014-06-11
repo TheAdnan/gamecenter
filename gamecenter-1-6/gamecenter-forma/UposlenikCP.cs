@@ -473,7 +473,7 @@ namespace gamecenter_forma
             Igrica x = new Igrica();
             for (int i = 0; i < sveIgrice.Count; i++)
             {
-                if (users.SelectedItem.ToString() == sveIgrice[i].ToString())
+                if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
                 {
                     x.Naziv = sveIgrice[i].Naziv;
                     x.Kategorija = sveIgrice[i].Kategorija;
