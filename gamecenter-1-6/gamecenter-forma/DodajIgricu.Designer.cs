@@ -57,7 +57,7 @@
             this.button1.Location = new System.Drawing.Point(64, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 40);
-            this.button1.TabIndex = 77;
+            this.button1.TabIndex = 80;
             this.button1.Text = "Izađi";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -135,7 +135,7 @@
             this.xPlatforma.Location = new System.Drawing.Point(220, 317);
             this.xPlatforma.Name = "xPlatforma";
             this.xPlatforma.Size = new System.Drawing.Size(127, 22);
-            this.xPlatforma.TabIndex = 80;
+            this.xPlatforma.TabIndex = 77;
             // 
             // label1
             // 

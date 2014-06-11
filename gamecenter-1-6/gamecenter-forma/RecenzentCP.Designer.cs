@@ -256,6 +256,7 @@
             this.platf_combo.Name = "platf_combo";
             this.platf_combo.Size = new System.Drawing.Size(146, 24);
             this.platf_combo.TabIndex = 41;
+            this.platf_combo.SelectedIndexChanged += new System.EventHandler(this.platf_combo_SelectedIndexChanged_1);
             // 
             // trailer_igrice
             // 

@@ -102,45 +102,34 @@ namespace gamecenter_forma
         
             private void games_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(games.SelectedIndex != -1)
-            for (int i = 0; i < sveIgrice.Count; i++)
+            if (games.SelectedIndex != -1)
             {
-                if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                for (int i = 0; i < sveIgrice.Count; i++)
                 {
-                    ime_igrice.Text = sveIgrice[i].Naziv;
-                    
-                    cijena_din.Text = sveIgrice[i].Cijena.ToString();
-                    
-                    for (int k = 0; k < svePlatforme.Count; k++)
+                    if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
                     {
-                        if (svePlatforme[k].ID == sveIgrice[i].Platforma)
-                        {
-                            platf_din.Text = svePlatforme[i].Naziv;
-                        }
-                    }
-                    dost_din.Text = sveIgrice[i].Dostupnost.ToString();
-                    kat_din.Text = sveIgrice[i].Kategorija;
-                    sveIgrice[i].PostaviSliku(sveIgrice[i].slika);
-                    slika_igrice.Image = sveIgrice[i].Slika;
+                        ime_igrice.Text = sveIgrice[i].Naziv;
 
+                        cijena_din.Text = sveIgrice[i].Cijena.ToString();
+
+                        for (int k = 0; k < svePlatforme.Count; k++)
+                        {
+                            if (svePlatforme[k].ID == sveIgrice[i].Platforma)
+                            {
+                                platf_din.Text = svePlatforme[i].Naziv;
+                            }
+                        }
+                        dost_din.Text = sveIgrice[i].Dostupnost.ToString();
+                        kat_din.Text = sveIgrice[i].Kategorija;
+                        sveIgrice[i].PostaviSliku(sveIgrice[i].slika);
+                        slika_igrice.Image = sveIgrice[i].Slika;
+
+                    }
                 }
             }
          }
             private void platf_combo_SelectedIndexChanged(object sender, EventArgs e)
             {
-                List<String> igrice_filtrirano = new List<String>();
-                for (int i = 0; i < sveIgrice.Count; i++)
-                {
-                    for (int j = 0; j < svePlatforme.Count; j++)
-                    {
-                        if ((svePlatforme[j].ID == sveIgrice[i].Platforma) && (platf_combo.SelectedItem.ToString() == svePlatforme[j].ToString()))
-                        {
-                            igrice_filtrirano.Add(sveIgrice[i].ToString());
-                        }
-                    }
-                }
-                games.DataSource = null;
-                games.DataSource = igrice_filtrirano;
             }
 
             private void editujIgru_Click(object sender, EventArgs e)
@@ -264,6 +253,24 @@ namespace gamecenter_forma
             private void button2_Click(object sender, EventArgs e)
             {
                 tabovi_rec.SelectedTab = home_tab;
+            }
+
+            private void platf_combo_SelectedIndexChanged_1(object sender, EventArgs e)
+            {
+
+                List<String> igrice_filtrirano = new List<String>();
+                for (int i = 0; i < sveIgrice.Count; i++)
+                {
+                    for (int j = 0; j < svePlatforme.Count; j++)
+                    {
+                        if ((svePlatforme[j].ID == sveIgrice[i].Platforma) && (platf_combo.SelectedItem.ToString() == svePlatforme[j].ToString()))
+                        {
+                            igrice_filtrirano.Add(sveIgrice[i].ToString());
+                        }
+                    }
+                }
+
+                games.DataSource = igrice_filtrirano;
             }
         }
     }
