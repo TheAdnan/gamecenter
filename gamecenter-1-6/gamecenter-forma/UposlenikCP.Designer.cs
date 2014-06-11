@@ -114,6 +114,13 @@
             this.deleteUser = new System.Windows.Forms.Button();
             this.addUser = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Ime_unos = new System.Windows.Forms.TextBox();
+            this.prezime_unos = new System.Windows.Forms.TextBox();
+            this.username_unos = new System.Windows.Forms.TextBox();
+            this.jmb_user = new System.Windows.Forms.TextBox();
+            this.mail_unos = new System.Windows.Forms.TextBox();
+            this.kontakt_unos = new System.Windows.Forms.TextBox();
+            this.tip_unos = new System.Windows.Forms.TextBox();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.korisnici_tab.SuspendLayout();
@@ -149,7 +156,7 @@
             this.tabovi_uposlenik.Location = new System.Drawing.Point(4, 1);
             this.tabovi_uposlenik.Name = "tabovi_uposlenik";
             this.tabovi_uposlenik.SelectedIndex = 0;
-            this.tabovi_uposlenik.Size = new System.Drawing.Size(863, 586);
+            this.tabovi_uposlenik.Size = new System.Drawing.Size(942, 586);
             this.tabovi_uposlenik.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabovi_uposlenik.TabIndex = 8;
             // 
@@ -249,6 +256,13 @@
             // 
             // korisnici_tab
             // 
+            this.korisnici_tab.Controls.Add(this.tip_unos);
+            this.korisnici_tab.Controls.Add(this.kontakt_unos);
+            this.korisnici_tab.Controls.Add(this.mail_unos);
+            this.korisnici_tab.Controls.Add(this.jmb_user);
+            this.korisnici_tab.Controls.Add(this.username_unos);
+            this.korisnici_tab.Controls.Add(this.prezime_unos);
+            this.korisnici_tab.Controls.Add(this.Ime_unos);
             this.korisnici_tab.Controls.Add(this.addUser);
             this.korisnici_tab.Controls.Add(this.deleteUser);
             this.korisnici_tab.Controls.Add(this.Uhome);
@@ -271,7 +285,7 @@
             this.korisnici_tab.Controls.Add(this.users);
             this.korisnici_tab.Location = new System.Drawing.Point(4, 25);
             this.korisnici_tab.Name = "korisnici_tab";
-            this.korisnici_tab.Size = new System.Drawing.Size(855, 557);
+            this.korisnici_tab.Size = new System.Drawing.Size(934, 557);
             this.korisnici_tab.TabIndex = 2;
             this.korisnici_tab.Text = "Korisnici";
             this.korisnici_tab.UseVisualStyleBackColor = true;
@@ -891,7 +905,7 @@
             // Uime
             // 
             this.Uime.AutoSize = true;
-            this.Uime.Location = new System.Drawing.Point(472, 53);
+            this.Uime.Location = new System.Drawing.Point(472, 56);
             this.Uime.Name = "Uime";
             this.Uime.Size = new System.Drawing.Size(40, 17);
             this.Uime.TabIndex = 19;
@@ -980,7 +994,7 @@
             // 
             // slikajuzera
             // 
-            this.slikajuzera.Location = new System.Drawing.Point(600, 53);
+            this.slikajuzera.Location = new System.Drawing.Point(669, 53);
             this.slikajuzera.Name = "slikajuzera";
             this.slikajuzera.Size = new System.Drawing.Size(247, 305);
             this.slikajuzera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -989,7 +1003,7 @@
             // 
             // editUser
             // 
-            this.editUser.Location = new System.Drawing.Point(600, 422);
+            this.editUser.Location = new System.Drawing.Point(669, 422);
             this.editUser.Name = "editUser";
             this.editUser.Size = new System.Drawing.Size(252, 49);
             this.editUser.TabIndex = 28;
@@ -999,7 +1013,7 @@
             // Uhome
             // 
             this.Uhome.Image = ((System.Drawing.Image)(resources.GetObject("Uhome.Image")));
-            this.Uhome.Location = new System.Drawing.Point(600, 495);
+            this.Uhome.Location = new System.Drawing.Point(669, 495);
             this.Uhome.Name = "Uhome";
             this.Uhome.Size = new System.Drawing.Size(252, 49);
             this.Uhome.TabIndex = 29;
@@ -1085,11 +1099,67 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Ime_unos
+            // 
+            this.Ime_unos.Location = new System.Drawing.Point(475, 50);
+            this.Ime_unos.Name = "Ime_unos";
+            this.Ime_unos.Size = new System.Drawing.Size(127, 23);
+            this.Ime_unos.TabIndex = 33;
+            this.Ime_unos.Visible = false;
+            // 
+            // prezime_unos
+            // 
+            this.prezime_unos.Location = new System.Drawing.Point(475, 122);
+            this.prezime_unos.Name = "prezime_unos";
+            this.prezime_unos.Size = new System.Drawing.Size(127, 23);
+            this.prezime_unos.TabIndex = 34;
+            this.prezime_unos.Visible = false;
+            // 
+            // username_unos
+            // 
+            this.username_unos.Location = new System.Drawing.Point(475, 204);
+            this.username_unos.Name = "username_unos";
+            this.username_unos.Size = new System.Drawing.Size(127, 23);
+            this.username_unos.TabIndex = 35;
+            this.username_unos.Visible = false;
+            // 
+            // jmb_user
+            // 
+            this.jmb_user.Location = new System.Drawing.Point(475, 278);
+            this.jmb_user.Name = "jmb_user";
+            this.jmb_user.Size = new System.Drawing.Size(127, 23);
+            this.jmb_user.TabIndex = 36;
+            this.jmb_user.Visible = false;
+            // 
+            // mail_unos
+            // 
+            this.mail_unos.Location = new System.Drawing.Point(475, 360);
+            this.mail_unos.Name = "mail_unos";
+            this.mail_unos.Size = new System.Drawing.Size(127, 23);
+            this.mail_unos.TabIndex = 37;
+            this.mail_unos.Visible = false;
+            // 
+            // kontakt_unos
+            // 
+            this.kontakt_unos.Location = new System.Drawing.Point(475, 435);
+            this.kontakt_unos.Name = "kontakt_unos";
+            this.kontakt_unos.Size = new System.Drawing.Size(127, 23);
+            this.kontakt_unos.TabIndex = 38;
+            this.kontakt_unos.Visible = false;
+            // 
+            // tip_unos
+            // 
+            this.tip_unos.Location = new System.Drawing.Point(492, 508);
+            this.tip_unos.Name = "tip_unos";
+            this.tip_unos.Size = new System.Drawing.Size(110, 23);
+            this.tip_unos.TabIndex = 39;
+            this.tip_unos.Visible = false;
+            // 
             // UposlenikCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 586);
+            this.ClientSize = new System.Drawing.Size(946, 586);
             this.Controls.Add(this.tabovi_uposlenik);
             this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1215,6 +1285,13 @@
         private System.Windows.Forms.Button addUser;
         private System.Windows.Forms.Button deleteUser;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox Ime_unos;
+        private System.Windows.Forms.TextBox tip_unos;
+        private System.Windows.Forms.TextBox kontakt_unos;
+        private System.Windows.Forms.TextBox mail_unos;
+        private System.Windows.Forms.TextBox jmb_user;
+        private System.Windows.Forms.TextBox username_unos;
+        private System.Windows.Forms.TextBox prezime_unos;
 
     }
 }
