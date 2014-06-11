@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajKorisnika));
             this.tip_unos = new System.Windows.Forms.TextBox();
             this.kontakt_unos = new System.Windows.Forms.TextBox();
             this.mail_unos = new System.Windows.Forms.TextBox();
@@ -208,6 +209,7 @@
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label29);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DodajKorisnika";
             this.Text = "DodajKorisnika";
             this.Load += new System.EventHandler(this.DodajKorisnika_Load);

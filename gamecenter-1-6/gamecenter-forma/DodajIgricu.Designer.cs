@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DodajIgricu));
             this.Dodaj = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.xKategorija = new System.Windows.Forms.TextBox();
@@ -164,6 +165,7 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label29);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DodajIgricu";
             this.Text = "Dodaj Igricu";
             this.ResumeLayout(false);
