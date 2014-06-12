@@ -584,6 +584,17 @@ namespace gamecenter_forma
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
             for (int i = 0; i < sveIgrice.Count; i++)
             {
                 if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
@@ -592,11 +603,6 @@ namespace gamecenter_forma
                     break;
                 }
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
 
         
