@@ -80,9 +80,27 @@ namespace DAL
             {
                 try
                 {
+                    var updateCommand = new MySqlCommand("UPDATE igrice SET naziv = @ex SET trailer = @ex1 SET dostupnost = @ex2 SET cijena = @ex3 SET kategorija = @ex4  SET platforma = @ex5 SET slika = @ex6 WHERE sifra =  @id");
+                    updateCommand.Parameters.Add("@ex", MySqlDbType.Text);
+                    updateCommand.Parameters["@ex"].Value = entity.Naziv;
+                    updateCommand.Parameters.Add("@ex1", MySqlDbType.Byte);
+                    updateCommand.Parameters["@ex1"].Value = entity.Trailer.ToString();
+                    updateCommand.Parameters.Add("@ex2", MySqlDbType.Int32);
+                    updateCommand.Parameters["@ex2"].Value = entity.Dostupnost.ToString();
+                    updateCommand.Parameters.Add("@ex3", MySqlDbType.Double);
+                    updateCommand.Parameters["@ex3"].Value = entity.Cijena.ToString();
+                    updateCommand.Parameters.Add("@ex4", MySqlDbType.Text);
+                    updateCommand.Parameters["@ex4"].Value = entity.Kategorija;
+                    updateCommand.Parameters.Add("@ex5", MySqlDbType.Int32);
+                    updateCommand.Parameters["@ex5"].Value = entity.Platforma.ToString();
+                    updateCommand.Parameters.Add("@ex6", MySqlDbType.Text);
+                    updateCommand.Parameters["@ex6"].Value = entity.Naziv;
+                    updateCommand.Parameters.Add("@id", MySqlDbType.Int32);
+                    updateCommand.Parameters["@id"].Value = entity.Sifra.ToString();
+
                     string query = "update igrice set naziv = '" + entity.Naziv + "', trailer = '" + entity.Trailer + "', dostupnost = '" + entity.Dostupnost + "',  cijena= '" + entity.Cijena + "', kategorija = '" + entity.Kategorija + "', platforma = '" + entity.Platforma + "'slika = '" + entity.slika + "' where sifra ='" + entity.Sifra + "';";
 
-                    c = new MySqlCommand(query, con);
+                    c = updateCommand;
 
                     c.ExecuteNonQuery();
 

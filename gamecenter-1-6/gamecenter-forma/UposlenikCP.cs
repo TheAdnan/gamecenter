@@ -503,7 +503,7 @@ namespace gamecenter_forma
                 try
                 {
                     x.Kategorija = k_u.Text;
-                    x.Platforma = Convert.ToInt32(p_u.Text);
+                    x.Platforma = Convert.ToInt32(1);
                     x.Dostupnost = Convert.ToInt32(d_u.Text);
                     x.Cijena = Convert.ToDouble(c_u.Text);
                     DAL.DAL.IgricaDAO juza = f.getDAO.getIgricaDAO();
