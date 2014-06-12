@@ -34,7 +34,7 @@ namespace GameCenter.klase
             ShoppingCart.Add(i);
         }
 
-        double obracunajPopust(Igrica i)
+        public double obracunajPopust(Igrica i)
         {
             double x = i.Cijena;
             if (this.TipRegistracije == 0)

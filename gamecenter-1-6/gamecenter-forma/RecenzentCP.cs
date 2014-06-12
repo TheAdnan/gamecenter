@@ -113,7 +113,7 @@ namespace gamecenter_forma
                     {
                         ime_igrice.Text = sveIgrice[i].Naziv;
 
-                        cijena_din.Text = sveIgrice[i].Cijena.ToString();
+                        cijena_din.Text = sveIgrice[i].Cijena.ToString() + " KM";
 
                         for (int k = 0; k < svePlatforme.Count; k++)
                         {

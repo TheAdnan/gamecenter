@@ -17,6 +17,8 @@ namespace gamecenter_forma
         public Klijent Cojek = new Klijent();
         public List<Igrica> sveIgrice;
         public List<Platform> svePlatforme;
+        public List<Igrica> shoppingCart = new List<Igrica>();
+        public double racun = 0;
         
         public KlijentCP()
         {
@@ -61,6 +63,7 @@ namespace gamecenter_forma
                 else reg2.Text = "Mjesecna registracija";
                 platf_combo.DataSource = null;
                 platf_combo.DataSource = svePlatforme;
+                
                 
             }
             catch
@@ -113,7 +116,7 @@ namespace gamecenter_forma
                     {
                         ime_igrice.Text = sveIgrice[i].Naziv;
 
-                        cijena_din.Text = sveIgrice[i].Cijena.ToString();
+                        cijena_din.Text = sveIgrice[i].Cijena.ToString() + " KM";
 
                         for (int k = 0; k < svePlatforme.Count; k++)
                         {
@@ -179,6 +182,66 @@ namespace gamecenter_forma
         private void button2_Click(object sender, EventArgs e)
         {
             tabovi_klijent.SelectedTab = Home_tab;
+        }
+
+        private void kupiIgru_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < sveIgrice.Count; i++)
+            {
+                if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                {
+                    shoppingCart.Add(sveIgrice[i]);
+                    racun += Cojek.obracunajPopust(sveIgrice[i]);
+                    shop_list.Items.Add(sveIgrice[i].ToString());
+                    rcn.Text = Convert.ToString(racun) + " KM";
+                    uoi.Text = Convert.ToString(shop_list.Items.Count);
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabovi_klijent.SelectedTab = Home_tab;
+        }
+
+        private void izdaj_racun_Click(object sender, EventArgs e)
+        {
+            shop_list.DataSource = null;
+        }
+
+        private void obrisi_Click(object sender, EventArgs e)
+        {
+            if (games.SelectedIndex != -1)
+            {
+                
+                for (int i = 0; i < shoppingCart.Count; i++)
+                {
+                    if (shoppingCart[i].ToString() == shop_list.SelectedItem.ToString())
+                    {
+                        shop_list.Items.RemoveAt(i);
+                        shoppingCart.RemoveAt(i);
+                        racun -= Cojek.obracunajPopust(sveIgrice[i]);
+                        break;
+                    }
+
+                }
+                
+                //shop_list.DataSource = null;
+                //shop_list.DataSource = shoppingCart;
+                rcn.Text = Convert.ToString(racun) + " KM";
+                uoi.Text = Convert.ToString(shop_list.Items.Count);
+            }
+            else
+            {
+                shop_list.SelectedIndex = 0;
+                MessageBox.Show("error");
+                return;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabovi_klijent.SelectedTab = igrice_tab;
         }
 
     }

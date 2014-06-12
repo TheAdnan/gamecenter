@@ -37,8 +37,7 @@
             this.igrice_button = new System.Windows.Forms.Button();
             this.racunari_button = new System.Windows.Forms.Button();
             this.igrice_tab = new System.Windows.Forms.TabPage();
-            this.profil_tab = new System.Windows.Forms.TabPage();
-            this.s_c_tab = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.trailer_igrice = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.platf_combo = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.c_u = new System.Windows.Forms.TextBox();
+            this.d_u = new System.Windows.Forms.TextBox();
             this.k_u = new System.Windows.Forms.TextBox();
             this.p_u = new System.Windows.Forms.TextBox();
             this.kupiIgru = new System.Windows.Forms.Button();
@@ -63,8 +63,9 @@
             this.ime_igrice = new System.Windows.Forms.Label();
             this.slika_igrice = new System.Windows.Forms.PictureBox();
             this.games = new System.Windows.Forms.ListBox();
-            this.d_u = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.profil_tab = new System.Windows.Forms.TabPage();
+            this.reg2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.xKontakt = new System.Windows.Forms.Label();
             this.xMail = new System.Windows.Forms.Label();
@@ -79,18 +80,27 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
-            this.reg2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.s_c_tab = new System.Windows.Forms.TabPage();
+            this.shop_list = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rcn = new System.Windows.Forms.Label();
+            this.uoi = new System.Windows.Forms.Label();
+            this.izdaj_racun = new System.Windows.Forms.Button();
+            this.obrisi = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabovi_klijent.SuspendLayout();
             this.Home_tab.SuspendLayout();
             this.igrice_tab.SuspendLayout();
-            this.profil_tab.SuspendLayout();
             this.trailer_igrice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
+            this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
+            this.s_c_tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabovi_klijent
@@ -206,40 +216,17 @@
             this.igrice_tab.Text = "Igrice";
             this.igrice_tab.UseVisualStyleBackColor = true;
             // 
-            // profil_tab
+            // button6
             // 
-            this.profil_tab.Controls.Add(this.reg2);
-            this.profil_tab.Controls.Add(this.label3);
-            this.profil_tab.Controls.Add(this.button2);
-            this.profil_tab.Controls.Add(this.xKontakt);
-            this.profil_tab.Controls.Add(this.xMail);
-            this.profil_tab.Controls.Add(this.xJmbg);
-            this.profil_tab.Controls.Add(this.xUsername);
-            this.profil_tab.Controls.Add(this.xPrezime);
-            this.profil_tab.Controls.Add(this.xIme);
-            this.profil_tab.Controls.Add(this.label15);
-            this.profil_tab.Controls.Add(this.label14);
-            this.profil_tab.Controls.Add(this.label13);
-            this.profil_tab.Controls.Add(this.label12);
-            this.profil_tab.Controls.Add(this.label11);
-            this.profil_tab.Controls.Add(this.label10);
-            this.profil_tab.Controls.Add(this.slika_profil);
-            this.profil_tab.Location = new System.Drawing.Point(4, 25);
-            this.profil_tab.Name = "profil_tab";
-            this.profil_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.profil_tab.Size = new System.Drawing.Size(934, 552);
-            this.profil_tab.TabIndex = 1;
-            this.profil_tab.Text = "Profil";
-            this.profil_tab.UseVisualStyleBackColor = true;
-            // 
-            // s_c_tab
-            // 
-            this.s_c_tab.Location = new System.Drawing.Point(4, 25);
-            this.s_c_tab.Name = "s_c_tab";
-            this.s_c_tab.Size = new System.Drawing.Size(934, 552);
-            this.s_c_tab.TabIndex = 3;
-            this.s_c_tab.Text = "Shopping cart";
-            this.s_c_tab.UseVisualStyleBackColor = true;
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(659, 503);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(263, 41);
+            this.button6.TabIndex = 51;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // trailer_igrice
             // 
@@ -353,6 +340,14 @@
             this.c_u.TabIndex = 37;
             this.c_u.Visible = false;
             // 
+            // d_u
+            // 
+            this.d_u.Location = new System.Drawing.Point(170, 154);
+            this.d_u.Name = "d_u";
+            this.d_u.Size = new System.Drawing.Size(100, 23);
+            this.d_u.TabIndex = 36;
+            this.d_u.Visible = false;
+            // 
             // k_u
             // 
             this.k_u.Location = new System.Drawing.Point(170, 85);
@@ -377,6 +372,7 @@
             this.kupiIgru.TabIndex = 33;
             this.kupiIgru.Text = "Dodaj u shopping cart!";
             this.kupiIgru.UseVisualStyleBackColor = true;
+            this.kupiIgru.Click += new System.EventHandler(this.kupiIgru_Click);
             // 
             // cijena_din
             // 
@@ -480,25 +476,50 @@
             this.games.TabIndex = 42;
             this.games.SelectedIndexChanged += new System.EventHandler(this.games_SelectedIndexChanged_1);
             // 
-            // d_u
+            // profil_tab
             // 
-            this.d_u.Location = new System.Drawing.Point(170, 154);
-            this.d_u.Name = "d_u";
-            this.d_u.Size = new System.Drawing.Size(100, 23);
-            this.d_u.TabIndex = 36;
-            this.d_u.Visible = false;
+            this.profil_tab.Controls.Add(this.reg2);
+            this.profil_tab.Controls.Add(this.label3);
+            this.profil_tab.Controls.Add(this.button2);
+            this.profil_tab.Controls.Add(this.xKontakt);
+            this.profil_tab.Controls.Add(this.xMail);
+            this.profil_tab.Controls.Add(this.xJmbg);
+            this.profil_tab.Controls.Add(this.xUsername);
+            this.profil_tab.Controls.Add(this.xPrezime);
+            this.profil_tab.Controls.Add(this.xIme);
+            this.profil_tab.Controls.Add(this.label15);
+            this.profil_tab.Controls.Add(this.label14);
+            this.profil_tab.Controls.Add(this.label13);
+            this.profil_tab.Controls.Add(this.label12);
+            this.profil_tab.Controls.Add(this.label11);
+            this.profil_tab.Controls.Add(this.label10);
+            this.profil_tab.Controls.Add(this.slika_profil);
+            this.profil_tab.Location = new System.Drawing.Point(4, 25);
+            this.profil_tab.Name = "profil_tab";
+            this.profil_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.profil_tab.Size = new System.Drawing.Size(934, 552);
+            this.profil_tab.TabIndex = 1;
+            this.profil_tab.Text = "Profil";
+            this.profil_tab.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // reg2
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(659, 503);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(263, 41);
-            this.button6.TabIndex = 51;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.reg2.AutoSize = true;
+            this.reg2.Location = new System.Drawing.Point(604, 391);
+            this.reg2.Name = "reg2";
+            this.reg2.Size = new System.Drawing.Size(40, 17);
+            this.reg2.TabIndex = 48;
+            this.reg2.Text = "Ime:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(444, 391);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 17);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Registrovan kao:";
             // 
             // button2
             // 
@@ -634,24 +655,112 @@
             this.slika_profil.TabIndex = 33;
             this.slika_profil.TabStop = false;
             // 
-            // reg2
+            // s_c_tab
             // 
-            this.reg2.AutoSize = true;
-            this.reg2.Location = new System.Drawing.Point(604, 391);
-            this.reg2.Name = "reg2";
-            this.reg2.Size = new System.Drawing.Size(40, 17);
-            this.reg2.TabIndex = 48;
-            this.reg2.Text = "Ime:";
+            this.s_c_tab.Controls.Add(this.button7);
+            this.s_c_tab.Controls.Add(this.obrisi);
+            this.s_c_tab.Controls.Add(this.izdaj_racun);
+            this.s_c_tab.Controls.Add(this.uoi);
+            this.s_c_tab.Controls.Add(this.rcn);
+            this.s_c_tab.Controls.Add(this.label4);
+            this.s_c_tab.Controls.Add(this.label2);
+            this.s_c_tab.Controls.Add(this.button4);
+            this.s_c_tab.Controls.Add(this.shop_list);
+            this.s_c_tab.Location = new System.Drawing.Point(4, 25);
+            this.s_c_tab.Name = "s_c_tab";
+            this.s_c_tab.Size = new System.Drawing.Size(934, 552);
+            this.s_c_tab.TabIndex = 3;
+            this.s_c_tab.Text = "Shopping cart";
+            this.s_c_tab.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // shop_list
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(444, 391);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 17);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Registrovan kao:";
+            this.shop_list.FormattingEnabled = true;
+            this.shop_list.ItemHeight = 16;
+            this.shop_list.Location = new System.Drawing.Point(3, 1);
+            this.shop_list.Name = "shop_list";
+            this.shop_list.Size = new System.Drawing.Size(427, 548);
+            this.shop_list.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(800, 497);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 49);
+            this.button4.TabIndex = 47;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(473, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 17);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Vaš trenutni račun iznosi:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(473, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 17);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Ukupno odabranih igrica: ";
+            // 
+            // rcn
+            // 
+            this.rcn.AutoSize = true;
+            this.rcn.Location = new System.Drawing.Point(692, 56);
+            this.rcn.Name = "rcn";
+            this.rcn.Size = new System.Drawing.Size(0, 17);
+            this.rcn.TabIndex = 50;
+            // 
+            // uoi
+            // 
+            this.uoi.AutoSize = true;
+            this.uoi.Location = new System.Drawing.Point(692, 134);
+            this.uoi.Name = "uoi";
+            this.uoi.Size = new System.Drawing.Size(0, 17);
+            this.uoi.TabIndex = 51;
+            // 
+            // izdaj_racun
+            // 
+            this.izdaj_racun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.izdaj_racun.Location = new System.Drawing.Point(476, 497);
+            this.izdaj_racun.Name = "izdaj_racun";
+            this.izdaj_racun.Size = new System.Drawing.Size(182, 49);
+            this.izdaj_racun.TabIndex = 52;
+            this.izdaj_racun.Text = "Kupi!";
+            this.izdaj_racun.UseVisualStyleBackColor = true;
+            this.izdaj_racun.Click += new System.EventHandler(this.izdaj_racun_Click);
+            // 
+            // obrisi
+            // 
+            this.obrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.obrisi.Location = new System.Drawing.Point(0, 497);
+            this.obrisi.Name = "obrisi";
+            this.obrisi.Size = new System.Drawing.Size(179, 49);
+            this.obrisi.TabIndex = 53;
+            this.obrisi.Text = "Odbaci artikal";
+            this.obrisi.UseVisualStyleBackColor = true;
+            this.obrisi.Click += new System.EventHandler(this.obrisi_Click);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Location = new System.Drawing.Point(248, 497);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(182, 49);
+            this.button7.TabIndex = 54;
+            this.button7.Text = "Dodaj još artikala";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // KlijentCP
             // 
@@ -670,15 +779,17 @@
             this.Home_tab.PerformLayout();
             this.igrice_tab.ResumeLayout(false);
             this.igrice_tab.PerformLayout();
-            this.profil_tab.ResumeLayout(false);
-            this.profil_tab.PerformLayout();
             this.trailer_igrice.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).EndInit();
+            this.profil_tab.ResumeLayout(false);
+            this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
+            this.s_c_tab.ResumeLayout(false);
+            this.s_c_tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -737,5 +848,14 @@
         private System.Windows.Forms.PictureBox slika_profil;
         private System.Windows.Forms.Label reg2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button obrisi;
+        private System.Windows.Forms.Button izdaj_racun;
+        private System.Windows.Forms.Label uoi;
+        private System.Windows.Forms.Label rcn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox shop_list;
     }
 }

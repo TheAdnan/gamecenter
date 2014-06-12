@@ -46,7 +46,6 @@
     <Compile Include="Klijent.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Platform.cs" />
-    <Compile Include="Poslodavac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Racunar.cs" />
     <Compile Include="Recenzent.cs" />
