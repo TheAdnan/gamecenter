@@ -62,6 +62,7 @@
             this.slika_igrice = new System.Windows.Forms.PictureBox();
             this.games = new System.Windows.Forms.ListBox();
             this.profil_tab = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.xKontakt = new System.Windows.Forms.Label();
             this.xMail = new System.Windows.Forms.Label();
             this.xJmbg = new System.Windows.Forms.Label();
@@ -75,15 +76,19 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabovi_rec.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.igrice_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.trailer_igrice.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
             this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabovi_rec
@@ -262,6 +267,9 @@
             // 
             this.trailer_igrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.trailer_igrice.Controls.Add(this.button4);
+            this.trailer_igrice.Controls.Add(this.button3);
+            this.trailer_igrice.Controls.Add(this.axWindowsMediaPlayer1);
             this.trailer_igrice.Location = new System.Drawing.Point(659, 174);
             this.trailer_igrice.Name = "trailer_igrice";
             this.trailer_igrice.Size = new System.Drawing.Size(271, 315);
@@ -458,6 +466,17 @@
             this.profil_tab.Text = "Profil";
             this.profil_tab.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(798, 499);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 49);
+            this.button2.TabIndex = 33;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // xKontakt
             // 
             this.xKontakt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -593,16 +612,35 @@
             this.slika_profil.TabIndex = 13;
             this.slika_profil.TabStop = false;
             // 
-            // button2
+            // axWindowsMediaPlayer1
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(798, 499);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 49);
-            this.button2.TabIndex = 33;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(8, 23);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(259, 249);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(8, 279);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 30);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Play";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(138, 278);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(127, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Stop";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // RecenzentCP
             // 
@@ -622,12 +660,14 @@
             this.igrice_tab.ResumeLayout(false);
             this.igrice_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.trailer_igrice.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).EndInit();
             this.profil_tab.ResumeLayout(false);
             this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -681,5 +721,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox slika_profil;
         private System.Windows.Forms.Button button2;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

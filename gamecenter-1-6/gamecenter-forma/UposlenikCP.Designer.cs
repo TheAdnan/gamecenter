@@ -92,8 +92,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.platf_combo = new System.Windows.Forms.ComboBox();
-            this.trailer_igrice = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.c_u = new System.Windows.Forms.TextBox();
+            this.d_u = new System.Windows.Forms.TextBox();
+            this.k_u = new System.Windows.Forms.TextBox();
+            this.p_u = new System.Windows.Forms.TextBox();
             this.editujIgru = new System.Windows.Forms.Button();
             this.cijena_din = new System.Windows.Forms.Label();
             this.cijena_igrice = new System.Windows.Forms.Label();
@@ -121,10 +124,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.slika_profil = new System.Windows.Forms.PictureBox();
-            this.p_u = new System.Windows.Forms.TextBox();
-            this.k_u = new System.Windows.Forms.TextBox();
-            this.d_u = new System.Windows.Forms.TextBox();
-            this.c_u = new System.Windows.Forms.TextBox();
+            this.trailer_igrice = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.tabovi_uposlenik.SuspendLayout();
             this.home_tab.SuspendLayout();
             this.korisnici_tab.SuspendLayout();
@@ -145,6 +148,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.slika_igrice)).BeginInit();
             this.profil_tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).BeginInit();
+            this.trailer_igrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabovi_uposlenik
@@ -774,6 +779,7 @@
             // 
             // igrice_tab
             // 
+            this.igrice_tab.Controls.Add(this.trailer_igrice);
             this.igrice_tab.Controls.Add(this.button9);
             this.igrice_tab.Controls.Add(this.button8);
             this.igrice_tab.Controls.Add(this.button6);
@@ -781,7 +787,6 @@
             this.igrice_tab.Controls.Add(this.pictureBox2);
             this.igrice_tab.Controls.Add(this.label16);
             this.igrice_tab.Controls.Add(this.platf_combo);
-            this.igrice_tab.Controls.Add(this.trailer_igrice);
             this.igrice_tab.Controls.Add(this.panel1);
             this.igrice_tab.Controls.Add(this.ime_igrice);
             this.igrice_tab.Controls.Add(this.slika_igrice);
@@ -866,17 +871,6 @@
             this.platf_combo.TabIndex = 9;
             this.platf_combo.SelectedIndexChanged += new System.EventHandler(this.platf_combo_SelectedIndexChanged);
             // 
-            // trailer_igrice
-            // 
-            this.trailer_igrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.trailer_igrice.Location = new System.Drawing.Point(655, 176);
-            this.trailer_igrice.Name = "trailer_igrice";
-            this.trailer_igrice.Size = new System.Drawing.Size(271, 315);
-            this.trailer_igrice.TabIndex = 8;
-            this.trailer_igrice.TabStop = false;
-            this.trailer_igrice.Text = "Trailer";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -898,6 +892,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(316, 378);
             this.panel1.TabIndex = 7;
+            // 
+            // c_u
+            // 
+            this.c_u.Location = new System.Drawing.Point(170, 219);
+            this.c_u.Name = "c_u";
+            this.c_u.Size = new System.Drawing.Size(100, 23);
+            this.c_u.TabIndex = 37;
+            this.c_u.Visible = false;
+            // 
+            // d_u
+            // 
+            this.d_u.Location = new System.Drawing.Point(170, 154);
+            this.d_u.Name = "d_u";
+            this.d_u.Size = new System.Drawing.Size(100, 23);
+            this.d_u.TabIndex = 36;
+            this.d_u.Visible = false;
+            // 
+            // k_u
+            // 
+            this.k_u.Location = new System.Drawing.Point(170, 85);
+            this.k_u.Name = "k_u";
+            this.k_u.Size = new System.Drawing.Size(100, 23);
+            this.k_u.TabIndex = 35;
+            this.k_u.Visible = false;
+            // 
+            // p_u
+            // 
+            this.p_u.Location = new System.Drawing.Point(170, 15);
+            this.p_u.Name = "p_u";
+            this.p_u.Size = new System.Drawing.Size(100, 23);
+            this.p_u.TabIndex = 34;
+            this.p_u.Visible = false;
             // 
             // editujIgru
             // 
@@ -1169,37 +1195,48 @@
             this.slika_profil.TabStop = false;
             this.slika_profil.Click += new System.EventHandler(this.slika_profil_Click);
             // 
-            // p_u
+            // trailer_igrice
             // 
-            this.p_u.Location = new System.Drawing.Point(170, 15);
-            this.p_u.Name = "p_u";
-            this.p_u.Size = new System.Drawing.Size(100, 23);
-            this.p_u.TabIndex = 34;
-            this.p_u.Visible = false;
+            this.trailer_igrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trailer_igrice.Controls.Add(this.button3);
+            this.trailer_igrice.Controls.Add(this.button5);
+            this.trailer_igrice.Controls.Add(this.axWindowsMediaPlayer1);
+            this.trailer_igrice.Location = new System.Drawing.Point(655, 176);
+            this.trailer_igrice.Name = "trailer_igrice";
+            this.trailer_igrice.Size = new System.Drawing.Size(271, 325);
+            this.trailer_igrice.TabIndex = 41;
+            this.trailer_igrice.TabStop = false;
+            this.trailer_igrice.Text = "Trailer";
             // 
-            // k_u
+            // button3
             // 
-            this.k_u.Location = new System.Drawing.Point(170, 85);
-            this.k_u.Name = "k_u";
-            this.k_u.Size = new System.Drawing.Size(100, 23);
-            this.k_u.TabIndex = 35;
-            this.k_u.Visible = false;
+            this.button3.Location = new System.Drawing.Point(144, 285);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 30);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Stop";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // d_u
+            // button5
             // 
-            this.d_u.Location = new System.Drawing.Point(170, 154);
-            this.d_u.Name = "d_u";
-            this.d_u.Size = new System.Drawing.Size(100, 23);
-            this.d_u.TabIndex = 36;
-            this.d_u.Visible = false;
+            this.button5.Location = new System.Drawing.Point(6, 285);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 30);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Play";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // c_u
+            // axWindowsMediaPlayer1
             // 
-            this.c_u.Location = new System.Drawing.Point(170, 219);
-            this.c_u.Name = "c_u";
-            this.c_u.Size = new System.Drawing.Size(100, 23);
-            this.c_u.TabIndex = 37;
-            this.c_u.Visible = false;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(4, 22);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(259, 257);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
             // 
             // UposlenikCP
             // 
@@ -1240,6 +1277,8 @@
             this.profil_tab.ResumeLayout(false);
             this.profil_tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slika_profil)).EndInit();
+            this.trailer_igrice.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1280,7 +1319,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label ime_igrice;
         private System.Windows.Forms.PictureBox slika_igrice;
-        private System.Windows.Forms.GroupBox trailer_igrice;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label dost_din;
         private System.Windows.Forms.Label kat_din;
@@ -1342,6 +1380,10 @@
         private System.Windows.Forms.TextBox d_u;
         private System.Windows.Forms.TextBox k_u;
         private System.Windows.Forms.TextBox p_u;
+        private System.Windows.Forms.GroupBox trailer_igrice;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
 
     }
 }

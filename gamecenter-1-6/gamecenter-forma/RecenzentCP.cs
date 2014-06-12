@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameCenter.klase;
+using System.Runtime.InteropServices;
 
 namespace gamecenter_forma
 {
+    
     public partial class RecenzentCP : Form
     {
+        
        // private TextBox username;
         //private string user;
      
@@ -271,6 +274,32 @@ namespace gamecenter_forma
                 }
 
                 games.DataSource = igrice_filtrirano;
+            }
+
+            private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+            {
+
+            }
+
+            private void button3_Click(object sender, EventArgs e)
+                
+                
+            {
+                
+                    for (int i = 0; i < sveIgrice.Count; i++)
+                    {
+                        if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                        {
+                            axWindowsMediaPlayer1.URL = @"D:\ETF\4. semestar\OOAD\gamecenter-1-6\video\" + sveIgrice[i].slika + ".mp4";
+                            break;
+                        }
+                    }
+                
+            }
+
+            private void button4_Click(object sender, EventArgs e)
+            {
+                axWindowsMediaPlayer1.Ctlcontrols.stop();
             }
         }
     }

@@ -21,6 +21,7 @@ namespace GameCenter.klase
 
         public String slika { get; set; }
         public  Image Slika;
+        public String video { get; set; }
 
         public void PostaviSliku(String swika)
         {

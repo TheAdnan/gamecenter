@@ -582,6 +582,23 @@ namespace gamecenter_forma
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < sveIgrice.Count; i++)
+            {
+                if (games.SelectedItem.ToString() == sveIgrice[i].ToString())
+                {
+                    axWindowsMediaPlayer1.URL = @"D:\ETF\4. semestar\OOAD\gamecenter-1-6\video\" + sveIgrice[i].slika + ".mp4";
+                    break;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
         
 
         
