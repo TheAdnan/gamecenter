@@ -211,6 +211,7 @@ namespace gamecenter_forma
 
         private void obrisi_Click(object sender, EventArgs e)
         {
+            obrisi.Enabled = false;
             if (games.SelectedIndex != -1)
             {
                 
@@ -237,6 +238,7 @@ namespace gamecenter_forma
                 MessageBox.Show("error");
                 return;
             }
+
         }
 
         private void button7_Click(object sender, EventArgs e)
